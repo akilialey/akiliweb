@@ -193,21 +193,36 @@ h1 em{font-style:italic;color:var(--mauve-light);}
 .services-heading{font-family:'DM Serif Display',serif;font-size:clamp(32px,4vw,52px);color:var(--plum);line-height:1.1;}
 .services-heading em{font-style:italic;color:var(--mauve);}
 .services-intro-text{font-size:15px;font-weight:300;color:var(--plum-mid);line-height:1.8;}
-.service-list{display:flex;flex-direction:column;gap:1px;background:var(--blush);}
+.service-list{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
 .service-row{
-  background:var(--white);display:grid;grid-template-columns:80px 1fr auto;
-  align-items:center;gap:2rem;padding:2.5rem 2.5rem;cursor:default;
-  border-left:3px solid transparent;transition:all 0.25s;
+  background:var(--white);display:flex;flex-direction:column;
+  padding:2.5rem 2rem;cursor:default;
+  border-top:3px solid var(--blush);border-radius:2px;
+  transition:all 0.25s;
 }
-.service-row:hover{background:var(--plum-tint);border-left-color:var(--amber);}
-.service-index{font-family:'DM Serif Display',serif;font-size:44px;color:var(--blush);line-height:1;font-style:italic;transition:color 0.25s;}
+.service-row:hover{border-top-color:var(--amber);box-shadow:0 8px 32px rgba(58,38,64,0.08);transform:translateY(-3px);}
+.service-index{font-family:'DM Serif Display',serif;font-size:56px;color:var(--blush);line-height:1;font-style:italic;transition:color 0.25s;margin-bottom:1rem;}
 .service-row:hover .service-index{color:var(--amber);}
-.service-tag{font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--mauve);margin-bottom:0.5rem;}
-.service-row h3{font-family:'DM Serif Display',serif;font-size:24px;color:var(--plum);margin-bottom:0.5rem;}
-.service-row p{font-size:14px;font-weight:300;color:var(--plum-mid);line-height:1.7;max-width:460px;}
-.service-includes{list-style:none;min-width:220px;border-left:1px solid var(--blush);padding-left:2rem;align-self:center;}
+.service-tag{font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--mauve);margin-bottom:0.75rem;}
+.service-row h3{font-family:'DM Serif Display',serif;font-size:24px;color:var(--plum);margin-bottom:0.75rem;line-height:1.15;}
+.service-row p{font-size:14px;font-weight:300;color:var(--plum-mid);line-height:1.7;flex:1;}
+.service-includes{list-style:none;border-top:1px solid var(--oat);padding-top:1.25rem;margin-top:1.5rem;}
 .service-includes li{font-size:12px;color:var(--plum-mid);padding:4px 0;display:flex;align-items:flex-start;gap:8px;font-weight:300;}
 .service-includes li::before{content:'';display:block;flex-shrink:0;width:4px;height:4px;border-radius:50%;background:var(--amber);margin-top:6px;}
+
+/* ── EXTENDED SERVICES ── */
+#extended{padding:80px 5rem;background:var(--plum-deep);}
+.extended-header{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-bottom:56px;align-items:end;}
+.extended-heading{font-family:'DM Serif Display',serif;font-size:clamp(26px,3vw,38px);color:var(--white);line-height:1.15;}
+.extended-heading em{font-style:italic;color:var(--mauve-light);}
+.extended-intro{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.8;}
+.extended-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:rgba(255,255,255,0.06);}
+.extended-card{background:var(--plum-deep);padding:2.25rem 2rem;transition:background 0.25s;cursor:default;}
+.extended-card:hover{background:var(--plum);}
+.extended-num{font-family:'DM Serif Display',serif;font-size:40px;color:var(--amber);opacity:0.2;line-height:1;margin-bottom:0.75rem;font-style:italic;}
+.extended-tag{font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--mauve-light);margin-bottom:0.6rem;opacity:0.7;}
+.extended-card h3{font-family:'DM Serif Display',serif;font-size:21px;color:var(--white);margin-bottom:0.65rem;line-height:1.2;}
+.extended-card p{font-size:13px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.75;}
 
 /* ── PROCESS ── */
 #process{background:var(--oat);padding:100px 5rem;}
@@ -241,7 +256,7 @@ h1 em{font-style:italic;color:var(--mauve-light);}
 .about-tags{display:flex;flex-wrap:wrap;gap:8px;margin:2rem 0;}
 .about-tag{font-family:'Syne',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--mauve-light);border:1px solid rgba(201,168,206,0.3);padding:6px 14px;border-radius:2px;}
 .about-right{position:relative;background:var(--plum-mid);display:flex;align-items:center;justify-content:center;overflow:hidden;}
-.about-right::before{content:'AA';font-family:'DM Serif Display',serif;font-style:italic;font-size:280px;color:rgba(255,255,255,0.04);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);user-select:none;pointer-events:none;white-space:nowrap;}
+.about-right::before{content:'TBD';font-family:'DM Serif Display',serif;font-style:italic;font-size:280px;color:rgba(255,255,255,0.04);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);user-select:none;pointer-events:none;white-space:nowrap;}
 .about-placeholder{position:relative;z-index:2;width:220px;height:260px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;}
 .about-placeholder-icon{width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;font-size:28px;color:rgba(255,255,255,0.3);}
 .about-placeholder p{font-size:11px;color:rgba(255,255,255,0.25);text-align:center;padding:0 1rem;}
@@ -348,8 +363,12 @@ footer{background:var(--plum-deep);border-top:1px solid rgba(255,255,255,0.06);p
   .problem-items{grid-template-columns:1fr;}
   #services{padding:80px 2rem;}
   .services-header{grid-template-columns:1fr;gap:1.5rem;}
-  .service-row{grid-template-columns:60px 1fr;gap:1.5rem;}
-  .service-includes{display:none;}
+  .service-list{grid-template-columns:1fr;}
+  .service-row{border-top:3px solid var(--blush);border-left:none;}
+  .service-includes{display:block;}
+  #extended{padding:64px 2rem;}
+  .extended-header{grid-template-columns:1fr;gap:1.5rem;}
+  .extended-grid{grid-template-columns:1fr;}
   #process{padding:80px 2rem;}
   .process-track{grid-template-columns:1fr 1fr;gap:2rem;}
   .process-track::before{display:none;}
@@ -536,6 +555,40 @@ footer{background:var(--plum-deep);border-top:1px solid rgba(255,255,255,0.06);p
   </div>
 </section>
 
+<!-- EXTENDED SERVICES -->
+<section id="extended">
+  <div class="container">
+    <div class="extended-header">
+      <h2 class="extended-heading reveal">Also at<br><em>The Bid Desk</em></h2>
+      <p class="extended-intro reveal reveal-d1">Beyond managing your next bid, I help clients build long-term proposal capability — so every submission is faster, stronger, and more competitive than the last.</p>
+    </div>
+    <div class="extended-grid">
+
+      <div class="extended-card reveal">
+        <div class="extended-num">04</div>
+        <div class="extended-tag">For growing bid teams</div>
+        <h3>Content Library Building</h3>
+        <p>Your best proposal content — company overviews, team bios, past performance write-ups, capability statements — built once and reusable forever. Every bid you write after this gets faster and cheaper. I organize, write, and structure your library so it's ready when the next RFP drops.</p>
+      </div>
+
+      <div class="extended-card reveal reveal-d1">
+        <div class="extended-num">05</div>
+        <div class="extended-tag">For companies that bid regularly</div>
+        <h3>Proposal Audit</h3>
+        <p>You've been submitting bids but not winning — or winning less than you should. I conduct a structured review of your proposal process, past submissions, and compliance approach, and deliver a written assessment of exactly where you're losing points and what to fix. A fresh set of expert eyes on work you're too close to see clearly.</p>
+      </div>
+
+      <div class="extended-card reveal reveal-d2">
+        <div class="extended-num">06</div>
+        <div class="extended-tag">Beyond government procurement</div>
+        <h3>Sales Proposals</h3>
+        <p>Not every opportunity comes through a formal RFP. When you need a polished, persuasive proposal for a corporate client, a partnership pitch, or an unsolicited business opportunity, I apply the same discipline and structure that wins government contracts — clear writing, strong positioning, and a response built around what the reader actually cares about.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- PROCESS -->
 <section id="process">
   <div class="process-header">
@@ -584,9 +637,7 @@ footer{background:var(--plum-deep);border-top:1px solid rgba(255,255,255,0.06);p
     <a href="#cta" class="btn-primary">Book a free 20-minute call</a>
   </div>
   <div class="about-right">
-  <img src="desk-sketch.png" alt="" 
-style="width:100%;height:100%;object-fit:contain;
-object-position:center;padding:2rem;opacity:0.7;">
+
     <div class="about-badge">
       <div class="about-badge-num">4+</div>
       <div class="about-badge-label">Years in<br>proposals</div>
@@ -596,14 +647,16 @@ object-position:center;padding:2rem;opacity:0.7;">
 
 <!-- FOUNDER STRIP -->
 <section id="founder">
-<img src="akili.jpg" alt="Akili" class="reveal" style="width:80px;height:80px;border-radius:50%;object-fit:cover;object-position:top;flex-shrink:0;">  <div class="founder-text reveal reveal-d1">
+  <img src="akili.jpg" alt="Akili Atherley" class="reveal"
+style="width:80px;height:80px;border-radius:50%;object-fit:cover;object-position:top;flex-shrink:0;">
+  <div class="founder-text reveal reveal-d1">
     <div class="founder-label">The person behind The Bid Desk</div>
-    <div class="founder-name">Akili</div>
-    <p class="founder-bio">I've spent years in proposal management, supporting government and enterprise bids across Canada. I started The Bid Desk because I kept seeing capable businesses lose contracts they should have won, simply because nobody on their team knew how to run a bid. <strong>That's a solvable problem.</strong> This is how I solve it.</p>
+    <div class="founder-name">Akili Atherley</div>
+    <p class="founder-bio">I've spent years in proposal management, supporting government and enterprise bids across Canada — from small service providers bidding on their first contract to larger firms pursuing federal opportunities. I started The Bid Desk because I kept seeing capable businesses lose contracts they should have won, simply because nobody on their team knew how to run a bid. <strong>That's a solvable problem.</strong> This is how I solve it.</p>
   </div>
   <div class="founder-links reveal reveal-d2">
     <a href="https://linkedin.com/in/akiliatherley" target="_blank" rel="noopener" class="founder-link">LinkedIn</a>
-    <a href="mailto:akili@thebiddesk.ca" class="founder-link">Email me</a>
+    <a href="mailto:hello@thebiddesk.ca" class="founder-link">Email me</a>
   </div>
 </section>
 
@@ -661,7 +714,7 @@ object-position:center;padding:2rem;opacity:0.7;">
       <li><a href="#about">About</a></li>
       <li><a href="#cta">Contact</a></li>
     </ul>
-    <p class="footer-copy">&copy; 2026 The Bid Desk &nbsp;·&nbsp; akili@thebiddesk.ca</p>
+    <p class="footer-copy">&copy; 2026 The Bid Desk &nbsp;·&nbsp; hello@thebiddesk.ca</p>
   </div>
 </footer>
 
