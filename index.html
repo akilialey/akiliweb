@@ -3,7 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Bid Desk — Win Your First Government Contract</title>
+
+<!-- Primary SEO -->
+<title>The Bid Desk | Government Procurement Consultant Canada | Proposal Management</title>
+<meta name="description" content="The Bid Desk helps small and mid-sized Canadian businesses win government contracts. Expert proposal management, RFP writing, and bid support for companies new to public sector procurement.">
+<meta name="keywords" content="government procurement consultant Canada, proposal management Canada, RFP writing Canada, government bid support, win government contracts Canada, public sector procurement small business">
+<meta name="author" content="Akili Atherley, The Bid Desk">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thebiddesk.ca/">
+
+<!-- Open Graph (LinkedIn, Facebook previews) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thebiddesk.ca/">
+<meta property="og:title" content="The Bid Desk — Helping Canadian Businesses Win Government Contracts">
+<meta property="og:description" content="Expert proposal management and bid support for small and mid-sized Canadian businesses. We help you navigate government procurement from RFP to submission.">
+<meta property="og:image" content="https://thebiddesk.ca/og-image.png">
+<meta property="og:locale" content="en_CA">
+<meta property="og:site_name" content="The Bid Desk">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Bid Desk — Government Procurement Consultant Canada">
+<meta name="twitter:description" content="Helping Canadian businesses win government contracts. Expert proposal management for companies new to public sector procurement.">
+<meta name="twitter:image" content="https://thebiddesk.ca/og-image.png">
+
+<!-- Geo targeting -->
+<meta name="geo.region" content="CA">
+<meta name="geo.country" content="Canada">
+<meta name="language" content="English">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -388,6 +415,37 @@ footer{background:var(--plum-deep);border-top:1px solid rgba(255,255,255,0.06);p
   .nav-mobile a:hover{color:var(--white);}
 }
 </style>
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "The Bid Desk",
+  "description": "Government procurement consulting and proposal management for small and mid-sized Canadian businesses.",
+  "url": "https://thebiddesk.ca",
+  "founder": {
+    "@type": "Person",
+    "name": "Akili Atherley"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Canada"
+  },
+  "serviceType": [
+    "Proposal Management",
+    "Government Procurement Consulting",
+    "Bid Writing",
+    "RFP Response"
+  ],
+  "priceRange": "$$",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "hello@thebiddesk.ca",
+    "contactType": "customer service"
+  }
+}
+</script>
 </head>
 <body>
 
@@ -647,8 +705,9 @@ footer{background:var(--plum-deep);border-top:1px solid rgba(255,255,255,0.06);p
 
 <!-- FOUNDER STRIP -->
 <section id="founder">
-  <img src="akili.jpg" alt="Akili Atherley" class="reveal"
-style="width:80px;height:80px;border-radius:50%;object-fit:cover;object-position:top;flex-shrink:0;">
+  <img src="akili.jpg" alt="Akili" class="reveal"
+style="width:80px;height:80px;border-radius:50%;
+object-fit:cover;object-position:top;flex-shrink:0;">
   <div class="founder-text reveal reveal-d1">
     <div class="founder-label">The person behind The Bid Desk</div>
     <div class="founder-name">Akili Atherley</div>
@@ -732,11 +791,44 @@ const io = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
 }, {threshold: 0.1});
 reveals.forEach(el => io.observe(el));
-document.getElementById('submit-btn').addEventListener('click', function(e){
+document.getElementById('submit-btn').addEventListener('click', async function(e){
   e.preventDefault();
-  this.textContent = 'Message sent \u2713';
-  this.style.background = 'var(--plum-mid)';
-  setTimeout(() => { this.textContent = 'Send message \u2192'; this.style.background = ''; }, 3000);
+  const btn = this;
+  const data = {
+    name: document.getElementById('name').value,
+    company: document.getElementById('company').value,
+    email: document.getElementById('email').value,
+    service: document.getElementById('service').value,
+    message: document.getElementById('message').value
+  };
+  if (!data.email) { alert('Please enter your email address.'); return; }
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  try {
+    const res = await fetch('https://formspree.io/f/mbdwrybp', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    if (res.ok) {
+      btn.textContent = 'Message sent ✓';
+      btn.style.background = 'var(--plum-mid)';
+      ['name','company','email','service','message'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+    } else {
+      btn.textContent = 'Error — email us directly';
+      btn.disabled = false;
+    }
+  } catch {
+    btn.textContent = 'Error — email us directly';
+    btn.disabled = false;
+  }
+  setTimeout(() => {
+    btn.textContent = 'Send message →';
+    btn.style.background = '';
+    btn.disabled = false;
+  }, 4000);
 });
 </script>
 </body>
