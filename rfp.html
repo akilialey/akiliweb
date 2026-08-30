@@ -113,6 +113,7 @@ nav {
 .nav-mobile{display:none;position:fixed;top:60px;left:0;right:0;background:var(--plum-deep);border-top:1px solid rgba(255,255,255,0.06);flex-direction:column;padding:1rem 1.5rem 1.5rem;z-index:199;}
 .nav-mobile.open{display:flex;}
 .nav-mobile a{font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05);letter-spacing:0.04em;}
+.nav-mobile a.sub-link{padding-left:1.25rem;font-size:12px;color:rgba(255,255,255,0.35);}
 .nav-mobile a:hover{color:var(--white);}
 .nav-toggle span { width: 22px; height: 1.5px; background: var(--white); display: block; }
 
@@ -742,11 +743,13 @@ footer {
 </nav>
 <div class="nav-mobile" id="nav-mobile">
   <a href="index.html">Home</a>
-  <a href="#services">Services</a>
-  <a href="#process">How it works</a>
   <a href="#about">About</a>
-  <a href="grants.html">Grant Funding Services</a>
-  <a href="rfp.html">RFPs & Proposal Services</a>
+  <a href="rfp.html">RFP & Proposal Services</a>
+  <a href="rfp.html#services" class="sub-link">Services</a>
+  <a href="rfp.html#process" class="sub-link">How it works</a>
+  <a href="grants.html">Grant Funding</a>
+  <a href="grants.html#services" class="sub-link">Services</a>
+  <a href="grants.html#process" class="sub-link">How it works</a>
   <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener">Book a call</a>
 </div>
 
