@@ -83,7 +83,11 @@ nav {
   text-decoration: none; transition: all 0.2s;
 }
 .nav-cta:hover { background: var(--amber-light); transform: translateY(-1px); }
-.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.nav-mobile{display:none;position:fixed;top:60px;left:0;right:0;background:var(--plum-deep);border-top:1px solid rgba(255,255,255,0.06);flex-direction:column;padding:1rem 1.5rem 1.5rem;z-index:199;}
+.nav-mobile.open{display:flex;}
+.nav-mobile a{font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05);letter-spacing:0.04em;}
+.nav-mobile a:hover{color:var(--white);}
 .nav-toggle span { width: 22px; height: 1.5px; background: var(--white); display: block; }
 
 /* ── BUTTONS ── */
@@ -361,10 +365,6 @@ footer {
   nav { padding: 0 1.5rem; }
   .nav-links { display: none; }
   .nav-toggle { display: flex; }
-  .nav-mobile { display: none; position: absolute; top: 76px; left: 0; right: 0; background: var(--plum-deep); border-top: 1px solid rgba(255,255,255,0.06); flex-direction: column; padding: 1rem 1.5rem 1.5rem; }
-  .nav-mobile.open { display: flex; }
-  .nav-mobile a { font-size: 15px; color: rgba(255,255,255,0.5); text-decoration: none; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
-  .nav-mobile a:hover { color: var(--white); }
 }
 </style>
 
