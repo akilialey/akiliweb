@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bid Desk | Government Contracts & Grants for Canadian Businesses</title>
+<meta name="description" content="The Bid Desk helps Canadian businesses win government contracts and secure grant funding. Proposal management, bid support, and grant writing for Canadian SMBs.">
+<meta name="author" content="Akili, The Bid Desk">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thebiddesk.ca/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thebiddesk.ca/">
+<meta property="og:title" content="The Bid Desk — Helping Canadian Businesses Win Government Contracts & Grants">
+<meta property="og:description" content="Proposal management and bid support for government contracts, plus grant research, writing, and post-award reporting — for small and mid-sized Canadian businesses.">
+<meta property="og:image" content="https://thebiddesk.ca/og-image.png">
+<meta property="og:locale" content="en_CA">
+<meta name="geo.region" content="CA">
+<meta name="geo.country" content="Canada">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --plum:       #3A2640;
+  --plum-deep:  #261829;
+  --plum-mid:   #5A4460;
+  --plum-light: #7B5E84;
+  --mauve:      #9B6FA0;
+  --mauve-light:#C9A8CE;
+  --amber:      #DDB945;
+  --amber-light:#EDD07A;
+  --amber-pale: #FAF3DC;
+  --cream:      #FBF7F0;
+  --oat:        #EDE3D8;
+  --blush:      #DDD0CC;
+  --white:      #FFFFFF;
+  --muted:      #8A7090;
+  --text:       #2D1F33;
+  --radius-sm:  20px;
+  --radius-md:  32px;
+  --radius-lg:  48px;
+  --radius-pill:100px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ── TYPOGRAPHY ── */
+.display {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.display em { font-style: italic; color: var(--mauve); }
+.display-light { font-family: 'DM Serif Display', serif; font-weight: 300; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  height: 68px; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 3rem;
+  background: rgba(38, 24, 41, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(201,168,206,0.08);
+}
+.nav-logo {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 500; font-size: 20px;
+  color: var(--white); text-decoration: none; letter-spacing: 0.04em;
+}
+.nav-logo span { color: var(--amber); font-style: italic; }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a {
+  font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.5);
+  text-decoration: none; letter-spacing: 0.04em; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--white); }
+.nav-cta {
+  font-size: 13px; font-weight: 600; letter-spacing: 0.02em;
+  color: var(--plum-deep); background: var(--amber);
+  padding: 10px 24px; border-radius: var(--radius-pill);
+  text-decoration: none; transition: all 0.2s;
+}
+.nav-cta:hover { background: var(--amber-light); transform: translateY(-1px); }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
+.nav-toggle span { width: 22px; height: 1.5px; background: var(--white); display: block; }
+
+/* ── BUTTONS ── */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Syne', sans-serif;
+  font-size: 13px; font-weight: 600; letter-spacing: 0.02em;
+  padding: 14px 32px; border-radius: var(--radius-pill);
+  text-decoration: none; border: none; cursor: pointer;
+  transition: all 0.25s;
+}
+.btn-amber { color: var(--plum-deep); background: var(--amber); }
+.btn-amber:hover { background: var(--amber-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(221,185,69,0.3); }
+.btn-outline { color: var(--plum); background: transparent; border: 1.5px solid var(--plum); }
+.btn-outline:hover { background: var(--plum); color: var(--white); transform: translateY(-2px); }
+.btn-white { color: var(--plum-deep); background: var(--white); }
+.btn-white:hover { background: var(--amber-pale); transform: translateY(-2px); }
+.btn-ghost {
+  font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.5);
+  text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+  transition: color 0.2s;
+}
+.btn-ghost:hover { color: var(--white); }
+.btn-ghost::after { content: '↓'; }
+
+/* ── HERO ── */
+#hero {
+  min-height: 100vh;
+  background: var(--plum-deep);
+  display: grid; grid-template-columns: 1fr 1fr;
+  position: relative; overflow: hidden;
+}
+.hero-bg-circle {
+  position: absolute; border-radius: 50%;
+  pointer-events: none;
+}
+.hero-bg-circle-1 {
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(155,111,160,0.15) 0%, transparent 70%);
+  top: -100px; left: -100px;
+}
+.hero-bg-circle-2 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(221,185,69,0.08) 0%, transparent 70%);
+  bottom: 0; right: 300px;
+}
+.hero-left {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 160px 4rem 80px 5rem;
+  position: relative; z-index: 2;
+}
+.hero-eyebrow {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--amber); margin-bottom: 2rem;
+  display: flex; align-items: center; gap: 12px;
+}
+.hero-eyebrow::before { content: ''; display: block; width: 28px; height: 1px; background: var(--amber); }
+.hero-h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(52px, 6vw, 88px);
+  line-height: 1.0; color: var(--white);
+  margin-bottom: 2rem; font-weight: 400;
+}
+.hero-h1 em { font-style: italic; color: var(--mauve-light); }
+.hero-body {
+  font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.6);
+  line-height: 1.8; max-width: 400px; margin-bottom: 3rem;
+}
+.hero-actions { display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap; }
+.hero-right {
+  position: relative; background: rgba(90,68,96,0.3);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 3rem; overflow: hidden;
+}
+.hero-right::before {
+  content: ''; position: absolute; inset: 0;
+  background: repeating-linear-gradient(-45deg, transparent, transparent 60px, rgba(255,255,255,0.012) 60px, rgba(255,255,255,0.012) 61px);
+}
+.hero-stats {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+  border-radius: var(--radius-md); overflow: hidden;
+}
+.hero-stat {
+  padding: 2rem 1.75rem;
+  background: rgba(38,24,41,0.7);
+  transition: background 0.2s;
+}
+.hero-stat:first-child { border-radius: var(--radius-md) 0 0 0; }
+.hero-stat:nth-child(2) { border-radius: 0 var(--radius-md) 0 0; }
+.hero-stat:nth-child(3) { border-radius: 0 0 0 var(--radius-md); }
+.hero-stat:last-child { border-radius: 0 0 var(--radius-md) 0; }
+.hero-stat:hover { background: rgba(90,68,96,0.6); }
+.stat-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 44px; color: var(--amber);
+  line-height: 1; margin-bottom: 0.5rem; font-weight: 500;
+}
+.stat-label { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.45); line-height: 1.6; }
+
+/* ── TICKER ── */
+.ticker-bar { background: var(--amber); padding: 14px 0; overflow: hidden; }
+.ticker-inner { display: flex; white-space: nowrap; animation: ticker 30s linear infinite; }
+.ticker-item {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--plum-deep); padding: 0 2.5rem;
+  display: flex; align-items: center; gap: 2.5rem;
+}
+.ticker-item::after { content: '·'; font-size: 18px; }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ── SECTIONS ── */
+.section { padding: 100px 5rem; }
+.section-sm { padding: 64px 5rem; }
+.section-eyebrow {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--mauve); margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 10px;
+}
+.section-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--mauve); }
+
+/* ── STATEMENT ── */
+#statement {
+  background: var(--cream);
+  display: grid; grid-template-columns: 1fr 2fr; gap: 5rem; align-items: start;
+}
+.statement-label {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--mauve); padding-top: 12px;
+}
+.statement-text {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(30px, 3.5vw, 46px);
+  line-height: 1.2; color: var(--plum); font-weight: 400;
+}
+.statement-text em { font-style: italic; color: var(--mauve); }
+
+/* ── PROBLEM/PATHS (shared card grid) ── */
+#problem, #paths { background: var(--oat); }
+.problem-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;
+  margin-top: 3rem;
+}
+.problem-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 2.25rem;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+.problem-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--blush);
+  box-shadow: 0 16px 48px rgba(58,38,64,0.08);
+}
+.problem-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 48px; color: var(--blush);
+  line-height: 1; font-style: italic; margin-bottom: 1.25rem;
+  font-weight: 300;
+}
+.problem-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--amber); margin-bottom: 0.75rem;
+}
+.problem-card h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 24px; color: var(--plum);
+  margin-bottom: 0.75rem; line-height: 1.2; font-weight: 500;
+}
+.problem-card p { font-size: 14px; font-weight: 300; color: var(--plum-mid); line-height: 1.8; }
+
+/* ── ABOUT ── */
+#about {
+  background: var(--plum);
+  display: grid; grid-template-columns: 1fr 1fr; min-height: 80vh;
+}
+.about-left {
+  padding: 100px 4rem 100px 5rem;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.about-eyebrow { color: var(--amber) !important; }
+.about-eyebrow::before { background: var(--amber) !important; }
+.about-h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(36px, 4vw, 54px);
+  color: var(--white); line-height: 1.1; font-weight: 400;
+  margin-bottom: 2rem;
+}
+.about-h2 em { font-style: italic; color: var(--mauve-light); }
+.about-left p {
+  font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.6);
+  line-height: 1.85; margin-bottom: 1.25rem;
+}
+.about-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 2rem 0; }
+.about-tag {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--mauve-light); border: 1px solid rgba(201,168,206,0.25);
+  padding: 7px 18px; border-radius: var(--radius-pill);
+}
+.about-right {
+  position: relative; background: var(--plum-mid);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.about-right::before {
+  content: 'TBD';
+  font-family: 'DM Serif Display', serif; font-style: italic;
+  font-size: 260px; color: rgba(255,255,255,0.04);
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none; pointer-events: none; white-space: nowrap;
+}
+.about-badge {
+  position: absolute; bottom: 48px; right: 48px; z-index: 3;
+  background: var(--amber); padding: 1.5rem 1.75rem;
+  border-radius: var(--radius-md); text-align: center;
+}
+.about-badge-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 44px; color: var(--plum-deep); line-height: 1; margin-bottom: 4px; font-weight: 500;
+}
+.about-badge-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--plum-deep); opacity: 0.7;
+}
+
+/* ── FOUNDER ── */
+#founder {
+  background: var(--oat);
+  border-top: 1px solid var(--blush);
+  padding: 72px 5rem;
+  display: grid; grid-template-columns: auto 1fr auto; gap: 3rem; align-items: center;
+}
+.founder-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--mauve); margin-bottom: 6px;
+}
+.founder-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 28px; color: var(--plum); margin-bottom: 8px; font-weight: 500;
+}
+.founder-bio { font-size: 14px; font-weight: 300; color: var(--plum-mid); line-height: 1.8; max-width: 560px; }
+.founder-bio strong { font-weight: 600; color: var(--plum); }
+.founder-links { display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
+.founder-link {
+  font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--plum-mid); text-decoration: none;
+  display: flex; align-items: center; gap: 5px; transition: color 0.2s;
+}
+.founder-link:hover { color: var(--plum); }
+.founder-link::after { content: '↗'; font-size: 12px; }
+
+/* ── CTA ── */
+#cta { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+.cta-eyebrow { color: var(--mauve); }
+.cta-eyebrow::before { background: var(--mauve); }
+.cta-h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(36px, 4vw, 56px); color: var(--plum);
+  line-height: 1.05; font-weight: 400; margin-bottom: 1.5rem;
+}
+.cta-h2 em { font-style: italic; color: var(--mauve); }
+.cta-left p { font-size: 15px; font-weight: 300; color: var(--plum-mid); line-height: 1.8; margin-bottom: 2rem; }
+.cta-book-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 13px; font-weight: 600;
+  color: var(--plum-deep); background: var(--amber);
+  padding: 15px 32px; border-radius: var(--radius-pill);
+  text-decoration: none; transition: all 0.25s; margin-bottom: 1rem;
+}
+.cta-book-btn:hover { background: var(--amber-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(221,185,69,0.3); }
+.cta-sub { font-size: 13px; font-weight: 300; color: var(--muted); display: block; margin-bottom: 2rem; }
+.contact-card {
+  background: var(--plum); border-radius: var(--radius-md); padding: 2.5rem;
+}
+.contact-card-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--mauve-light); margin-bottom: 1.75rem;
+}
+.form-field { margin-bottom: 1.25rem; }
+.form-field label {
+  display: block; font-size: 10px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(201,168,206,0.6); margin-bottom: 7px;
+}
+.form-field input, .form-field textarea, .form-field select {
+  width: 100%; background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-sm); padding: 12px 16px;
+  font-family: 'Syne', sans-serif;
+  font-size: 14px; font-weight: 300; color: var(--white);
+  outline: none; transition: border-color 0.2s; -webkit-appearance: none;
+}
+.form-field input::placeholder, .form-field textarea::placeholder { color: rgba(255,255,255,0.2); }
+.form-field input:focus, .form-field textarea:focus, .form-field select:focus { border-color: var(--amber); }
+.form-field select option { background: var(--plum); color: var(--white); }
+.form-field textarea { resize: vertical; min-height: 100px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-submit {
+  width: 100%; font-family: 'Syne', sans-serif;
+  font-size: 13px; font-weight: 600; letter-spacing: 0.04em;
+  color: var(--plum-deep); background: var(--amber);
+  border: none; border-radius: var(--radius-pill); padding: 14px;
+  cursor: pointer; transition: background 0.2s; margin-top: 0.5rem;
+}
+.form-submit:hover { background: var(--amber-light); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--plum-deep);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 2.5rem 5rem;
+}
+.footer-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 1.5rem;
+}
+.footer-logo {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 500; font-size: 18px;
+  color: var(--white); text-decoration: none;
+}
+.footer-logo span { color: var(--amber); font-style: italic; }
+.footer-nav { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
+.footer-nav a { font-size: 12px; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; font-weight: 300; }
+.footer-nav a:hover { color: var(--white); }
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.15); font-weight: 300; }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+.hero-left > * { opacity: 0; animation: fadeUp 0.8s ease both; }
+.hero-left .hero-eyebrow { animation-delay: 0.1s; }
+.hero-left .hero-h1 { animation-delay: 0.25s; }
+.hero-left .hero-body { animation-delay: 0.4s; }
+.hero-left .hero-actions { animation-delay: 0.55s; }
+.hero-right { opacity: 0; animation: fadeUp 0.8s ease 0.6s both; }
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-d1 { transition-delay: 0.1s; }
+.reveal-d2 { transition-delay: 0.2s; }
+.reveal-d3 { transition-delay: 0.3s; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  #hero { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .hero-left { padding: 120px 2rem 80px; }
+  #statement { grid-template-columns: 1fr; padding: 80px 2rem; gap: 2rem; }
+  .section { padding: 80px 2rem; }
+  .section-sm { padding: 48px 2rem; }
+  #problem, #paths { padding: 80px 2rem; }
+  .problem-grid { grid-template-columns: 1fr; }
+  #about { grid-template-columns: 1fr; }
+  .about-right { display: none; }
+  .about-left { padding: 80px 2rem; }
+  #founder { grid-template-columns: 1fr; padding: 48px 2rem; gap: 1.5rem; }
+  .founder-links { align-items: flex-start; flex-direction: row; }
+  #cta { grid-template-columns: 1fr; padding: 80px 2rem; gap: 3rem; }
+  footer { padding: 2rem; }
+  nav { padding: 0 1.5rem; }
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .nav-mobile { display: none; position: absolute; top: 68px; left: 0; right: 0; background: var(--plum-deep); border-top: 1px solid rgba(255,255,255,0.06); flex-direction: column; padding: 1rem 1.5rem 1.5rem; }
+  .nav-mobile.open { display: flex; }
+  .nav-mobile a { font-size: 15px; color: rgba(255,255,255,0.5); text-decoration: none; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .nav-mobile a:hover { color: var(--white); }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "The Bid Desk",
+  "description": "Government procurement consulting, proposal management, and grant writing for Canadian businesses.",
+  "url": "https://thebiddesk.ca",
+  "founder": { "@type": "Person", "name": "Akili Atherley" },
+  "areaServed": { "@type": "Country", "name": "Canada" },
+  "serviceType": ["Fractional Proposal Manager","Proposal Process Audit","Content Library Development","Procurement Readiness","Bid Review and Support","Grant Research and Matching","Grant Application Writing","Post-Award Reporting Support","Document Design"],
+  "priceRange": "$$",
+  "contactPoint": { "@type": "ContactPoint", "email": "akili@thebiddesk.ca", "contactType": "customer service" }
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">The Bid Desk<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="rfp.html">Government Contracts</a></li>
+    <li><a href="grants.html">Grants</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener" class="nav-cta">Book a call</a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="rfp.html">Government Contracts</a>
+  <a href="grants.html">Grants</a>
+  <a href="#about">About</a>
+  <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener">Book a call</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-circle hero-bg-circle-1"></div>
+  <div class="hero-bg-circle hero-bg-circle-2"></div>
+  <div class="hero-left">
+    <p class="hero-eyebrow">Government Contracts &amp; Grants · Canada</p>
+    <h1 class="hero-h1">Two paths.<br>One partner who<br><em>gets you funded.</em></h1>
+    <p class="hero-body">The Bid Desk helps Canadian businesses win government contracts and secure grant funding — with the proposal expertise to make every submission count.</p>
+    <div class="hero-actions">
+      <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener" class="btn btn-amber">Book a free call</a>
+      <a href="#paths" class="btn-ghost">See how I help</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stats" style="grid-template-columns: 1fr; gap: 2px;">
+      <a href="rfp.html" class="hero-stat" style="border-radius: var(--radius-md); text-decoration: none; margin-bottom: 2px;">
+        <div class="stat-num" style="font-size: 30px;">Government Contracts</div>
+        <div class="stat-label">Full proposal management, bid review, procurement readiness, and fractional proposal leadership for RFPs, tenders, and standing offers.</div>
+      </a>
+      <a href="grants.html" class="hero-stat" style="border-radius: var(--radius-md); text-decoration: none;">
+        <div class="stat-num" style="font-size: 30px;">Grants &amp; Funding</div>
+        <div class="stat-label">Grant research and matching, application writing, and post-award reporting for businesses and nonprofits.</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-bar" aria-hidden="true">
+  <div class="ticker-inner">
+    <span class="ticker-item">Fractional proposal management</span>
+    <span class="ticker-item">Grant writing &amp; research</span>
+    <span class="ticker-item">Proposal process audit</span>
+    <span class="ticker-item">Grant research &amp; matching</span>
+    <span class="ticker-item">Procurement readiness</span>
+    <span class="ticker-item">Post-award reporting</span>
+    <span class="ticker-item">Bid review &amp; support</span>
+    <span class="ticker-item">RFP writing &amp; response</span>
+    <span class="ticker-item">Government contracts</span>
+    <span class="ticker-item">Provincial grants</span>
+    <span class="ticker-item">CanadaBuys · MERX</span>
+    <span class="ticker-item">Fractional proposal management</span>
+    <span class="ticker-item">Grant writing &amp; research</span>
+    <span class="ticker-item">Proposal process audit</span>
+    <span class="ticker-item">Grant research &amp; matching</span>
+    <span class="ticker-item">Procurement readiness</span>
+    <span class="ticker-item">Post-award reporting</span>
+    <span class="ticker-item">Bid review &amp; support</span>
+    <span class="ticker-item">RFP writing &amp; response</span>
+    <span class="ticker-item">Government contracts</span>
+    <span class="ticker-item">Provincial grants</span>
+    <span class="ticker-item">CanadaBuys · MERX</span>
+  </div>
+</div>
+
+<!-- STATEMENT -->
+<section id="statement" class="section reveal">
+  <div class="statement-label">What we do</div>
+  <div class="statement-text reveal reveal-d1">
+    The Bid Desk helps Canadian businesses win government contracts and secure grant funding — with one experienced proposal professional handling both, so you don't need two different specialists to grow. <em>You deserve a process that actually works, whichever door you're walking through.</em>
+  </div>
+</section>
+
+<!-- PATHS -->
+<section id="paths" class="section">
+  <div class="section-eyebrow reveal">How I can help</div>
+  <h2 class="display reveal reveal-d1" style="font-size: clamp(32px,4vw,52px); max-width: 640px; margin-bottom: 0;">Two ways to grow with <em>funded work</em></h2>
+  <div class="problem-grid">
+    <div class="problem-card reveal">
+      <div class="problem-label">Government Contracts</div>
+      <h3>Win the RFPs, tenders &amp; standing offers you bid on</h3>
+      <p>Full proposal management, bid review, procurement readiness, content library development, and fractional proposal leadership — for businesses actively pursuing government work.</p>
+      <a href="rfp.html" class="btn btn-outline" style="margin-top: 1.5rem;">Explore contract services →</a>
+    </div>
+    <div class="problem-card reveal reveal-d1">
+      <div class="problem-label">Grants &amp; Funding</div>
+      <h3>Find and win the grants you qualify for</h3>
+      <p>Grant research and matching, application writing, and post-award reporting support — for businesses and nonprofits chasing funding, not contracts.</p>
+      <a href="grants.html" class="btn btn-outline" style="margin-top: 1.5rem;">Explore grant services →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-left reveal">
+    <div class="section-eyebrow about-eyebrow">About The Bid Desk</div>
+    <h2 class="about-h2">One desk.<br><em>Every funding path.</em></h2>
+    <p>The Bid Desk is a Canadian proposal management and procurement consultancy built for small and mid-sized businesses that want to compete for government contracts and grant funding — and keep winning them.</p>
+    <p>Some clients come with a single bid or application and need an expert review before it goes in. Others have been pursuing funding for years and can't figure out why their win rate isn't climbing. Both problems are solvable — the approach is the same: understand the full picture, build a real plan, and execute without shortcuts.</p>
+    <p>There are no junior consultants here. No rotating teams. When you work with The Bid Desk, you get a single experienced practitioner who is accountable from start to finish.</p>
+    <div class="about-tags">
+      <span class="about-tag">Federal procurement</span>
+      <span class="about-tag">Provincial RFPs</span>
+      <span class="about-tag">Grants &amp; funding</span>
+      <span class="about-tag">Enterprise bids</span>
+      <span class="about-tag">CanadaBuys</span>
+      <span class="about-tag">MERX</span>
+      <span class="about-tag">Fractional leadership</span>
+    </div>
+    <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener" class="btn btn-white">Book a free 20-minute call</a>
+  </div>
+  <div class="about-right">
+    <div class="about-badge">
+      <div class="about-badge-num">4+</div>
+      <div class="about-badge-label">Years in<br>proposals</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section id="founder">
+  <img src="akili.jpg" alt="Akili" class="reveal"
+    style="width:80px;height:80px;border-radius:50%;object-fit:cover;object-position:top;flex-shrink:0;box-shadow:0 4px 16px rgba(58,38,64,0.15);">
+  <div class="reveal reveal-d1">
+    <div class="founder-label">The person behind The Bid Desk</div>
+    <div class="founder-name">Hi! I'm Akili</div>
+    <p class="founder-bio">I’ve spent years inside proposal teams supporting government and enterprise bids across Canada. I’ve seen strong companies lose contracts and funding they should have won — not because they lacked capability, but because their response process broke down under pressure. Disconnected content. Inconsistent messaging. Last-minute scrambling. That’s not a talent issue. It’s a <em>structural</em> one. The Bid Desk exists to fix that — by giving growing companies the systems, content, and infrastructure they need to respond like a mature, high-performing team, whether they're chasing a contract or a grant.</p>
+  </div>
+  <div class="founder-links reveal reveal-d2">
+    <a href="https://linkedin.com/in/akiliatherley" target="_blank" rel="noopener" class="founder-link">LinkedIn</a>
+    <a href="mailto:akili@thebiddesk.ca" class="founder-link">Email me</a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta" class="section">
+  <div class="cta-left reveal">
+    <div class="section-eyebrow cta-eyebrow">Ready to start?</div>
+    <h2 class="cta-h2">Ready to get<br><em>funded?</em></h2>
+    <p>Book a free 20-minute call. Tell me about the contract you're bidding on or the grant you're chasing. I'll tell you honestly where the gaps are and whether working together makes sense. No pitch, no pressure.</p>
+    <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener" class="cta-book-btn">
+      📅 &nbsp;Pick a time — book directly
+    </a>
+    <span class="cta-sub">Prefer to write first? Use the form.</span>
+    <p style="font-size:13px;color:var(--muted);">Based in Canada &nbsp;·&nbsp; Serving clients nationwide &nbsp;·&nbsp; Responding within one business day</p>
+  </div>
+  <div class="reveal reveal-d1">
+    <div class="contact-card">
+      <div class="contact-card-label">Or send a message</div>
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" placeholder="Jane Smith">
+        </div>
+        <div class="form-field">
+          <label for="company">Company</label>
+          <input type="text" id="company" placeholder="Acme Inc.">
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="jane@thebiddesk.ca">
+      </div>
+      <div class="form-field">
+        <label for="service">What do you need?</label>
+        <select id="service">
+          <option value="">Choose a service&#8230;</option>
+          <option>Fractional Proposal Manager (retainer)</option>
+          <option>Content Library Development &amp; Management</option>
+          <option>Proposal Process Audit</option>
+          <option>Procurement Readiness</option>
+          <option>Bid Review &amp; Support</option>
+          <option>Document Design (flyers, decks, templates)</option>
+          <option>Grant Research &amp; Matching</option>
+          <option>Grant Application Writing</option>
+          <option>Post-Award Reporting Support</option>
+          <option>Not sure yet — let's talk</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="message">Tell me about your situation</label>
+        <textarea id="message" placeholder="Are you chasing a contract, a grant, or both? What's the deadline?"></textarea>
+      </div>
+      <!-- Formspree ID: mbdwrybp -->
+      <button class="form-submit" id="submit-btn">Send message →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo">The Bid Desk<span>.</span></a>
+    <ul class="footer-nav">
+      <li><a href="rfp.html">Government Contracts</a></li>
+      <li><a href="grants.html">Grants</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#cta">Contact</a></li>
+    </ul>
+    <p class="footer-copy">&copy; 2026 The Bid Desk &nbsp;·&nbsp; akili@thebiddesk.ca</p>
+  </div>
+</footer>
+
+<script>
+// Nav
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 30), {passive:true});
+document.getElementById('nav-toggle').addEventListener('click', () => {
+  document.getElementById('nav-mobile').classList.toggle('open');
+});
+document.querySelectorAll('#nav-mobile a').forEach(a => a.addEventListener('click', () => {
+  document.getElementById('nav-mobile').classList.remove('open');
+}));
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }});
+}, {threshold: 0.1});
+reveals.forEach(el => io.observe(el));
+
+// Contact form — Formspree ID: mbdwrybp
+document.getElementById('submit-btn').addEventListener('click', async function(e) {
+  e.preventDefault();
+  const btn = this;
+  const data = {
+    name:    document.getElementById('name').value,
+    company: document.getElementById('company').value,
+    email:   document.getElementById('email').value,
+    service: document.getElementById('service').value,
+    message: document.getElementById('message').value
+  };
+  if (!data.email) { alert('Please enter your email address.'); return; }
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  try {
+    const res = await fetch('https://formspree.io/f/mbdwrybp', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    if (res.ok) {
+      btn.textContent = 'Message sent ✓';
+      btn.style.background = 'var(--plum-mid)';
+      ['name','company','email','service','message'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+    } else {
+      btn.textContent = 'Error — email us directly';
+      btn.disabled = false;
+    }
+  } catch {
+    btn.textContent = 'Error — email us directly';
+    btn.disabled = false;
+  }
+  setTimeout(() => {
+    btn.textContent = 'Send message →';
+    btn.style.background = '';
+    btn.disabled = false;
+  }, 4000);
+});
+</script>
+</body>
+</html>
