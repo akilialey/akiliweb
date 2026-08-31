@@ -1,0 +1,16 @@
+---
+layout: base.njk
+---
+<section class="post-hero">
+  <p class="post-hero-eyebrow">{{ eyebrow or "The Bid Desk Blog" }}</p>
+  <h1>{{ title }}</h1>
+  <p class="post-hero-date">{{ date | readableDate }}</p>
+</section>
+
+<article class="post-body">
+  {{ content | safe }}
+</article>
+
+<div class="post-cta">
+  <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener">📅 Book a free call</a>
+</div>

@@ -1,0 +1,20 @@
+---
+layout: base.njk
+title: Blog
+permalink: /blog/index.html
+---
+<section class="blog-hero">
+  <p class="blog-hero-eyebrow">Insights</p>
+  <h1>Contracts &amp; Grants, Explained</h1>
+</section>
+
+<div class="blog-list">
+  {%- for post in collections.posts %}
+  <a href="{{ post.url }}" class="post-card">
+    <p class="post-card-date">{{ post.date | readableDate }}</p>
+    <h2 class="post-card-title">{{ post.data.title }}</h2>
+    <p class="post-card-excerpt">{{ post.data.excerpt }}</p>
+    <span class="post-card-read">Read more →</span>
+  </a>
+  {%- endfor %}
+</div>

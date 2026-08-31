@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title }} | The Bid Desk</title>
+<meta name="description" content="{{ description or 'Government contracts and grant funding insights for Canadian businesses, from The Bid Desk.' }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/blog.css">
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="/index.html" class="nav-logo">The Bid Desk<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/index.html#about">About</a></li>
+    <li class="nav-item-dropdown">
+      <a href="/rfp.html">RFP & Proposal Services</a>
+      <div class="nav-dropdown">
+        <a href="/rfp.html#services">Services</a>
+        <a href="/rfp.html#process">How it works</a>
+      </div>
+    </li>
+    <li class="nav-item-dropdown">
+      <a href="/grants.html">Grant Funding</a>
+      <div class="nav-dropdown">
+        <a href="/grants.html#services">Services</a>
+        <a href="/grants.html#process">How it works</a>
+      </div>
+    </li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+  <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener" class="nav-cta">Book a call</a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="/index.html">Home</a>
+  <a href="/index.html#about">About</a>
+  <a href="/rfp.html">RFP & Proposal Services</a>
+  <a href="/rfp.html#services" class="sub-link">Services</a>
+  <a href="/rfp.html#process" class="sub-link">How it works</a>
+  <a href="/grants.html">Grant Funding</a>
+  <a href="/grants.html#services" class="sub-link">Services</a>
+  <a href="/grants.html#process" class="sub-link">How it works</a>
+  <a href="/blog/">Blog</a>
+  <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener">Book a call</a>
+</div>
+
+{{ content | safe }}
+
+<footer>
+  <div class="footer-inner">
+    <a href="/index.html" class="footer-logo">The Bid Desk<span>.</span></a>
+    <ul class="footer-nav">
+      <li><a href="/rfp.html">Contracts</a></li>
+      <li><a href="/grants.html">Grants</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/index.html#cta">Contact</a></li>
+    </ul>
+    <p class="footer-copy">&copy; 2026 The Bid Desk &nbsp;·&nbsp; akili@thebiddesk.ca</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('nav-toggle').addEventListener('click', () => {
+  document.getElementById('nav-mobile').classList.toggle('open');
+});
+document.querySelectorAll('#nav-mobile a').forEach(a => a.addEventListener('click', () => {
+  document.getElementById('nav-mobile').classList.remove('open');
+}));
+</script>
+</body>
+</html>
