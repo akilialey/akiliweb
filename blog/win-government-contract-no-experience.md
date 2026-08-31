@@ -1,13 +1,13 @@
 ---
 layout: post.njk
-title: How to Win a Government Contract With No Experience (Yes, It's Possible)
+title: How to Win an RFP With No Experience (Yes, It's Possible)
 excerpt: You need experience to win a contract, and a contract to get experience. Here's how Canadian small businesses actually break that cycle.
 eyebrow: RFPs & Proposals
 date: 2026-08-31
 permalink: /blog/win-government-contract-no-experience/index.html
 ---
 
-You need past performance to win a government contract. You need a government contract to build past performance. If that sentence made you want to close this tab, you're not alone - it's the single most common reason capable small business owners never bid at all.
+You need past performance to win a government contract like an RFP. You need a government contract to build past performance. If that sentence made you want to close this tab, you're not alone - it's the single most common reason capable small business owners never bid at all.
 
 So let's actually talk about it, because "it's possible" isn't the same as "here's how."
 
