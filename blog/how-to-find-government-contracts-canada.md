@@ -3,7 +3,7 @@ layout: post.njk
 title: How to Find Government Contracts in Canada — A Beginner's Guide for Small Businesses
 excerpt: Where Canadian government contracts actually get posted, how to register, the mistakes that trip up almost every beginner, and the part nobody tells you about.
 eyebrow: RFPs & Proposals
-date: 2026-08-31
+date: 2026-08-30
 permalink: /blog/how-to-find-government-contracts-canada/index.html
 ---
 
