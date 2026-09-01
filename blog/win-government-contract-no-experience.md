@@ -1,6 +1,6 @@
 ---
 layout: post.njk
-title: How to Win an RFP With No Experience (Yes, It's Possible)
+title: How to Win an RFP With No Experience (Yes, It's Hard, But Not Impossible)
 excerpt: You need experience to win a contract, and a contract to get experience. Here's how Canadian small businesses actually break that cycle.
 eyebrow: RFPs & Proposals
 date: 2026-08-31
