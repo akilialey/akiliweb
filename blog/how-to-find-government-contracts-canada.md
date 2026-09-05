@@ -1,13 +1,13 @@
 ---
 layout: post.njk
-title: How to Find Government Contracts in Canada — A Beginner's Guide for Small Businesses
+title: How to Find Government Contracts in Canada - A Beginner's Guide for Small Businesses
 excerpt: Where Canadian government contracts actually get posted, how to register, the mistakes that trip up almost every beginner, and the part nobody tells you about.
 eyebrow: RFPs & Proposals
 date: 2026-08-30
 permalink: /blog/how-to-find-government-contracts-canada/index.html
 ---
 
-Let's say you just found out the Canadian government spends over $25 billion a year buying goods and services from businesses like yours. Naturally, you google "how to find government contracts in Canada." You land on a page that says "just check CanadaBuys," click through, see a wall of acronyms — SRI, SAP Ariba, UNSPSC — and close the tab.
+Let's say you just found out the Canadian government spends over $25 billion a year buying goods and services from businesses like yours. Naturally, you google "how to find government contracts in Canada." You land on a page that says "just check CanadaBuys," click through, see a wall of acronyms - SRI, SAP Ariba, UNSPSC - and close the tab.
 
 If that's you, take a breath. None of this is actually complicated once someone walks you through it in plain English. That's what this post is. No jargon you have to decode, no assuming you already know what any of this means. Just: here's where the contracts are, here's how to actually get in front of them, and here's what trips up almost everyone the first time.
 
@@ -39,7 +39,7 @@ None of it costs money. It's just paperwork that's much easier to do on a slow T
 
 Here's a mistake almost every beginner makes: typing your industry into the search bar and expecting good results. Search "marketing" or "construction" on CanadaBuys and you'll get buried in listings that have nothing to do with what you actually offer.
 
-Government buyers describe what they need using specific classification codes and precise language — often not the words you'd naturally use to describe your own business. Once you figure out the right terms and codes for your industry, set up saved searches and email alerts so opportunities land in your inbox automatically. You want to be the person who gets notified, not the person manually refreshing a webpage hoping to get lucky.
+Government buyers describe what they need using specific classification codes and precise language - often not the words you'd naturally use to describe your own business. Once you figure out the right terms and codes for your industry, set up saved searches and email alerts so opportunities land in your inbox automatically. You want to be the person who gets notified, not the person manually refreshing a webpage hoping to get lucky.
 
 ## Step 3: Zoom out past federal
 
@@ -57,21 +57,21 @@ If you're not on the relevant list, that work is completely invisible - you coul
 
 ## A quick 2026 update
 
-Public Services and Procurement Canada is rolling out a new Small Business Procurement Program, with the first phase being scheduled to launch in summer 2026 — designed to make requirements friendlier for smaller businesses and introduce more standardized templates. If you're just starting out, this is genuinely good timing. The government is actively trying to make this more accessible, not less.
+Public Services and Procurement Canada is rolling out a new Small Business Procurement Program, with the first phase being scheduled to launch in summer 2026 - designed to make requirements friendlier for smaller businesses and introduce more standardized templates. If you're just starting out, this is genuinely good timing. The government is actively trying to make this more accessible, not less.
 
 ## Quick answers to what you're probably wondering
 
 **Do I have to pay to find government contracts?**
-No - you never have to pay to find or bid on a government contract in Canada. Official portals — CanadaBuys for federal, and every province and territory's own site — are free. You may run into paid aggregators like MERX along the way, which charge for convenience features like one-stop alerts and document downloads across sources. They're not required — the same opportunities almost always exist for free on the official government source. If a paid subscription is being presented as your only way in, that's worth being skeptical of.
+No - you never have to pay to find or bid on a government contract in Canada. Official portals - CanadaBuys for federal, and every province and territory's own site - are free. You may run into paid aggregators like MERX along the way, which charge for convenience features like one-stop alerts and document downloads across sources. They're not required - the same opportunities almost always exist for free on the official government source. If a paid subscription is being presented as your only way in, that's worth being skeptical of.
 
 **How long does registration actually take?**
 It varies, but plan for it to take longer than you'd expect for a "just fill out a form" task - often a couple of weeks once you account for verification steps. Which is exactly why doing it now, before you need it, matters so much.
 
 **Do I need a lawyer or a consultant just to register?**
-No — registration itself is something you can do yourself. Where people tend to want help is later, once they've found something worth bidding on and need to actually write a competitive response.
+No - registration itself is something you can do yourself. Where people tend to want help is later, once they've found something worth bidding on and need to actually write a competitive response.
 
 ## Finding it is step one. Winning it is a different skill.
 
-Here's the honest truth: everything above gets you *access*. It doesn't help you win. RFPs are scored against mandatory requirements and evaluation criteria that have almost nothing to do with how good your work actually is on the ground — and figuring out how to answer exactly what's being scored is a completely different skill from knowing where to look.
+Here's the honest truth: everything above gets you *access*. It doesn't help you win. RFPs are scored against mandatory requirements and evaluation criteria that have almost nothing to do with how good your work actually is on the ground - and figuring out how to answer exactly what's being scored is a completely different skill from knowing where to look.
 
-So if you get to the point where you've found a contract that's genuinely a fit, and it's the *proposal itself* that's making you want to close the tab — that's exactly the part we help with. [Book a free 20-minute call](https://calendly.com/thebiddesk) and we'll tell you honestly whether it's worth pursuing, and what it would take to actually win it.
+So if you get to the point where you've found a contract that's genuinely a fit, and it's the *proposal itself* that's making you want to close the tab - that's exactly the part we help with. [Book a free 20-minute call](https://calendly.com/thebiddesk) and we'll tell you honestly whether it's worth pursuing, and what it would take to actually win it.
