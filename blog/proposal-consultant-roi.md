@@ -3,7 +3,7 @@ layout: post.njk
 title: Is a Proposal Consultant Worth It? The Real ROI of Outsourced Proposal Support
 excerpt: Hiring help feels like an added cost - until you actually calculate what an RFP is already costing you. Here's how to run that math honestly.
 eyebrow: RFPs & Proposals
-date: 2026-09-14
+date: 2026-09-05
 permalink: /blog/proposal-consultant-roi/index.html
 ---
 
