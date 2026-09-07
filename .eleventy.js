@@ -11,6 +11,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("akili.jpg");
   eleventyConfig.addPassthroughCopy("og-image.png");
   eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("sitemap.xml");
+  eleventyConfig.addPassthroughCopy("robots.txt");
+
 
   eleventyConfig.addCollection("posts", function (collectionApi) {
     return collectionApi.getFilteredByGlob("blog/*.md").sort((a, b) => {
