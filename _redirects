@@ -1,0 +1,6 @@
+/rfp          /services   301
+/rfp.html     /services   301
+
+# Uncomment these two lines once you delete grants.html
+# /grants       /           301
+# /grants.html  /           301

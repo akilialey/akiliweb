@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bid Strategy Services: Bid/No-Bid, Capture &amp; Pricing | The Bid Desk</title>
+<meta name="description" content="Bid decision reviews, bid history diagnostics, capture plans, proposal leadership and an ongoing bid advisor for government contractors in Canada and the US. Fixed fees, agreed up front.">
+<meta name="author" content="Akili Atherley, The Bid Desk">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thebiddesk.ca/services">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thebiddesk.ca/services">
+<meta property="og:title" content="Services — The Bid Desk">
+<meta property="og:description" content="Decide what to bid, what to charge, and how to win the bids that will actually pay.">
+<meta property="og:image" content="https://thebiddesk.ca/og-image.png">
+<meta property="og:locale" content="en_CA">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --plum:       #3A2640;
+  --plum-deep:  #261829;
+  --plum-mid:   #5A4460;
+  --mauve:      #9B6FA0;
+  --mauve-light:#C9A8CE;
+  --amber:      #DDB945;
+  --amber-light:#EDD07A;
+  --cream:      #FBF7F0;
+  --oat:        #EDE3D8;
+  --blush:      #DDD0CC;
+  --white:      #FFFFFF;
+  --muted:      #8A7090;
+  --text:       #2D1F33;
+  --radius-sm:  20px;
+  --radius-md:  32px;
+  --radius-pill:100px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); overflow-x: hidden; }
+em { font-style: italic; color: var(--mauve); }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 76px; display: flex; align-items: center; justify-content: space-between; padding: 0 3.5rem; background: rgba(38,24,41,0.92); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(201,168,206,0.08); }
+.nav-logo { font-family: 'DM Serif Display', serif; font-size: 19px; color: var(--white); text-decoration: none; letter-spacing: 0.04em; }
+.nav-logo span { color: var(--amber); font-style: italic; }
+.nav-links { display: flex; gap: 2.75rem; list-style: none; }
+.nav-links a { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.55); text-decoration: none; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s; }
+.nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--white); }
+.nav-cta { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--plum-deep); background: var(--amber); padding: 11px 26px; border-radius: var(--radius-pill); text-decoration: none; transition: all 0.2s; }
+.nav-cta:hover { background: var(--amber-light); }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: transparent; border: none; padding: 8px; }
+.nav-toggle span { width: 22px; height: 1.5px; background: var(--white); display: block; }
+.nav-mobile { display: none; position: fixed; top: 76px; left: 0; right: 0; background: var(--plum-deep); flex-direction: column; padding: 1rem 1.5rem 1.5rem; z-index: 199; }
+.nav-mobile.open { display: flex; }
+.nav-mobile a { font-size: 14px; color: rgba(255,255,255,0.6); text-decoration: none; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+
+/* BUTTONS */
+.btn { display: inline-flex; align-items: center; gap: 8px; font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 600; padding: 15px 34px; border-radius: var(--radius-pill); text-decoration: none; border: none; cursor: pointer; transition: all 0.25s; }
+.btn-amber { color: var(--plum-deep); background: var(--amber); }
+.btn-amber:hover { background: var(--amber-light); transform: translateY(-2px); }
+.btn-outline { color: var(--plum); border: 1.5px solid var(--plum); background: transparent; }
+.btn-outline:hover { background: var(--plum); color: var(--white); }
+.btn-outline-light { color: var(--white); border: 1.5px solid rgba(255,255,255,0.35); background: transparent; }
+.btn-outline-light:hover { background: var(--white); color: var(--plum-deep); }
+.text-link { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 600; color: var(--plum); text-decoration: none; border-bottom: 1.5px solid var(--amber); padding-bottom: 2px; }
+
+/* TYPE */
+.section { padding: 110px 2rem; }
+.wrap { max-width: 900px; margin: 0 auto; }
+.wrap-wide { max-width: 1060px; margin: 0 auto; }
+.eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mauve); margin-bottom: 1.5rem; }
+.h2 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.15; color: var(--plum); margin-bottom: 1.5rem; }
+.lead { font-size: 17px; font-weight: 300; color: var(--plum-mid); line-height: 1.85; max-width: 680px; }
+.on-dark .eyebrow { color: var(--amber); }
+.on-dark .h2 { color: var(--white); }
+.on-dark .h2 em { color: var(--mauve-light); }
+.on-dark .lead { color: rgba(255,255,255,0.65); }
+
+/* HERO */
+#hero { background: radial-gradient(ellipse 900px 500px at 20% 10%, rgba(155,111,160,0.22), transparent 60%), var(--plum-deep); text-align: center; }
+.hero-inner { max-width: 860px; margin: 0 auto; padding: 170px 2rem 100px; }
+.hero-h1 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: clamp(38px, 5.4vw, 66px); line-height: 1.12; color: var(--white); margin-bottom: 1.75rem; }
+.hero-h1 em { color: var(--mauve-light); }
+.hero-sub { font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.68); line-height: 1.8; max-width: 620px; margin: 0 auto 2.5rem; }
+.hero-actions { display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap; }
+
+/* PICKER */
+#picker { background: var(--cream); }
+.picker-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2.5rem; }
+.pick { display: block; text-decoration: none; background: var(--white); border: 1px solid var(--oat); border-radius: var(--radius-md); padding: 1.75rem; transition: all 0.2s; }
+.pick:hover { border-color: var(--amber); transform: translateY(-2px); }
+.pick-q { font-family: 'DM Serif Display', serif; font-size: 19px; color: var(--plum); line-height: 1.35; margin-bottom: 0.9rem; }
+.pick-a { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mauve); }
+
+/* SERVICE DETAIL */
+.svc { padding: 100px 2rem; border-top: 1px solid var(--oat); }
+.svc:nth-of-type(even) { background: var(--white); }
+.svc-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; max-width: 1060px; margin: 0 auto; align-items: start; }
+.svc-tag { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mauve); margin-bottom: 1rem; }
+.svc h2 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: clamp(28px, 3vw, 40px); line-height: 1.15; color: var(--plum); margin-bottom: 1.25rem; }
+.svc-pitch { font-size: 16px; font-weight: 300; color: var(--plum-mid); line-height: 1.85; margin-bottom: 1.5rem; }
+.svc-best { font-size: 14px; color: var(--plum); line-height: 1.7; background: var(--oat); border-radius: var(--radius-sm); padding: 1rem 1.25rem; margin-bottom: 1.75rem; }
+.svc-best strong { font-weight: 600; }
+.facts { display: grid; grid-template-columns: repeat(3, auto); gap: 1.5rem; justify-content: start; margin-bottom: 2rem; }
+.fact span { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.35rem; }
+.fact strong { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 20px; color: var(--plum); }
+.svc-box { background: var(--cream); border: 1px solid var(--oat); border-radius: var(--radius-md); padding: 2rem; }
+.svc:nth-of-type(even) .svc-box { background: var(--cream); }
+.svc-box h3 { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--plum); margin-bottom: 1rem; }
+.svc-box ul { list-style: none; margin-bottom: 1.75rem; }
+.svc-box ul:last-child { margin-bottom: 0; }
+.svc-box li { font-size: 14px; font-weight: 300; color: var(--plum-mid); line-height: 1.65; padding: 0.45rem 0 0.45rem 1.4rem; position: relative; }
+.svc-box li::before { content: ''; position: absolute; left: 0; top: 1.05em; width: 8px; height: 8px; border-radius: 50%; background: var(--amber); }
+.svc-box .needs li::before { background: var(--mauve-light); }
+
+/* HOW ENGAGEMENTS WORK */
+#how { background: var(--plum-deep); }
+.steps { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 2.5rem; counter-reset: s; }
+.steps li { counter-increment: s; border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-md); padding: 1.75rem 1.5rem; }
+.steps li::before { content: counter(s, decimal-leading-zero); display: block; font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; color: var(--amber); margin-bottom: 0.9rem; }
+.steps h3 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 20px; color: var(--white); margin-bottom: 0.5rem; }
+.steps p { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.6); line-height: 1.7; }
+
+/* FAQ */
+#faq { background: var(--cream); }
+.faq-item { margin-bottom: 2rem; }
+.faq-item h3 { font-family: 'DM Serif Display', serif; font-style: italic; font-weight: 400; font-size: 20px; color: var(--plum); margin-bottom: 0.5rem; }
+.faq-item p { font-size: 15px; font-weight: 300; color: var(--plum-mid); line-height: 1.8; }
+
+/* CTA */
+#cta { background: var(--plum); text-align: center; }
+#cta .lead { margin: 0 auto 2.25rem; }
+.cta-actions { display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.25rem; }
+.cta-fine { font-size: 12px; color: rgba(255,255,255,0.45); }
+
+/* FOOTER */
+footer { background: var(--plum-deep); border-top: 1px solid rgba(255,255,255,0.06); padding: 2.5rem 5rem; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+.footer-logo { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--white); text-decoration: none; }
+.footer-logo span { color: var(--amber); font-style: italic; }
+.footer-nav { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
+.footer-nav a { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.35); text-decoration: none; font-weight: 500; }
+.footer-nav a:hover { color: var(--white); }
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.25); }
+
+/* MOTION */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  nav { padding: 0 1.25rem; }
+  .nav-links, .nav-cta { display: none; }
+  .nav-toggle { display: flex; }
+  .section, .svc { padding: 80px 1rem; }
+  .hero-inner { padding: 130px 1rem 80px; }
+  .picker-grid, .svc-grid, .steps { grid-template-columns: 1fr; }
+  .svc-grid { gap: 2rem; }
+  .facts { grid-template-columns: 1fr 1fr; }
+  .svc-box { padding: 1.5rem 1.25rem; }
+  footer { padding: 2rem 1rem; }
+}
+@media (max-width: 520px) {
+  .hero-actions .btn, .cta-actions .btn { width: 100%; justify-content: center; }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "The Bid Desk",
+  "url": "https://thebiddesk.ca/services",
+  "areaServed": [{ "@type": "Country", "name": "Canada" }, { "@type": "Country", "name": "United States" }],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Government bid strategy services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bid Decision Review", "description": "Go/no-go, lowest price that still pays and a recommended price range for one government opportunity." }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 1500, "priceCurrency": "CAD" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bid Desk Diagnostic", "description": "Analysis of 24 months of government bids: win rates, pursuit cost, margins and a calibrated bid scorecard." }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 8500, "priceCurrency": "CAD" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Capture Plan", "description": "Buyer, spending, incumbent and renewal research with a 12-month pursuit plan." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pursuit Lead", "description": "Proposal leadership for government bids that have passed a bid decision review." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fractional Bid Desk", "description": "Ongoing bid advisor: pipeline reviews, go/no-go on every opportunity, pricing on major bids." } }
+    ]
+  }
+}
+</script>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">The Bid Desk<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#economics">Bid economics</a></li>
+    <li><a href="index.html#method">How I work</a></li>
+    <li><a href="services.html" aria-current="page">Services</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Pressure-test a bid</a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html#economics">Bid economics</a>
+  <a href="index.html#method">How I work</a>
+  <a href="services.html">Services</a>
+  <a href="index.html#about">About</a>
+  <a href="/blog/">Blog</a>
+  <a href="index.html#contact">Pressure-test a bid</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <p class="eyebrow" style="color:var(--amber)">Services · Canada and the US</p>
+    <h1 class="hero-h1">Better decisions on every bid — <em>then better bids.</em></h1>
+    <p class="hero-sub">Five ways to work together, from a few days on one opportunity to an ongoing bid advisor. Every engagement is a fixed fee, agreed before any work starts.</p>
+    <div class="hero-actions">
+      <a href="#decision-review" class="btn btn-amber">Start with one bid</a>
+      <a href="#how" class="btn btn-outline-light">How engagements work</a>
+    </div>
+  </div>
+</section>
+
+<!-- PICKER -->
+<section id="picker" class="section">
+  <div class="wrap-wide">
+    <p class="eyebrow reveal">Where to start</p>
+    <h2 class="h2 reveal">What's on your mind right now?</h2>
+    <div class="picker-grid">
+      <a href="#decision-review" class="pick reveal"><p class="pick-q">"We have a bid in front of us and aren't sure it's worth it."</p><p class="pick-a">Bid Decision Review →</p></a>
+      <a href="#diagnostic" class="pick reveal"><p class="pick-q">"We bid a lot. We don't know which bids are paying off."</p><p class="pick-a">Bid Desk Diagnostic →</p></a>
+      <a href="#capture" class="pick reveal"><p class="pick-q">"We keep finding opportunities too late."</p><p class="pick-a">Capture Plan →</p></a>
+      <a href="#pursuit-lead" class="pick reveal"><p class="pick-q">"We've decided to go for it. We need someone to lead the bid."</p><p class="pick-a">Pursuit Lead →</p></a>
+      <a href="#fractional" class="pick reveal"><p class="pick-q">"We need this thinking on every opportunity, not just one."</p><p class="pick-a">Fractional Bid Desk →</p></a>
+      <a href="index.html#contact" class="pick reveal"><p class="pick-q">"Honestly, not sure yet."</p><p class="pick-a">Free Bid Health Check →</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- 1. BID DECISION REVIEW -->
+<section id="decision-review" class="svc">
+  <div class="svc-grid">
+    <div>
+      <p class="svc-tag reveal">01 · Bid economics &amp; pricing · One opportunity</p>
+      <h2 class="reveal">Bid Decision Review</h2>
+      <p class="svc-pitch reveal">Before your team commits weeks to a bid, find out whether it's worth it — and what price wins without losing money. You get a clear go, go-with-conditions, or walk-away, with the numbers behind it.</p>
+      <p class="svc-best reveal"><strong>Best for:</strong> a live RFP, tender or standing offer you're unsure about. Most useful when it's big, when there's a strong incumbent, or when margins look tight.</p>
+      <div class="facts reveal">
+        <div class="fact"><span>Timeline</span><strong>3–5 business days</strong></div>
+        <div class="fact"><span>Standard</span><strong>From $1,500</strong></div>
+        <div class="fact"><span>Major bids</span><strong>From $4,000</strong></div>
+      </div>
+      <a href="index.html#contact" class="btn btn-amber reveal">Send me the opportunity</a>
+    </div>
+    <div class="svc-box reveal">
+      <h3>What you get</h3>
+      <ul>
+        <li>A bid scorecard: fit, competition, incumbent, how it's scored, contract risk, strategic value</li>
+        <li>The bid business case: realistic odds, cost to pursue, expected return</li>
+        <li>The lowest price that still pays, and a recommended price range</li>
+        <li>Top win themes and the biggest risks</li>
+        <li>A clear recommendation, walked through on a 30-minute call</li>
+        <li>Major bids add: what similar contracts were awarded for, likely competitors, and risks in the contract terms</li>
+      </ul>
+      <h3>What I need from you</h3>
+      <ul class="needs">
+        <li>The solicitation, or a link to it</li>
+        <li>Your rough cost and rate information</li>
+        <li>Who would deliver the work</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 2. DIAGNOSTIC -->
+<section id="diagnostic" class="svc">
+  <div class="svc-grid">
+    <div>
+      <p class="svc-tag reveal">02 · Bid economics · Your whole bid history</p>
+      <h2 class="reveal">Bid Desk Diagnostic</h2>
+      <p class="svc-pitch reveal">A hard look at your last two years of government bids: where your effort went, what it cost, what you won, and which wins actually made money. You leave with a scorecard tuned to your own track record, so every future decision gets easier.</p>
+      <p class="svc-best reveal"><strong>Best for:</strong> companies submitting 8 or more public bids a year — after a losing streak, before hiring a business development lead, or when government work feels busy but not profitable.</p>
+      <div class="facts reveal">
+        <div class="fact"><span>Timeline</span><strong>3–4 weeks</strong></div>
+        <div class="fact"><span>Investment</span><strong>From $8,500</strong></div>
+        <div class="fact"><span>Readout</span><strong>90 minutes</strong></div>
+      </div>
+      <a href="index.html#contact" class="btn btn-amber reveal">Talk about a diagnostic</a>
+    </div>
+    <div class="svc-box reveal">
+      <h3>What you get</h3>
+      <ul>
+        <li>Win rate by buyer, bid type and contract size</li>
+        <li>What each bid cost you to pursue — and what it costs you to win $1 of government revenue</li>
+        <li>Margins on the contracts you won</li>
+        <li>Patterns in your wins, losses and evaluation scores</li>
+        <li>A bid scorecard calibrated to your own history</li>
+        <li>A written report and a prioritized 90-day action plan</li>
+      </ul>
+      <h3>What I need from you</h3>
+      <ul class="needs">
+        <li>A list of bids from the last 24 months, with outcomes (I can help build it)</li>
+        <li>Submitted prices, and any debriefs or scores</li>
+        <li>Rough hours spent per bid</li>
+        <li>Financial results for contracts you won</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 3. CAPTURE PLAN -->
+<section id="capture" class="svc">
+  <div class="svc-grid">
+    <div>
+      <p class="svc-tag reveal">03 · Capture strategy · The next 12 months</p>
+      <h2 class="reveal">Capture Plan</h2>
+      <p class="svc-pitch reveal">Stop meeting opportunities for the first time when the notice goes live. I map who buys what you sell, how much they spend, who holds the contracts now, and when those contracts come up — then turn it into a ranked list of pursuits and a 12-month calendar.</p>
+      <p class="svc-best reveal"><strong>Best for:</strong> companies with a government growth target, a new offering, or a push into a new department, province, state or agency — including Canadian firms selling into the US and US firms selling into Canada.</p>
+      <div class="facts reveal">
+        <div class="fact"><span>Timeline</span><strong>4–6 weeks</strong></div>
+        <div class="fact"><span>Investment</span><strong>Quoted</strong></div>
+        <div class="fact"><span>Refresh</span><strong>Quarterly option</strong></div>
+      </div>
+      <a href="index.html#contact" class="btn btn-amber reveal">Talk about a capture plan</a>
+    </div>
+    <div class="svc-box reveal">
+      <h3>What you get</h3>
+      <ul>
+        <li>A market map built from public award data: buyers, spending, suppliers, contract values</li>
+        <li>Contracts expiring in your space, and who holds them</li>
+        <li>10–20 target opportunities, ranked and timed</li>
+        <li>Positioning actions for each: who to know, what to prepare, when buyers invite input</li>
+        <li>A 12-month bid calendar</li>
+      </ul>
+      <h3>What I need from you</h3>
+      <ul class="needs">
+        <li>What you sell, and who you've sold it to</li>
+        <li>Past government contracts and bids</li>
+        <li>Your growth goals and capacity</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 4. PURSUIT LEAD -->
+<section id="pursuit-lead" class="svc">
+  <div class="svc-grid">
+    <div>
+      <p class="svc-tag reveal">04 · Bid strategy &amp; proposal leadership · After a “go”</p>
+      <h2 class="reveal">Pursuit Lead</h2>
+      <p class="svc-pitch reveal">For bids that pass the test. I lead the response so the strategy survives the deadline: a compliance plan, a clear structure, win themes carried through every section, reviews, and a clean submission. Your subject-matter experts supply the substance; I make sure it scores.</p>
+      <p class="svc-best reveal"><strong>Available after a Bid Decision Review.</strong> The review fee is credited toward Pursuit Lead if you go ahead. I don't take on bids that haven't been through the decision first — it's the whole point.</p>
+      <div class="facts reveal">
+        <div class="fact"><span>Timeline</span><strong>RFP deadline</strong></div>
+        <div class="fact"><span>Investment</span><strong>Quoted per bid</strong></div>
+        <div class="fact"><span>Credit</span><strong>Review fee applied</strong></div>
+      </div>
+      <a href="#decision-review" class="btn btn-outline reveal">Start with a Decision Review</a>
+    </div>
+    <div class="svc-box reveal">
+      <h3>What you get</h3>
+      <ul>
+        <li>A requirements and compliance plan — nothing mandatory missed</li>
+        <li>A response structure mapped to how the bid will be scored</li>
+        <li>Win themes and pricing strategy carried into the narrative</li>
+        <li>Writing direction and coordination for your team</li>
+        <li>Evaluator-style reviews before submission</li>
+        <li>Submission management and a post-decision debrief request</li>
+      </ul>
+      <h3>What I need from you</h3>
+      <ul class="needs">
+        <li>Access to the people who know the work</li>
+        <li>Past proposals, résumés and project examples</li>
+        <li>Quick decisions from whoever signs off</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 5. FRACTIONAL -->
+<section id="fractional" class="svc">
+  <div class="svc-grid">
+    <div>
+      <p class="svc-tag reveal">05 · All of the above · Ongoing</p>
+      <h2 class="reveal">Fractional Bid Desk</h2>
+      <p class="svc-pitch reveal">Your part-time bid advisor. Every opportunity gets a go or no-go, major bids get pricing, the bids worth winning get led properly, and every quarter you see what you're winning, losing and why. Senior judgment without a full-time hire.</p>
+      <p class="svc-best reveal"><strong>Best for:</strong> companies bidding regularly without a dedicated capture or pricing function. Usually starts after a Diagnostic, so the scorecard is already tuned to you.</p>
+      <div class="facts reveal">
+        <div class="fact"><span>Commitment</span><strong>6-month minimum</strong></div>
+        <div class="fact"><span>Investment</span><strong>Monthly, quoted</strong></div>
+        <div class="fact"><span>Cadence</span><strong>Monthly review</strong></div>
+      </div>
+      <a href="index.html#contact" class="btn btn-amber reveal">Talk about a retainer</a>
+    </div>
+    <div class="svc-box reveal">
+      <h3>What you get</h3>
+      <ul>
+        <li>A monthly pipeline review</li>
+        <li>A scorecard and go/no-go on every opportunity you're considering</li>
+        <li>Pricing reviews on major bids</li>
+        <li>Pursuit leadership hours included each month</li>
+        <li>A watch list of renewals and expiring contracts</li>
+        <li>A quarterly win/loss report</li>
+      </ul>
+      <h3>What I need from you</h3>
+      <ul class="needs">
+        <li>A named person who owns government bids on your side</li>
+        <li>Opportunities shared as soon as you see them</li>
+        <li>Outcomes and debriefs, so the scorecard keeps learning</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- HOW ENGAGEMENTS WORK -->
+<section id="how" class="section on-dark">
+  <div class="wrap-wide">
+    <p class="eyebrow reveal">How engagements work</p>
+    <h2 class="h2 reveal">Simple, fixed, and <em>no surprises.</em></h2>
+    <ol class="steps reveal">
+      <li><h3>Send it over</h3><p>Email an opportunity or book a free 20-minute Bid Health Check.</p></li>
+      <li><h3>Fixed quote</h3><p>A written scope and fixed fee within one business day. No hourly billing.</p></li>
+      <li><h3>The work</h3><p>You work with me directly. No junior handoffs, no subcontractors.</p></li>
+      <li><h3>A decision</h3><p>Every engagement ends with a clear recommendation, not just a report.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section">
+  <div class="wrap">
+    <p class="eyebrow reveal">Fair questions</p>
+    <div class="faq-item reveal"><h3>"Do you write proposals?"</h3><p>I lead proposals for bids that have passed a Decision Review. I don't sell proposal writing on its own — if you just need a writer, you'll get better value elsewhere.</p></div>
+    <div class="faq-item reveal"><h3>"We already have a proposal team."</h3><p>Good — they'll get better inputs. Most of my work happens upstream of them: what to bid, how to position, what to charge.</p></div>
+    <div class="faq-item reveal"><h3>"Do you work with US companies?"</h3><p>Yes. I work with contractors in Canada and the US, and with companies bidding across the border. Canadian clients are billed in CAD; US clients in USD.</p></div>
+    <div class="faq-item reveal"><h3>"Can you guarantee we'll win?"</h3><p>No, and be wary of anyone who says they can. What I can do is make sure you're chasing the right bids, at the right price, as prepared as possible.</p></div>
+    <div class="faq-item reveal"><h3>"Is my information safe?"</h3><p>Everything you share stays between us. No subcontractors, no rotating team, and I never work with two clients on the same opportunity.</p></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta" class="section on-dark">
+  <div class="wrap">
+    <p class="eyebrow reveal">Start with one bid</p>
+    <h2 class="h2 reveal">Have an opportunity <em>you're debating?</em></h2>
+    <p class="lead reveal">Send it to me — the notice, the RFP, or just a link. Within one business day, I'll reply with a candid first read and the questions that will decide it.</p>
+    <div class="cta-actions reveal">
+      <a href="mailto:akili@thebiddesk.ca?subject=Opportunity%20to%20pressure-test" class="btn btn-amber">Send me an opportunity</a>
+      <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener" class="btn btn-outline-light">Book a 20-minute Bid Health Check</a>
+    </div>
+    <p class="cta-fine reveal">One opportunity per company. If it needs real analysis, I'll quote a fixed fee first.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo">The Bid Desk<span>.</span></a>
+    <ul class="footer-nav">
+      <li><a href="index.html#economics">Bid economics</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <p class="footer-copy">&copy; 2026 The Bid Desk · Canada and the US · akili@thebiddesk.ca</p>
+  </div>
+</footer>
+
+<script>
+const toggle = document.getElementById('nav-toggle');
+const mobile = document.getElementById('nav-mobile');
+toggle.addEventListener('click', () => {
+  const open = mobile.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', open);
+});
+mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  mobile.classList.remove('open');
+  toggle.setAttribute('aria-expanded', 'false');
+}));
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
