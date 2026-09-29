@@ -6,7 +6,7 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy("index.html");
-  eleventyConfig.addPassthroughCopy("rfp.html");
+  eleventyConfig.addPassthroughCopy("services.html");
   eleventyConfig.addPassthroughCopy("grants.html");
   eleventyConfig.addPassthroughCopy("akili.jpg");
   eleventyConfig.addPassthroughCopy("og-image.png");
@@ -14,6 +14,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("sitemap.xml");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("_headers");
+  eleventyConfig.addPassthroughCopy("_redirects");
 
 
   eleventyConfig.addCollection("posts", function (collectionApi) {
