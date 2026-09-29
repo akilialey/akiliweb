@@ -151,14 +151,11 @@ nav {
 .questions h3 { font-family: 'DM Serif Display', serif; font-size: 21px; font-weight: 400; color: var(--plum); margin-bottom: 0.5rem; }
 .questions p { font-size: 14px; font-weight: 300; color: var(--plum-mid); line-height: 1.75; }
 
-.example { background: var(--white); border: 1px solid var(--oat); border-radius: var(--radius-md); padding: 2.5rem; margin: 3rem 0 1rem; }
-.example-title { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mauve); margin-bottom: 1.5rem; }
-.example table { width: 100%; border-collapse: collapse; font-size: 14px; }
-.example th, .example td { text-align: left; padding: 12px 10px; border-bottom: 1px solid var(--oat); color: var(--plum-mid); font-weight: 300; }
-.example th { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-.example tr:last-child td { border-bottom: none; font-weight: 600; color: var(--plum); }
-.example .neg { color: #9B3B3B; }
-.example-note { font-size: 12px; font-style: italic; color: var(--muted); margin-top: 1rem; }
+.example { border-left: 3px solid var(--amber); padding: 0.25rem 0 0.25rem 1.75rem; margin: 3rem 0 1rem; max-width: 640px; }
+.example p { font-size: 16px; font-weight: 300; color: var(--plum-mid); line-height: 1.85; margin-bottom: 1rem; }
+.example .example-lead { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 22px; line-height: 1.4; color: var(--plum); }
+.example .example-punch { font-family: 'DM Serif Display', serif; font-style: italic; font-weight: 400; font-size: 20px; color: var(--plum); margin-bottom: 0.5rem; }
+.example .example-note { font-size: 12px; color: var(--muted); margin: 0; }
 .inline-cta { margin-top: 2.5rem; font-size: 16px; color: var(--plum-mid); }
 
 /* ── CAPTURE ── */
@@ -286,7 +283,7 @@ footer { background: var(--plum-deep); border-top: 1px solid rgba(255,255,255,0.
   .check-list, .questions, .service-grid, .finding-grid, .fit-grid, .pillars, .stats-inner { grid-template-columns: 1fr; }
   .method-steps { grid-template-columns: 1fr 1fr; }
   .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .example { padding: 1.5rem 1rem; overflow-x: auto; }
+  .example { padding-left: 1.25rem; }
   .form-grid { grid-template-columns: 1fr; }
   .stats-band { padding: 64px 1rem 48px; }
   footer { padding: 2rem 1rem; }
@@ -420,18 +417,11 @@ footer { background: var(--plum-deep); border-top: 1px solid rgba(255,255,255,0.
     <p class="body reveal"><strong>The goal isn't to bid on more.</strong> It's to put your people where the return is highest, and walk away from the rest with confidence.</p>
 
     <div class="example reveal">
-      <p class="example-title">A $1.2M contract, looked at honestly</p>
-      <table>
-        <thead><tr><th></th><th>Gut view</th><th>Honest view</th></tr></thead>
-        <tbody>
-          <tr><td>Real margin</td><td>15%</td><td>8%, after overhead and admin</td></tr>
-          <tr><td>Odds of winning</td><td>25%</td><td>15%, against a strong incumbent</td></tr>
-          <tr><td>Expected profit</td><td>$45,000</td><td>$14,400</td></tr>
-          <tr><td>Cost to pursue</td><td>$20,000</td><td>$20,000</td></tr>
-          <tr><td>Worth it?</td><td>+$25,000 — bid</td><td class="neg">–$5,600 — rethink</td></tr>
-        </tbody>
-      </table>
-      <p class="example-note">Illustrative example, not a client result.</p>
+      <p class="example-lead">Say you're weighing a $1.2M, three-year contract.</p>
+      <p>You figure you'll keep 15% and you've got a one-in-four shot. That's $45,000 in expected profit against roughly $20,000 to put the bid together. Easy yes.</p>
+      <p>Now use real numbers. After overhead and admin, you keep 8%, not 15%. There's a strong incumbent, so your odds are closer to 15%. Expected profit drops to $14,400, less than the bid costs you to produce.</p>
+      <p class="example-punch">Same contract. Same team. Different answer.</p>
+      <p class="example-note">Illustrative numbers.</p>
     </div>
     <p class="inline-cta reveal">Debating a bid right now? <a href="mailto:akili@thebiddesk.ca?subject=Opportunity%20to%20pressure-test" class="text-link">Send me the opportunity →</a></p>
   </div>
