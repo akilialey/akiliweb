@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Government Bid Strategy &amp; Pricing | The Bid Desk</title>
-<meta name="description" content="Know which government contracts are worth winning. Bid economics, capture strategy and pricing for government contractors in Canada and the US — before the proposal starts.">
+<meta name="description" content="Know which government contracts are worth winning. Bid economics, capture strategy and pricing for Canadian government contractors, and Canadian firms selling into the US. Decide what to pursue before the proposal starts.">
 <meta name="author" content="Akili Atherley, The Bid Desk">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://thebiddesk.ca/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://thebiddesk.ca/">
 <meta property="og:title" content="The Bid Desk — Know which government contracts are worth winning">
-<meta property="og:description" content="Bid economics, capture strategy and pricing for government contractors in Canada and the US.">
+<meta property="og:description" content="Bid economics, capture strategy and pricing for Canadian government contractors.">
 <meta property="og:image" content="https://thebiddesk.ca/og-image.png">
 <meta property="og:locale" content="en_CA">
 <meta name="geo.region" content="CA">
@@ -158,6 +158,21 @@ nav {
 .example .example-note { font-size: 12px; color: var(--muted); margin: 0; }
 .inline-cta { margin-top: 2.5rem; font-size: 16px; color: var(--plum-mid); }
 
+.assessment-line { font-size: 15px; font-weight: 300; color: var(--plum-mid); line-height: 1.8; max-width: 680px; margin: -0.5rem 0 1.5rem; }
+.assessment-line strong { color: var(--plum); font-weight: 600; }
+.cost-list { list-style: none; margin: 0 0 2rem; max-width: 680px; }
+.cost-list li { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.75); line-height: 1.7; padding: 0.4rem 0 0.4rem 1.5rem; position: relative; }
+.cost-list li::before { content: ''; position: absolute; left: 0; top: 1.05em; width: 8px; height: 2px; background: var(--amber); }
+
+/* ── SCENARIOS ── */
+#scenarios { background: var(--cream); }
+.scenario { border-left: 3px solid var(--amber); padding: 0.25rem 0 0.25rem 1.75rem; margin: 2.75rem 0 0; max-width: 680px; }
+.scenario h3 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 22px; color: var(--plum); margin-bottom: 0.6rem; }
+.scenario p { font-size: 15px; font-weight: 300; color: var(--plum-mid); line-height: 1.85; }
+.scenario .call { margin-top: 0.75rem; color: var(--plum); }
+.scenario .call strong { font-weight: 600; }
+.scenario-note { font-size: 13px; color: var(--muted); }
+
 /* ── CAPTURE ── */
 #capture { background: var(--oat); }
 .plain-list { list-style: none; margin: 2rem 0 2.5rem; }
@@ -191,10 +206,10 @@ nav {
 
 /* ── UNCOVER ── */
 #uncover { background: var(--white); }
-.finding-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; margin-top: 2.5rem; border-top: 1px solid var(--oat); }
-.finding { padding: 1.75rem 1.5rem 1.75rem 0; border-bottom: 1px solid var(--oat); }
-.finding h3 { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 20px; font-weight: 400; color: var(--plum); margin-bottom: 0.5rem; }
-.finding p { font-size: 14px; font-weight: 300; color: var(--plum-mid); line-height: 1.75; }
+.leak-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-top: 2.5rem; }
+.leak-col h3 { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 22px; font-weight: 400; color: var(--plum); padding-bottom: 0.75rem; margin-bottom: 0.5rem; border-bottom: 2px solid var(--amber); }
+.leak-col ul { list-style: none; }
+.leak-col li { font-size: 15px; font-weight: 300; color: var(--plum-mid); line-height: 1.65; padding: 0.8rem 0; border-bottom: 1px solid var(--oat); }
 
 /* ── ROI ── */
 #roi { background: var(--plum); }
@@ -205,6 +220,7 @@ nav {
 /* ── FIT ── */
 #fit { background: var(--cream); }
 .fit-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 1.5rem; margin-top: 2.5rem; }
+#fit .body { max-width: 720px; }
 .fit-card { border-radius: var(--radius-md); padding: 2.25rem; }
 .fit-card.yes { background: var(--white); border: 1px solid var(--oat); }
 .fit-card.no { background: var(--oat); }
@@ -280,7 +296,7 @@ footer { background: var(--plum-deep); border-top: 1px solid rgba(255,255,255,0.
   .nav-toggle { display: flex; }
   .section { padding: 84px 1rem; }
   .hero-inner { padding: 130px 1rem 80px; }
-  .check-list, .questions, .service-grid, .finding-grid, .fit-grid, .pillars, .stats-inner { grid-template-columns: 1fr; }
+  .check-list, .questions, .service-grid, .leak-grid, .fit-grid, .pillars, .stats-inner { grid-template-columns: 1fr; }
   .method-steps { grid-template-columns: 1fr 1fr; }
   .about-grid { grid-template-columns: 1fr; gap: 2rem; }
   .example { padding-left: 1.25rem; }
@@ -299,11 +315,11 @@ footer { background: var(--plum-deep); border-top: 1px solid rgba(255,255,255,0.
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "The Bid Desk",
-  "description": "Bid strategy, bid economics, capture strategy and pricing for government contractors in Canada and the US.",
+  "description": "Bid strategy, bid economics, capture strategy and pricing for Canadian government contractors, including firms selling into the US.",
   "url": "https://thebiddesk.ca",
   "founder": { "@type": "Person", "name": "Akili Atherley" },
   "areaServed": [{ "@type": "Country", "name": "Canada" }, { "@type": "Country", "name": "United States" }],
-  "serviceType": ["Government bid strategy", "Bid/no-bid analysis", "Bid economics", "Capture strategy", "Government contract pricing", "Proposal leadership"],
+  "serviceType": ["Government bid strategy", "Bid/no-bid analysis", "Bid economics", "Capture strategy", "Government contract pricing", "Proposal execution"],
   "priceRange": "$$$",
   "contactPoint": { "@type": "ContactPoint", "email": "akili@thebiddesk.ca", "contactType": "sales" }
 }
@@ -336,7 +352,7 @@ footer { background: var(--plum-deep); border-top: 1px solid rgba(255,255,255,0.
 <!-- 1. HERO -->
 <section id="hero">
   <div class="hero-inner">
-    <p class="hero-eyebrow">Bid strategy &amp; pricing · Government contractors in Canada and the US</p>
+    <p class="hero-eyebrow">Bid strategy &amp; pricing · For Canadian government contractors</p>
     <h1 class="hero-h1">Know which government contracts are <em>worth winning.</em></h1>
     <p class="hero-sub">Every bid costs your team time and money, win or lose. I help you decide what to pursue, what to charge, and how to win the bids that will actually pay — before the proposal work starts.</p>
     <div class="hero-actions">
@@ -369,7 +385,17 @@ footer { background: var(--plum-deep); border-top: 1px solid rgba(255,255,255,0.
   <div class="wrap">
     <p class="eyebrow reveal">The hidden cost</p>
     <h2 class="h2 reveal">A bad bid isn't free. <em>A bad win can cost more.</em></h2>
-    <p class="lead reveal">A serious public bid pulls your best people — sales, delivery leads, finance, sometimes legal — off other work for weeks. Most of that effort goes to bids that lose.</p>
+    <p class="lead reveal">The cost of a government opportunity isn't the cost of writing the proposal. A serious pursuit pulls in:</p>
+    <ul class="cost-list reveal">
+      <li>Your senior people: sales, delivery leads, executives</li>
+      <li>Solution design and pricing work</li>
+      <li>Legal review of the terms</li>
+      <li>Partner and subcontractor negotiations</li>
+      <li>Demos, site visits and travel</li>
+      <li>Compliance paperwork, certifications and security requirements</li>
+      <li>And the other work those people didn't get to</li>
+    </ul>
+    <p class="body reveal"><strong>Every bid is an investment decision.</strong> You're putting senior time, pricing room, delivery capacity and sometimes cash behind a chance at revenue. Most of that goes to bids that lose.</p>
     <div class="stages reveal" aria-label="Stages of a government pursuit">
       <span class="stage">Find</span><span class="stage-arrow">→</span>
       <span class="stage">Qualify</span><span class="stage-arrow">→</span>
@@ -380,7 +406,7 @@ footer { background: var(--plum-deep); border-top: 1px solid rgba(255,255,255,0.
       <span class="stage pay">Deliver</span>
     </div>
     <p class="stages-note reveal">Every stage spends something. Only the last one pays you back.</p>
-    <p class="body reveal">And winning isn't the finish line. A contract priced to win instead of to deliver keeps costing you for its whole term: thin margins, heavy reporting, slow payment, and people pulled away from better work.</p>
+    <p class="body reveal">And winning isn't the finish line. <strong>A contract's face value isn't its economic value.</strong> Priced to win instead of to deliver, it keeps costing you for the whole term: thin margins, heavy reporting, slow payment, and people pulled away from better work.</p>
   </div>
 </section>
 
@@ -388,18 +414,18 @@ footer { background: var(--plum-deep); border-top: 1px solid rgba(255,255,255,0.
   <div class="stats-inner">
     <div class="stats-item reveal">
       <strong>~37%</strong>
-      <p>The share of RFPs North American proposal teams win. Most bid effort goes to bids that lose.</p>
+      <p>Roughly the share of RFPs North American response teams report winning, across industries. Most bid effort goes to bids that lose.</p>
     </div>
     <div class="stats-item reveal">
       <strong>38%</strong>
-      <p>Of government contractors name pricing they couldn't defend as the top reason proposals weren't selected.</p>
+      <p>Of US and Canadian government contractors in Deltek's 2026 study said pricing that couldn't stand up to scrutiny was the top reason their proposals weren't selected.</p>
     </div>
     <div class="stats-item reveal">
       <strong>#1</strong>
-      <p>Finding opportunities too late is contractors' top business-development challenge.</p>
+      <p>Finding opportunities too late was the top business-development challenge in Deltek's 2025 study of US and Canadian contractors.</p>
     </div>
   </div>
-  <p class="stats-source">Sources: <a href="https://vercor.ai/resources/proposal-ops/rfp-statistics-2026" target="_blank" rel="noopener">Loopio/APMP benchmark data</a> · <a href="https://www.deltek.com/resources/articles/deltek-govcon-clarity-2026-pricing-and-estimating/" target="_blank" rel="noopener">Deltek Clarity 2026</a> · <a href="https://www.citybiz.co/article/689746/deltek-clarity-2025-government-contracting-industry-study/" target="_blank" rel="noopener">Deltek Clarity 2025</a></p>
+  <p class="stats-source">Sources: <a href="https://loopio.com/blog/rfp-statistics-win-rates/" target="_blank" rel="noopener">Loopio/APMP benchmark data</a> · <a href="https://www.deltek.com/resources/articles/deltek-govcon-clarity-2026-pricing-and-estimating/" target="_blank" rel="noopener">Deltek Clarity 2026</a> · <a href="https://www.prnewswire.com/news-releases/deltek-unveils-16th-annual-clarity-government-contracting-study-ai-trends-compliance-pressures-and-strategic-shifts-for-govcon-leaders-302452027.html" target="_blank" rel="noopener">Deltek Clarity 2025</a></p>
 </section>
 
 <!-- 4. BID ECONOMICS -->
@@ -410,10 +436,11 @@ footer { background: var(--plum-deep); border-top: 1px solid rgba(255,255,255,0.
     <p class="lead reveal">Contract value is the number on the notice. It isn't what the opportunity is worth. Before you commit a team, I work through four questions:</p>
     <ol class="questions reveal">
       <li><h3>What does it cost to chase?</h3><p>Your team's hours at their real cost, plus any outside help.</p></li>
-      <li><h3>What are your real odds?</h3><p>Based on the buyer, the incumbent, how it's scored, and whether you saw it coming.</p></li>
+      <li><h3>How strong is your position?</h3><p>An honest read based on evidence: the buyer, the incumbent, how it's scored, and whether you saw it coming. An estimate, not a guess, and never a guarantee.</p></li>
       <li><h3>What's the lowest price that still pays?</h3><p>Delivery, overhead, compliance and payment terms — all in.</p></li>
-      <li><h3>Is it worth it?</h3><p>Your odds times the profit, minus what it costs to try — plus what it opens up next.</p></li>
+      <li><h3>Is it worth it?</h3><p>The likely return, weighed against the cost and risk of chasing it, and what it could lead to.</p></li>
     </ol>
+    <p class="assessment-line reveal">Behind these questions is the <strong>Bid Economics Assessment</strong>, the structured review I run on every opportunity before anyone commits real resources to it.</p>
     <p class="body reveal"><strong>The goal isn't to bid on more.</strong> It's to put your people where the return is highest, and walk away from the rest with confidence.</p>
 
     <div class="example reveal">
@@ -444,6 +471,35 @@ footer { background: var(--plum-deep); border-top: 1px solid rgba(255,255,255,0.
   </div>
 </section>
 
+<!-- 5b. HOW I LOOK AT A BID -->
+<section id="scenarios" class="section">
+  <div class="wrap">
+    <p class="eyebrow reveal">How I look at a bid</p>
+    <h2 class="h2 reveal">Four situations <em>I see often.</em></h2>
+    <p class="scenario-note reveal">Illustrative scenarios, not client results.</p>
+    <div class="scenario reveal">
+      <h3>The incumbent problem</h3>
+      <p>A $2M, three-year services contract that fits you well. The same company has held it for eight years, delivered without complaint, and the evaluation leans heavily on past performance. On paper it's a strong bid. In practice your position is weak.</p>
+      <p class="call"><strong>The call:</strong> don't bid this round. Respond to the next RFI, note when the contract expires, and be the obvious alternative next time.</p>
+    </div>
+    <div class="scenario reveal">
+      <h3>The pursuit that costs more than the prize</h3>
+      <p>A $300,000 contract that needs a live demo, two site visits, a teaming partner and legal review of non-standard terms. Add it up and the pursuit could cost more than the profit you'd expect from it, even with a strong position.</p>
+      <p class="call"><strong>The call:</strong> bid only if the demo and partnership will serve other pursuits. Otherwise, pass.</p>
+    </div>
+    <div class="scenario reveal">
+      <h3>The win that costs money</h3>
+      <p>Fixed price, 60-day payment terms, a holdback until completion, and staff hired before day one. The face value looks healthy. But you're funding payroll for months before the first payment clears, and the margin that looked like 12% shrinks once admin and financing are counted.</p>
+      <p class="call"><strong>The call:</strong> bid, but price the cash cost in and raise mobilization payments during the question period.</p>
+    </div>
+    <div class="scenario reveal">
+      <h3>The pattern in the losses</h3>
+      <p>Four losses in two years, each by a few points, each on the same rated section. The team assumed it was price, so they kept cutting it.</p>
+      <p class="call"><strong>The call:</strong> stop discounting. Rebuild the one section that keeps losing points.</p>
+    </div>
+  </div>
+</section>
+
 <!-- 6. METHOD -->
 <section id="method" class="section on-dark">
   <div class="wrap-wide">
@@ -453,7 +509,7 @@ footer { background: var(--plum-deep); border-top: 1px solid rgba(255,255,255,0.
       <div class="method-step"><p class="method-num">01</p><p class="method-q">Is it worth chasing?</p><p class="method-label">Bid economics</p></div>
       <div class="method-step"><p class="method-num">02</p><p class="method-q">Can we win it?</p><p class="method-label">Capture and competitive position</p></div>
       <div class="method-step"><p class="method-num">03</p><p class="method-q">Will it pay?</p><p class="method-label">Pricing and contract terms</p></div>
-      <div class="method-step final"><p class="method-num">THEN</p><p class="method-q">Win it.</p><p class="method-label">Bid strategy and proposal leadership</p></div>
+      <div class="method-step final"><p class="method-num">THEN</p><p class="method-q">Win it.</p><p class="method-label">Bid strategy and proposal execution</p></div>
     </div>
     <p class="lead reveal">Proposal work comes last on purpose. A well-written bid on the wrong opportunity is still the wrong bid.</p>
   </div>
@@ -468,27 +524,45 @@ footer { background: var(--plum-deep); border-top: 1px solid rgba(255,255,255,0.
       <div class="service reveal"><p class="service-num">01</p><h3>Bid economics</h3><p>Decide which opportunities deserve your resources. A clear go or no-go, the lowest price that still pays, and a recommended price range — for one opportunity or your whole pipeline.</p></div>
       <div class="service reveal"><p class="service-num">02</p><h3>Capture strategy</h3><p>Get positioned early for the opportunities worth winning: buyer history, spending, incumbents, renewal timing, and a pursuit plan.</p></div>
       <div class="service reveal"><p class="service-num">03</p><h3>Bid strategy &amp; pricing</h3><p>The commercial and competitive plan for a major pursuit: win themes, teaming, pricing against the competition, and the risks hiding in the contract terms.</p></div>
-      <div class="service last reveal"><p class="service-num">04</p><h3>Proposal leadership</h3><p>For bids that pass the test, I lead the response so the strategy survives the deadline — compliance, structure, reviews and submission.</p></div>
+      <div class="service last reveal"><p class="service-num">04</p><h3>Proposal execution</h3><p>For bids that pass the test. I lead the response so the strategy survives the deadline: compliance, structure, reviews and submission.</p></div>
     </div>
     <p class="formats reveal">Work with me on one opportunity, a review of your last two years of bids, or as your ongoing bid advisor.</p>
     <a href="services.html" class="text-link reveal">See services →</a>
   </div>
 </section>
 
-<!-- 8. WHAT A REVIEW TURNS UP -->
+<!-- 8. WHERE REVENUE LEAKS -->
 <section id="uncover" class="section">
   <div class="wrap-wide">
-    <p class="eyebrow reveal">What a review turns up</p>
-    <h2 class="h2 reveal">The kind of things <em>a bid review uncovers.</em></h2>
-    <p class="body reveal">Every company is different. These are examples of what I look for — not assumptions about you.</p>
-    <div class="finding-grid">
-      <div class="finding reveal"><h3>Effort pointed at your weakest ground</h3><p>Most pursuit hours going to the kinds of bids you rarely win.</p></div>
-      <div class="finding reveal"><h3>Big contracts, thin margins</h3><p>Your largest wins earning less per dollar than your smaller ones.</p></div>
-      <div class="finding reveal"><h3>Every RFP treated the same</h3><p>No rule for what gets full effort and what gets a pass.</p></div>
-      <div class="finding reveal"><h3>Near misses with a pattern</h3><p>Close losses on the same scored criterion, bid after bid.</p></div>
-      <div class="finding reveal"><h3>Renewals nobody owns</h3><p>Contracts carrying a big share of revenue expiring without a plan.</p></div>
-      <div class="finding reveal"><h3>Winning prices below your own floor</h3><p>Bids won at prices that don't cover the real cost to deliver.</p></div>
-      <div class="finding reveal"><h3>Cash you're fronting</h3><p>Contracts that leave you out of pocket for months before the first payment.</p></div>
+    <p class="eyebrow reveal">Where the money goes</p>
+    <h2 class="h2 reveal">Where government revenue <em>leaks.</em></h2>
+    <p class="body reveal">Every company is different. These are the kinds of things I look for, not assumptions about you.</p>
+    <div class="leak-grid">
+      <div class="leak-col reveal">
+        <h3>Before the bid</h3>
+        <ul>
+          <li>Chasing opportunities you rarely win</li>
+          <li>Finding them too late to compete properly</li>
+          <li>Treating every RFP as equally important</li>
+          <li>Senior time spent on low-value pursuits</li>
+        </ul>
+      </div>
+      <div class="leak-col reveal">
+        <h3>During the bid</h3>
+        <ul>
+          <li>Price set in the final week from a rate card</li>
+          <li>Delivery costs assumed, not worked out</li>
+          <li>The same scoring mistakes, bid after bid</li>
+        </ul>
+      </div>
+      <div class="leak-col reveal">
+        <h3>After the award</h3>
+        <ul>
+          <li>Work won below your own economic floor</li>
+          <li>Cash fronted for months before the first payment</li>
+          <li>Renewals nobody owns until it's too late</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -514,24 +588,24 @@ footer { background: var(--plum-deep); border-top: 1px solid rgba(255,255,255,0.
 <section id="fit" class="section">
   <div class="wrap-wide">
     <p class="eyebrow reveal">Who this is for</p>
-    <h2 class="h2 reveal">Built for contractors who bid often enough <em>for the decisions to matter.</em></h2>
+    <h2 class="h2 reveal">Built for companies that bid often enough <em>for the decisions to matter.</em></h2>
+    <p class="body reveal">Usually that's an established company with some government revenue already, or serious plans for it. You pursue several public opportunities a year, often worth hundreds of thousands or millions. You have people who can write, maybe even a proposal lead, but nobody whose job is deciding which bids deserve the effort, or what to charge.</p>
     <div class="fit-grid">
       <div class="fit-card yes reveal">
         <h3>A good fit if</h3>
         <ul>
-          <li>You already win some government work and want more of it — or better of it</li>
-          <li>You pursue several public opportunities a year, often worth $250K or more</li>
+          <li>You already win some government work and want more of it, or better of it</li>
           <li>Bids pull in people who have other jobs: sales, delivery leads, executives</li>
-          <li>You don't have a dedicated capture or pricing function</li>
-          <li>You sell to government in Canada, the US, or across the border</li>
+          <li>You're not sure which of your bids, or wins, are actually paying off</li>
+          <li>You sell to government in Canada, or across the border into the US</li>
         </ul>
       </div>
       <div class="fit-card no reveal">
-        <h3>Probably not a fit if</h3>
+        <h3>Probably not the right fit if</h3>
         <ul>
-          <li>You need someone to write a proposal at a per-page rate</li>
-          <li>You bid once or twice a year on small contracts — a free Bid Health Check may be all you need</li>
-          <li>You already have a mature capture and pricing team</li>
+          <li>You need someone to write or format a proposal</li>
+          <li>You're looking for grant writing</li>
+          <li>You bid occasionally on smaller contracts. Send me the opportunity anyway, and I'll point you to what will help.</li>
         </ul>
       </div>
     </div>
@@ -551,6 +625,7 @@ footer { background: var(--plum-deep); border-top: 1px solid rgba(255,255,255,0.
         <div class="pillar"><strong>Finance</strong><span>Cost, margin, cash and risk</span></div>
         <div class="pillar"><strong>Revenue</strong><span>How bids fit a sales pipeline and a growth plan</span></div>
       </div>
+      <p class="body reveal">Put together, that's government revenue strategy: deciding what to pursue, how to position, what to charge and how to win, before anyone writes a proposal.</p>
       <p class="promise reveal">One desk, one expert. No junior handoffs, and I never work with two clients on the same opportunity.</p>
       <div class="founder-links reveal">
         <a href="https://linkedin.com/in/akiliatherley" target="_blank" rel="noopener" class="founder-link">LinkedIn</a>
@@ -566,7 +641,7 @@ footer { background: var(--plum-deep); border-top: 1px solid rgba(255,255,255,0.
     <p class="eyebrow reveal">Fair questions</p>
     <div class="objection reveal"><h3>"We already have a proposal team."</h3><p>Good — they'll get better inputs. I work upstream of them: what to bid, how to position, what to charge.</p></div>
     <div class="objection reveal"><h3>"Isn't this just bid/no-bid?"</h3><p>A checklist tells you whether you <em>can</em> bid. Bid economics tells you whether you <em>should</em> — with numbers.</p></div>
-    <div class="objection reveal"><h3>"What does it cost?"</h3><p>Fixed fees, agreed before any work starts. A single-opportunity review starts at $1,500. Larger engagements are quoted after a first conversation.</p></div>
+    <div class="objection reveal"><h3>"What does it cost?"</h3><p>Every engagement is a fixed fee, agreed before any work starts. Most clients begin with a Bid Economics Review, a fixed-scope assessment of one opportunity. Send it over and I'll quote it the same day.</p></div>
     <div class="objection reveal"><h3>"Is my information safe?"</h3><p>Everything you share stays between us — no subcontractors, no rotating team, and never two clients on the same opportunity.</p></div>
   </div>
 </section>
@@ -622,11 +697,10 @@ footer { background: var(--plum-deep); border-top: 1px solid rgba(255,255,255,0.
     <ul class="footer-nav">
       <li><a href="#economics">Bid economics</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="grants.html">Grants</a></li>
       <li><a href="/blog/">Blog</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <p class="footer-copy">&copy; 2026 The Bid Desk · Canada and the US · akili@thebiddesk.ca</p>
+    <p class="footer-copy">&copy; 2026 The Bid Desk · Ottawa, Canada · akili@thebiddesk.ca</p>
   </div>
 </footer>
 
