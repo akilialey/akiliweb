@@ -20,9 +20,11 @@
         toggle.focus();
       }
     });
-    window.matchMedia('(min-width: 861px)').addEventListener('change', function (m) {
-      if (m.matches) setOpen(false);
-    });
+    try {
+      var mq = window.matchMedia('(min-width: 861px)');
+      var onMq = function (m) { if (m.matches) setOpen(false); };
+      if (mq.addEventListener) mq.addEventListener('change', onMq); else if (mq.addListener) mq.addListener(onMq);
+    } catch (e) {}
   }
 
   // Mobile booking bar: appears once the hero's own buttons scroll away
@@ -88,7 +90,9 @@
       if (el) io.observe(el);
     });
   }
+})();
 
+(function () {
   // Contact form (Formspree)
   var form = document.getElementById('contact-form');
   if (form) {
@@ -116,8 +120,22 @@
       link.setAttribute('aria-invalid', linkErr.textContent ? 'true' : 'false');
       return ok;
     };
-    email.addEventListener('blur', function () { if (email.value) validate(); });
-    link.addEventListener('blur', function () { if (link.value) validate(); });
+    // Validate on submit only, so the Send button never moves mid-click.
+    // While typing, clear an error once the field becomes valid.
+    var clearIfValid = function () {
+      if (emailErr.textContent && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) { emailErr.textContent = ''; email.setAttribute('aria-invalid', 'false'); }
+      if (linkErr.textContent && (!link.value.trim() || /^https?:\/\/\S+\.\S+/.test(link.value.trim()))) { linkErr.textContent = ''; link.setAttribute('aria-invalid', 'false'); }
+    };
+    email.addEventListener('input', clearIfValid);
+    link.addEventListener('input', clearIfValid);
+
+    // Pre-select the service when arriving from a services page button (/?service=diagnostic#contact)
+    var svcSel = form.querySelector('#service');
+    var svcMap = { review: 'Bid Economics Review', diagnostic: 'Bid Desk Diagnostic', capture: 'Capture Plan', pursuit: 'Pursuit Lead', fractional: 'Fractional Bid Desk', check: 'Bid Health Check (free)' };
+    try {
+      var want = new URLSearchParams(location.search).get('service');
+      if (svcSel && want && svcMap[want]) svcSel.value = svcMap[want];
+    } catch (e) {}
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -134,7 +152,7 @@
           if (!res.ok) throw new Error('bad status');
           form.reset();
           status.className = 'form-status ok';
-          status.innerHTML = icon('i-check-circle') + '<span>Sent. I’ll reply within one business day.</span>';
+          status.innerHTML = icon('i-check-circle') + '<span>Sent. You’ll hear back within one business day.</span>';
           btn.innerHTML = btnLabel;
           btn.disabled = false;
         })
