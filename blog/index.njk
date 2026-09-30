@@ -1,21 +1,56 @@
 ---
 layout: base.njk
 title: Blog
-description: Field notes on government bids from The Bid Desk. What to pursue, what to charge, and how to win work that actually pays.
+metaTitle: "Government Contracting & RFP Blog | The Bid Desk"
+description: "Practical advice on RFPs, government tenders and bid strategy for Canadian and US contractors. How to find opportunities, price bids and win contracts that pay."
 permalink: /blog/index.html
+nav: blog
 ---
-<section class="blog-hero">
-  <p class="blog-hero-eyebrow">Insights</p>
-  <h1>Field notes on government bids</h1>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Blog", "@id": "https://thebiddesk.ca/blog/#blog", "name": "The Bid Desk Blog", "url": "https://thebiddesk.ca/blog/", "publisher": { "@id": "https://thebiddesk.ca/#business" }, "inLanguage": "en-CA" },
+    { "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://thebiddesk.ca/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://thebiddesk.ca/blog/" }
+    ] }
+  ]
+}
+</script>
+
+<section class="page-hero dark glow" aria-labelledby="blog-title">
+  <div class="wrap">
+    <ol class="crumbs"><li><a href="/">Home</a></li><li aria-current="page">Blog</li></ol>
+    <h1 id="blog-title">The Bid Desk Blog</h1>
+    <p class="lead">Straight answers on RFPs, government tenders and bid strategy. How to find the right opportunities, price them, and win contracts that pay.</p>
+  </div>
 </section>
 
-<div class="blog-list">
-  {%- for post in collections.posts %}
-  <a href="{{ post.url }}" class="post-card">
-    <p class="post-card-date">{{ post.date | readableDate }}</p>
-    <h2 class="post-card-title">{{ post.data.title }}</h2>
-    <p class="post-card-excerpt">{{ post.data.excerpt }}</p>
-    <span class="post-card-read">Read more →</span>
-  </a>
-  {%- endfor %}
-</div>
+<section class="section-tight tint" aria-label="All posts">
+  <div class="wrap">
+    <div class="post-grid">
+      {%- for post in collections.posts %}
+      <a class="card post-card" href="{{ post.url }}">
+        <span class="badge">{{ post.data.eyebrow or "Bid strategy" }}</span>
+        <h2>{{ post.data.title }}</h2>
+        <p>{{ post.data.excerpt }}</p>
+        <p class="post-meta"><span><time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time></span><span>{{ post.content | readingTime }}</span></p>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section dark glow" aria-labelledby="blog-cta">
+  <div class="wrap cta-band">
+    <div>
+      <h2 id="blog-cta">Have an RFP on your desk right now?</h2>
+      <p class="lead">Get an honest first read within one business day.</p>
+    </div>
+    <div class="actions">
+      <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener" class="btn btn-gold">Book a free call <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a href="/#contact" class="btn btn-ghost">Send me an RFP</a>
+    </div>
+  </div>
+</section>
