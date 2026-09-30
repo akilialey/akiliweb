@@ -1,763 +1,551 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Government Bid Strategy &amp; Pricing | The Bid Desk</title>
-<meta name="description" content="Know which government contracts are worth winning. Bid economics, capture strategy and pricing for Canadian government contractors, and Canadian firms selling into the US. Decide what to pursue before the proposal starts.">
-<meta name="author" content="Akili Atherley, The Bid Desk">
-<meta name="robots" content="index, follow">
+<title>RFP &amp; Government Bid Consultant in Canada | The Bid Desk</title>
+<meta name="description" content="Win government contracts that actually pay. RFP and bid strategy consulting for Canadian and US contractors: bid/no-bid decisions, tender pricing and capture. Book a free 20-minute Bid Health Check.">
+<meta name="author" content="Akili Atherley">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://thebiddesk.ca/">
+<meta property="og:site_name" content="The Bid Desk">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://thebiddesk.ca/">
-<meta property="og:title" content="The Bid Desk — Know which government contracts are worth winning">
-<meta property="og:description" content="Bid economics, capture strategy and pricing for Canadian government contractors.">
+<meta property="og:title" content="Win government contracts that actually pay | The Bid Desk">
+<meta property="og:description" content="RFP and bid strategy for government contractors. Know which tenders to chase, what to charge, and when to walk away.">
 <meta property="og:image" content="https://thebiddesk.ca/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Bid Desk: win government contracts that actually pay">
 <meta property="og:locale" content="en_CA">
-<meta name="geo.region" content="CA">
-<meta name="geo.country" content="Canada">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
-<style>
-:root {
-  --plum:       #3A2640;
-  --plum-deep:  #261829;
-  --plum-mid:   #5A4460;
-  --plum-light: #7B5E84;
-  --mauve:      #9B6FA0;
-  --mauve-light:#C9A8CE;
-  --amber:      #DDB945;
-  --amber-light:#EDD07A;
-  --amber-pale: #FAF3DC;
-  --cream:      #FBF7F0;
-  --oat:        #EDE3D8;
-  --blush:      #DDD0CC;
-  --white:      #FFFFFF;
-  --muted:      #8A7090;
-  --text:       #2D1F33;
-  --radius-sm:  20px;
-  --radius-md:  32px;
-  --radius-lg:  48px;
-  --radius-pill:100px;
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); overflow-x: hidden; }
-em { font-style: italic; color: var(--mauve); }
-
-/* ── NAV ── */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-  height: 76px; display: flex; align-items: center; justify-content: space-between;
-  padding: 0 3.5rem;
-  background: rgba(38, 24, 41, 0.9);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(201,168,206,0.08);
-}
-.nav-logo { font-family: 'DM Serif Display', serif; font-size: 19px; color: var(--white); text-decoration: none; letter-spacing: 0.04em; }
-.nav-logo span { color: var(--amber); font-style: italic; }
-.nav-links { display: flex; gap: 2.75rem; list-style: none; }
-.nav-links a { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.55); text-decoration: none; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s; }
-.nav-links a:hover { color: var(--white); }
-.nav-cta { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--plum-deep); background: var(--amber); padding: 11px 26px; border-radius: var(--radius-pill); text-decoration: none; transition: all 0.2s; }
-.nav-cta:hover { background: var(--amber-light); transform: translateY(-1px); }
-.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: transparent; border: none; padding: 8px; }
-.nav-toggle span { width: 22px; height: 1.5px; background: var(--white); display: block; }
-.nav-mobile { display: none; position: fixed; top: 76px; left: 0; right: 0; background: var(--plum-deep); border-top: 1px solid rgba(255,255,255,0.06); flex-direction: column; padding: 1rem 1.5rem 1.5rem; z-index: 199; }
-.nav-mobile.open { display: flex; }
-.nav-mobile a { font-size: 14px; color: rgba(255,255,255,0.6); text-decoration: none; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
-.nav-mobile a:hover { color: var(--white); }
-
-/* ── BUTTONS ── */
-.btn { display: inline-flex; align-items: center; gap: 8px; font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.02em; padding: 15px 34px; border-radius: var(--radius-pill); text-decoration: none; border: none; cursor: pointer; transition: all 0.25s; }
-.btn-amber { color: var(--plum-deep); background: var(--amber); }
-.btn-amber:hover { background: var(--amber-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(221,185,69,0.3); }
-.btn-outline { color: var(--plum); background: transparent; border: 1.5px solid var(--plum); }
-.btn-outline:hover { background: var(--plum); color: var(--white); transform: translateY(-2px); }
-.btn-outline-light { color: var(--white); background: transparent; border: 1.5px solid rgba(255,255,255,0.35); }
-.btn-outline-light:hover { background: var(--white); color: var(--plum-deep); border-color: var(--white); transform: translateY(-2px); }
-.text-link { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 600; color: var(--plum); text-decoration: none; border-bottom: 1.5px solid var(--amber); padding-bottom: 2px; }
-.text-link:hover { color: var(--mauve); }
-
-/* ── SHARED SECTION TYPE ── */
-.section { padding: 120px 2rem; }
-.wrap { max-width: 900px; margin: 0 auto; }
-.wrap-wide { max-width: 1060px; margin: 0 auto; }
-.eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mauve); margin-bottom: 1.5rem; }
-.h2 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: clamp(30px, 3.8vw, 48px); line-height: 1.15; color: var(--plum); margin-bottom: 1.75rem; }
-.h2 em { color: var(--mauve); }
-.lead { font-size: 17px; font-weight: 300; color: var(--plum-mid); line-height: 1.85; max-width: 680px; margin-bottom: 1.5rem; }
-.body { font-size: 15px; font-weight: 300; color: var(--plum-mid); line-height: 1.85; max-width: 680px; margin-bottom: 1.25rem; }
-.body strong, .lead strong { color: var(--plum); font-weight: 600; }
-.on-dark .eyebrow { color: var(--amber); }
-.on-dark .h2 { color: var(--white); }
-.on-dark .h2 em { color: var(--mauve-light); }
-.on-dark .lead, .on-dark .body { color: rgba(255,255,255,0.65); }
-.on-dark .body strong, .on-dark .lead strong { color: var(--white); }
-
-/* ── HERO ── */
-#hero {
-  min-height: 100vh;
-  background:
-    radial-gradient(ellipse 900px 600px at 20% 15%, rgba(155,111,160,0.22), transparent 60%),
-    radial-gradient(ellipse 700px 500px at 85% 80%, rgba(221,185,69,0.12), transparent 60%),
-    var(--plum-deep);
-  position: relative; overflow: hidden;
-  display: flex; align-items: center; justify-content: center; text-align: center;
-}
-#hero::after {
-  content: ''; position: absolute; inset: 0; opacity: 0.5; mix-blend-mode: overlay; pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
-}
-.hero-inner { position: relative; z-index: 2; max-width: 900px; padding: 170px 2rem 110px; }
-.hero-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 2.25rem; }
-.hero-h1 { font-family: 'DM Serif Display', serif; font-size: clamp(40px, 6vw, 76px); line-height: 1.1; color: var(--white); margin-bottom: 2rem; font-weight: 400; }
-.hero-h1 em { color: var(--mauve-light); }
-.hero-sub { font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.68); line-height: 1.8; max-width: 620px; margin: 0 auto 3rem; }
-.hero-actions { display: flex; gap: 1.25rem; align-items: center; justify-content: center; flex-wrap: wrap; margin-bottom: 1.75rem; }
-.hero-fine { font-size: 12px; color: rgba(255,255,255,0.4); letter-spacing: 0.03em; }
-
-/* ── RECOGNITION ── */
-#familiar { background: var(--cream); }
-.check-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem 3rem; margin: 2.5rem 0 2.5rem; }
-.check-list li { font-size: 16px; font-weight: 300; color: var(--plum); line-height: 1.7; padding-left: 1.75rem; position: relative; }
-.check-list li::before { content: ''; position: absolute; left: 0; top: 0.65em; width: 10px; height: 10px; border-radius: 50%; background: var(--amber); }
-.callout { font-family: 'DM Serif Display', serif; font-style: italic; font-size: clamp(20px, 2.2vw, 26px); color: var(--plum); line-height: 1.45; border-left: 3px solid var(--amber); padding-left: 1.5rem; max-width: 700px; }
-
-/* ── COST OF A BAD BID ── */
-#cost { background: var(--plum-deep); }
-.stages { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin: 2.5rem 0 1rem; }
-.stage { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.75); border: 1px solid rgba(255,255,255,0.18); border-radius: var(--radius-pill); padding: 8px 16px; }
-.stage.pay { background: var(--amber); color: var(--plum-deep); border-color: var(--amber); }
-.stage-arrow { color: rgba(255,255,255,0.3); font-size: 14px; }
-.stages-note { font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 2.5rem; }
-
-.stats-band { background: var(--plum); padding: 80px 2rem 60px; }
-.stats-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; text-align: center; }
-.stats-item strong { display: block; font-family: 'DM Serif Display', serif; font-size: 44px; color: var(--amber); font-weight: 400; margin-bottom: 0.75rem; }
-.stats-item p { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.7; }
-.stats-source { max-width: 1000px; margin: 2.5rem auto 0; text-align: center; font-size: 11px; color: rgba(255,255,255,0.35); line-height: 1.8; }
-.stats-source a { color: rgba(255,255,255,0.5); }
-
-/* ── BID ECONOMICS ── */
-#economics { background: var(--cream); }
-.questions { list-style: none; counter-reset: q; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 3rem; margin: 2.5rem 0; }
-.questions li { counter-increment: q; position: relative; padding-left: 3rem; }
-.questions li::before { content: counter(q, decimal-leading-zero); position: absolute; left: 0; top: 0; font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; color: var(--amber); }
-.questions h3 { font-family: 'DM Serif Display', serif; font-size: 21px; font-weight: 400; color: var(--plum); margin-bottom: 0.5rem; }
-.questions p { font-size: 14px; font-weight: 300; color: var(--plum-mid); line-height: 1.75; }
-
-.example { border-left: 3px solid var(--amber); padding: 0.25rem 0 0.25rem 1.75rem; margin: 3rem 0 1rem; max-width: 640px; }
-.example p { font-size: 16px; font-weight: 300; color: var(--plum-mid); line-height: 1.85; margin-bottom: 1rem; }
-.example .example-lead { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 22px; line-height: 1.4; color: var(--plum); }
-.example .example-punch { font-family: 'DM Serif Display', serif; font-style: italic; font-weight: 400; font-size: 20px; color: var(--plum); margin-bottom: 0.5rem; }
-.example .example-note { font-size: 12px; color: var(--muted); margin: 0; }
-.inline-cta { margin-top: 2.5rem; font-size: 16px; color: var(--plum-mid); }
-
-.assessment-line { font-size: 15px; font-weight: 300; color: var(--plum-mid); line-height: 1.8; max-width: 680px; margin: -0.5rem 0 1.5rem; }
-.assessment-line strong { color: var(--plum); font-weight: 600; }
-.cost-list { list-style: none; margin: 0 0 2rem; max-width: 680px; }
-.cost-list li { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.75); line-height: 1.7; padding: 0.4rem 0 0.4rem 1.5rem; position: relative; }
-.cost-list li::before { content: ''; position: absolute; left: 0; top: 1.05em; width: 8px; height: 2px; background: var(--amber); }
-
-/* ── SCENARIOS ── */
-#scenarios { background: var(--cream); }
-.scenario { border-left: 3px solid var(--amber); padding: 0.25rem 0 0.25rem 1.75rem; margin: 2.75rem 0 0; max-width: 680px; }
-.scenario h3 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 22px; color: var(--plum); margin-bottom: 0.6rem; }
-.scenario p { font-size: 15px; font-weight: 300; color: var(--plum-mid); line-height: 1.85; }
-.scenario .call { margin-top: 0.75rem; color: var(--plum); }
-.scenario .call strong { font-weight: 600; }
-.scenario-note { font-size: 13px; color: var(--muted); }
-
-/* ── CAPTURE ── */
-#capture { background: var(--oat); }
-.plain-list { list-style: none; margin: 2rem 0 2.5rem; }
-.plain-list li { font-size: 15px; font-weight: 300; color: var(--plum); line-height: 1.7; padding: 0.85rem 0 0.85rem 1.75rem; border-bottom: 1px solid var(--blush); position: relative; }
-.plain-list li::before { content: '→'; position: absolute; left: 0; color: var(--mauve); }
-.limits { background: var(--cream); border-radius: var(--radius-sm); padding: 1.75rem 2rem; font-size: 15px; font-weight: 300; color: var(--plum-mid); line-height: 1.8; max-width: 720px; }
-.limits strong { color: var(--plum); }
-
-/* ── METHOD ── */
-#method { background: var(--plum-deep); text-align: center; }
-.method-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin: 3rem auto 2.5rem; max-width: 1000px; }
-.method-step { border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-md); padding: 2rem 1.25rem; }
-.method-step.final { background: var(--amber); border-color: var(--amber); }
-.method-num { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; color: var(--amber); margin-bottom: 1rem; }
-.method-step.final .method-num { color: var(--plum-deep); }
-.method-q { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--white); margin-bottom: 0.75rem; line-height: 1.2; }
-.method-step.final .method-q { color: var(--plum-deep); }
-.method-label { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.55); line-height: 1.6; }
-.method-step.final .method-label { color: var(--plum); }
-#method .lead { margin: 0 auto; }
-
-/* ── SERVICES ── */
-#services { background: var(--cream); }
-.service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2.5rem 0 2rem; }
-.service { background: var(--white); border: 1px solid var(--oat); border-radius: var(--radius-md); padding: 2.25rem; }
-.service.last { background: var(--oat); border-color: var(--oat); }
-.service-num { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; color: var(--mauve); margin-bottom: 0.75rem; }
-.service h3 { font-family: 'DM Serif Display', serif; font-size: 24px; font-weight: 400; color: var(--plum); margin-bottom: 0.75rem; }
-.service p { font-size: 14px; font-weight: 300; color: var(--plum-mid); line-height: 1.8; }
-.formats { font-size: 15px; font-weight: 300; color: var(--plum-mid); margin-bottom: 1.25rem; }
-
-/* ── UNCOVER ── */
-#uncover { background: var(--white); }
-.leak-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-top: 2.5rem; }
-.leak-col h3 { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 22px; font-weight: 400; color: var(--plum); padding-bottom: 0.75rem; margin-bottom: 0.5rem; border-bottom: 2px solid var(--amber); }
-.leak-col ul { list-style: none; }
-.leak-col li { font-size: 15px; font-weight: 300; color: var(--plum-mid); line-height: 1.65; padding: 0.8rem 0; border-bottom: 1px solid var(--oat); }
-
-/* ── ROI ── */
-#roi { background: var(--plum); }
-.roi-list { list-style: none; margin: 2rem 0 2rem; }
-.roi-list li { font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.8); line-height: 1.7; padding: 1rem 0 1rem 1.75rem; border-bottom: 1px solid rgba(255,255,255,0.1); position: relative; }
-.roi-list li::before { content: ''; position: absolute; left: 0; top: 1.65em; width: 10px; height: 2px; background: var(--amber); }
-
-/* ── FIT ── */
-#fit { background: var(--cream); }
-.fit-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 1.5rem; margin-top: 2.5rem; }
-#fit .body { max-width: 720px; }
-.fit-card { border-radius: var(--radius-md); padding: 2.25rem; }
-.fit-card.yes { background: var(--white); border: 1px solid var(--oat); }
-.fit-card.no { background: var(--oat); }
-.fit-card h3 { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mauve); margin-bottom: 1.25rem; }
-.fit-card ul { list-style: none; }
-.fit-card li { font-size: 15px; font-weight: 300; color: var(--plum); line-height: 1.65; padding: 0.55rem 0; }
-
-/* ── CREDIBILITY ── */
-#about { background: var(--oat); }
-.about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 3.5rem; align-items: start; }
-.founder-photo { width: 100%; max-width: 260px; aspect-ratio: 1; border-radius: var(--radius-md); object-fit: cover; object-position: top; box-shadow: 0 12px 32px rgba(58,38,64,0.15); }
-.pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0; }
-.pillar { background: var(--cream); border-radius: var(--radius-sm); padding: 1.25rem; }
-.pillar strong { display: block; font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--plum); margin-bottom: 0.5rem; }
-.pillar span { font-size: 13px; font-weight: 300; color: var(--plum-mid); line-height: 1.6; }
-.promise { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 19px; color: var(--plum); line-height: 1.5; }
-.founder-links { display: flex; gap: 2rem; margin-top: 1.75rem; }
-.founder-link { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--plum); text-decoration: none; border-bottom: 1px solid var(--blush); padding-bottom: 2px; }
-.founder-link:hover { color: var(--mauve); border-color: var(--mauve); }
-
-/* ── OBJECTIONS ── */
-#objections { background: var(--cream); }
-.objection { margin-bottom: 2rem; }
-.objection h3 { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 20px; color: var(--plum); margin-bottom: 0.5rem; font-weight: 400; }
-.objection p { font-size: 15px; font-weight: 300; color: var(--plum-mid); line-height: 1.8; }
-
-/* ── CTA ── */
-#contact { background: var(--plum-deep); text-align: center; }
-#contact .lead { margin: 0 auto 2.5rem; }
-.cta-actions { display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.25rem; }
-.cta-fine { font-size: 12px; color: rgba(255,255,255,0.4); }
-.form-wrap { max-width: 600px; margin: 4rem auto 0; text-align: left; }
-.contact-card { background: var(--plum); border-radius: var(--radius-md); padding: 2.5rem; }
-.contact-card-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mauve-light); margin-bottom: 1.75rem; text-align: center; }
-.form-field { margin-bottom: 1.25rem; }
-.form-field label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(201,168,206,0.7); margin-bottom: 7px; }
-.form-field input, .form-field textarea, .form-field select { width: 100%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); padding: 12px 16px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 300; color: var(--white); outline: none; transition: border-color 0.2s; -webkit-appearance: none; }
-.form-field input::placeholder, .form-field textarea::placeholder { color: rgba(255,255,255,0.25); }
-.form-field input:focus, .form-field textarea:focus, .form-field select:focus { border-color: var(--amber); }
-.form-field select option { background: var(--plum); color: var(--white); }
-.form-field textarea { resize: vertical; min-height: 100px; }
-.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.form-submit { width: 100%; font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: var(--plum-deep); background: var(--amber); border: none; border-radius: var(--radius-pill); padding: 14px; cursor: pointer; transition: background 0.2s; margin-top: 0.5rem; }
-.form-submit:hover { background: var(--amber-light); }
-
-/* ── FOOTER ── */
-footer { background: var(--plum-deep); border-top: 1px solid rgba(255,255,255,0.06); padding: 2.5rem 5rem; }
-.footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
-.footer-logo { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--white); text-decoration: none; }
-.footer-logo span { color: var(--amber); font-style: italic; }
-.footer-nav { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
-.footer-nav a { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.35); text-decoration: none; font-weight: 500; }
-.footer-nav a:hover { color: var(--white); }
-.footer-copy { font-size: 11px; color: rgba(255,255,255,0.25); font-weight: 300; }
-
-/* ── ANIMATIONS ── */
-@keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-.hero-inner > * { opacity: 0; animation: fadeUp 0.9s ease both; }
-.hero-inner > *:nth-child(2) { animation-delay: 0.2s; }
-.hero-inner > *:nth-child(3) { animation-delay: 0.35s; }
-.hero-inner > *:nth-child(4) { animation-delay: 0.5s; }
-.hero-inner > *:nth-child(5) { animation-delay: 0.6s; }
-.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-@media (prefers-reduced-motion: reduce) {
-  .hero-inner > *, .reveal { animation: none; opacity: 1; transform: none; transition: none; }
-}
-
-/* ── RESPONSIVE ── */
-@media (max-width: 900px) {
-  nav { padding: 0 1.25rem; }
-  .nav-links, .nav-cta { display: none; }
-  .nav-toggle { display: flex; }
-  .section { padding: 84px 1rem; }
-  .hero-inner { padding: 130px 1rem 80px; }
-  .check-list, .questions, .service-grid, .leak-grid, .fit-grid, .pillars, .stats-inner { grid-template-columns: 1fr; }
-  .method-steps { grid-template-columns: 1fr 1fr; }
-  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .example { padding-left: 1.25rem; }
-  .form-grid { grid-template-columns: 1fr; }
-  .stats-band { padding: 64px 1rem 48px; }
-  footer { padding: 2rem 1rem; }
-}
-@media (max-width: 520px) {
-  .method-steps { grid-template-columns: 1fr; }
-  .hero-actions .btn, .cta-actions .btn { width: 100%; justify-content: center; }
-}
-</style>
-
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Win government contracts that actually pay | The Bid Desk">
+<meta name="twitter:description" content="RFP and bid strategy for government contractors. Know which tenders to chase, what to charge, and when to walk away.">
+<meta name="twitter:image" content="https://thebiddesk.ca/og-image.png">
+<meta name="geo.region" content="CA-ON">
+<meta name="geo.placename" content="Ottawa">
+<meta name="theme-color" content="#2E1D33">
+<link rel="alternate" type="application/rss+xml" title="The Bid Desk Blog" href="/blog/feed.xml">
+<link rel="preload" href="/fonts/SchibstedGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "The Bid Desk",
-  "description": "Bid strategy, bid economics, capture strategy and pricing for Canadian government contractors, including firms selling into the US.",
-  "url": "https://thebiddesk.ca",
-  "founder": { "@type": "Person", "name": "Akili Atherley" },
-  "areaServed": [{ "@type": "Country", "name": "Canada" }, { "@type": "Country", "name": "United States" }],
-  "serviceType": ["Government bid strategy", "Bid/no-bid analysis", "Bid economics", "Capture strategy", "Government contract pricing", "Proposal execution"],
-  "priceRange": "$$$",
-  "contactPoint": { "@type": "ContactPoint", "email": "akili@thebiddesk.ca", "contactType": "sales" }
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://thebiddesk.ca/#business",
+      "name": "The Bid Desk",
+      "url": "https://thebiddesk.ca/",
+      "image": "https://thebiddesk.ca/og-image.png",
+      "logo": "https://thebiddesk.ca/og-image.png",
+      "description": "RFP and government bid strategy consulting: bid/no-bid decisions, bid pricing, capture planning and proposal leadership for government contractors in Canada and the US.",
+      "email": "akili@thebiddesk.ca",
+      "priceRange": "$$$",
+      "address": { "@type": "PostalAddress", "addressLocality": "Ottawa", "addressRegion": "ON", "addressCountry": "CA" },
+      "areaServed": [{ "@type": "Country", "name": "Canada" }, { "@type": "Country", "name": "United States" }],
+      "founder": { "@id": "https://thebiddesk.ca/#akili" },
+      "knowsAbout": ["RFP response", "Government tenders", "Bid/no-bid decisions", "Bid pricing", "Capture management", "Proposal management", "CanadaBuys", "MERX", "SAM.gov"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://thebiddesk.ca/#akili",
+      "name": "Akili Atherley",
+      "jobTitle": "Founder and bid strategist",
+      "image": "https://thebiddesk.ca/akili.jpg",
+      "worksFor": { "@id": "https://thebiddesk.ca/#business" },
+      "sameAs": ["https://linkedin.com/in/akiliatherley"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://thebiddesk.ca/#website",
+      "url": "https://thebiddesk.ca/",
+      "name": "The Bid Desk",
+      "inLanguage": "en-CA",
+      "publisher": { "@id": "https://thebiddesk.ca/#business" }
+    }
+  ]
 }
 </script>
 </head>
 <body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 7.5v5M12 16.25h.01"/></symbol>
+  <symbol id="i-stop" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="m15 9-6 6M9 9l6 6"/></symbol>
+  <symbol id="i-minus-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M8 12h8"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="16.5" rx="2"/><path d="M16 2.5v4M8 2.5v4M3 10h18"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M21.5 2.5 10.5 13.5M21.5 2.5l-7 19-4-8-8-4z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.8 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.7 7.5-9.5V6z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 7v5l3.5 2"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+</svg>
 
-<!-- NAV -->
-<nav id="navbar">
-  <a href="index.html" class="nav-logo">The Bid Desk<span>.</span></a>
-  <ul class="nav-links">
-    <li><a href="#economics">Bid economics</a></li>
-    <li><a href="#method">How I work</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="/blog/">Blog</a></li>
-  </ul>
-  <a href="#contact" class="nav-cta">Pressure-test a bid</a>
-  <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-</nav>
-<div class="nav-mobile" id="nav-mobile">
-  <a href="#economics">Bid economics</a>
-  <a href="#method">How I work</a>
-  <a href="services.html">Services</a>
-  <a href="#about">About</a>
-  <a href="/blog/">Blog</a>
-  <a href="#contact">Pressure-test a bid</a>
-</div>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<!-- 1. HERO -->
-<section id="hero">
-  <div class="hero-inner">
-    <p class="hero-eyebrow">Bid strategy &amp; pricing · For Canadian government contractors</p>
-    <h1 class="hero-h1">Know which government contracts are <em>worth winning.</em></h1>
-    <p class="hero-sub">Every bid costs your team time and money, win or lose. I help you decide what to pursue, what to charge, and how to win the bids that will actually pay — before the proposal work starts.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn btn-amber">Pressure-test your next bid</a>
-      <a href="mailto:akili@thebiddesk.ca?subject=Opportunity%20to%20pressure-test" class="btn btn-outline-light">Send me an opportunity</a>
-    </div>
-    <p class="hero-fine">Reply within one business day · One client per opportunity, always confidential</p>
-  </div>
-</section>
-
-<!-- 2. SOUND FAMILIAR -->
-<section id="familiar" class="section">
+<header class="site-nav">
   <div class="wrap">
-    <p class="eyebrow reveal">Sound familiar?</p>
-    <h2 class="h2 reveal">Your bid team is busy. <em>Is your government strategy?</em></h2>
-    <ul class="check-list reveal">
-      <li>You bid on almost anything that looks relevant, because saying no feels like leaving money on the table.</li>
-      <li>You couldn't say what your company spent chasing government work last year — in hours or in dollars.</li>
-      <li>Your price gets set in the final week, from a rate card and a gut feeling.</li>
-      <li>You first hear about most opportunities the day the notice is published.</li>
-      <li>You won a contract that looked great on paper. It's been a margin headache ever since.</li>
-      <li>Your win/loss history exists. Nobody uses it to decide what to bid next.</li>
-    </ul>
-    <p class="callout reveal">If three or more of these sound like you, the problem isn't your proposals. It's how you decide what to chase.</p>
-  </div>
-</section>
-
-<!-- 3. THE COST OF A BAD BID -->
-<section id="cost" class="section on-dark">
-  <div class="wrap">
-    <p class="eyebrow reveal">The hidden cost</p>
-    <h2 class="h2 reveal">A bad bid isn't free. <em>A bad win can cost more.</em></h2>
-    <p class="lead reveal">The cost of a government opportunity isn't the cost of writing the proposal. A serious pursuit pulls in:</p>
-    <ul class="cost-list reveal">
-      <li>Your senior people: sales, delivery leads, executives</li>
-      <li>Solution design and pricing work</li>
-      <li>Legal review of the terms</li>
-      <li>Partner and subcontractor negotiations</li>
-      <li>Demos, site visits and travel</li>
-      <li>Compliance paperwork, certifications and security requirements</li>
-      <li>And the other work those people didn't get to</li>
-    </ul>
-    <p class="body reveal"><strong>Every bid is an investment decision.</strong> You're putting senior time, pricing room, delivery capacity and sometimes cash behind a chance at revenue. Most of that goes to bids that lose.</p>
-    <div class="stages reveal" aria-label="Stages of a government pursuit">
-      <span class="stage">Find</span><span class="stage-arrow">→</span>
-      <span class="stage">Qualify</span><span class="stage-arrow">→</span>
-      <span class="stage">Position</span><span class="stage-arrow">→</span>
-      <span class="stage">Price</span><span class="stage-arrow">→</span>
-      <span class="stage">Propose</span><span class="stage-arrow">→</span>
-      <span class="stage">Negotiate</span><span class="stage-arrow">→</span>
-      <span class="stage pay">Deliver</span>
-    </div>
-    <p class="stages-note reveal">Every stage spends something. Only the last one pays you back.</p>
-    <p class="body reveal">And winning isn't the finish line. <strong>A contract's face value isn't its economic value.</strong> Priced to win instead of to deliver, it keeps costing you for the whole term: thin margins, heavy reporting, slow payment, and people pulled away from better work.</p>
-  </div>
-</section>
-
-<section class="stats-band">
-  <div class="stats-inner">
-    <div class="stats-item reveal">
-      <strong>~37%</strong>
-      <p>Roughly the share of RFPs North American response teams report winning, across industries. Most bid effort goes to bids that lose.</p>
-    </div>
-    <div class="stats-item reveal">
-      <strong>38%</strong>
-      <p>Of US and Canadian government contractors in Deltek's 2026 study said pricing that couldn't stand up to scrutiny was the top reason their proposals weren't selected.</p>
-    </div>
-    <div class="stats-item reveal">
-      <strong>#1</strong>
-      <p>Finding opportunities too late was the top business-development challenge in Deltek's 2025 study of US and Canadian contractors.</p>
+    <a href="/" class="wordmark" aria-label="The Bid Desk, home">The Bid Desk<span class="dot">.</span></a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="/services">Services</a></li>
+        <li><a href="/#how-it-works">How it works</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener" class="btn btn-gold nav-cta">Book a free call</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Open menu">
+        <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
     </div>
   </div>
-  <p class="stats-source">Sources: <a href="https://loopio.com/blog/rfp-statistics-win-rates/" target="_blank" rel="noopener">Loopio/APMP benchmark data</a> · <a href="https://www.deltek.com/resources/articles/deltek-govcon-clarity-2026-pricing-and-estimating/" target="_blank" rel="noopener">Deltek Clarity 2026</a> · <a href="https://www.prnewswire.com/news-releases/deltek-unveils-16th-annual-clarity-government-contracting-study-ai-trends-compliance-pressures-and-strategic-shifts-for-govcon-leaders-302452027.html" target="_blank" rel="noopener">Deltek Clarity 2025</a></p>
-</section>
-
-<!-- 4. BID ECONOMICS -->
-<section id="economics" class="section">
-  <div class="wrap">
-    <p class="eyebrow reveal">Bid economics</p>
-    <h2 class="h2 reveal">What is this opportunity <em>actually worth</em> to you?</h2>
-    <p class="lead reveal">Contract value is the number on the notice. It isn't what the opportunity is worth. Before you commit a team, I work through four questions:</p>
-    <ol class="questions reveal">
-      <li><h3>What does it cost to chase?</h3><p>Your team's hours at their real cost, plus any outside help.</p></li>
-      <li><h3>How strong is your position?</h3><p>An honest read based on evidence: the buyer, the incumbent, how it's scored, and whether you saw it coming. An estimate, not a guess, and never a guarantee.</p></li>
-      <li><h3>What's the lowest price that still pays?</h3><p>Delivery, overhead, compliance and payment terms — all in.</p></li>
-      <li><h3>Is it worth it?</h3><p>The likely return, weighed against the cost and risk of chasing it, and what it could lead to.</p></li>
-    </ol>
-    <p class="assessment-line reveal">Behind these questions is the <strong>Bid Economics Assessment</strong>, the structured review I run on every opportunity before anyone commits real resources to it.</p>
-    <p class="body reveal"><strong>The goal isn't to bid on more.</strong> It's to put your people where the return is highest, and walk away from the rest with confidence.</p>
-
-    <div class="example reveal">
-      <p class="example-lead">Say you're weighing a $1.2M, three-year contract.</p>
-      <p>You figure you'll keep 15% and you've got a one-in-four shot. That's $45,000 in expected profit against roughly $20,000 to put the bid together. Easy yes.</p>
-      <p>Now use real numbers. After overhead and admin, you keep 8%, not 15%. There's a strong incumbent, so your odds are closer to 15%. Expected profit drops to $14,400, less than the bid costs you to produce.</p>
-      <p class="example-punch">Same contract. Same team. Different answer.</p>
-      <p class="example-note">Illustrative numbers.</p>
-    </div>
-    <p class="inline-cta reveal">Debating a bid right now? <a href="mailto:akili@thebiddesk.ca?subject=Opportunity%20to%20pressure-test" class="text-link">Send me the opportunity →</a></p>
-  </div>
-</section>
-
-<!-- 5. CAPTURE -->
-<section id="capture" class="section">
-  <div class="wrap">
-    <p class="eyebrow reveal">Capture strategy</p>
-    <h2 class="h2 reveal">If you meet an opportunity when the RFP is published, <em>you may already be behind.</em></h2>
-    <p class="lead reveal">The firms that win consistently tend to know the buyer, the history and the competition before the notice goes live. Capture is that groundwork. It can show you:</p>
-    <ul class="plain-list reveal">
-      <li>What departments and agencies buy, from whom, and for how much</li>
-      <li>Which contracts are coming up for renewal, and who holds them now</li>
-      <li>What similar contracts have been awarded for</li>
-      <li>Where your offer genuinely stands out against how the work will be scored</li>
-      <li>When buyers invite input — RFIs, industry days, consultations — and how to use it well</li>
-    </ul>
-    <p class="limits reveal"><strong>What capture can't do:</strong> it can't rig a fair competition, and once a solicitation is live, buyers limit contact with bidders. It doesn't guarantee a win. It makes sure you're not starting from zero.</p>
-  </div>
-</section>
-
-<!-- 5b. HOW I LOOK AT A BID -->
-<section id="scenarios" class="section">
-  <div class="wrap">
-    <p class="eyebrow reveal">How I look at a bid</p>
-    <h2 class="h2 reveal">Four situations <em>I see often.</em></h2>
-    <p class="scenario-note reveal">Illustrative scenarios, not client results.</p>
-    <div class="scenario reveal">
-      <h3>The incumbent problem</h3>
-      <p>A $2M, three-year services contract that fits you well. The same company has held it for eight years, delivered without complaint, and the evaluation leans heavily on past performance. On paper it's a strong bid. In practice your position is weak.</p>
-      <p class="call"><strong>The call:</strong> don't bid this round. Respond to the next RFI, note when the contract expires, and be the obvious alternative next time.</p>
-    </div>
-    <div class="scenario reveal">
-      <h3>The pursuit that costs more than the prize</h3>
-      <p>A $300,000 contract that needs a live demo, two site visits, a teaming partner and legal review of non-standard terms. Add it up and the pursuit could cost more than the profit you'd expect from it, even with a strong position.</p>
-      <p class="call"><strong>The call:</strong> bid only if the demo and partnership will serve other pursuits. Otherwise, pass.</p>
-    </div>
-    <div class="scenario reveal">
-      <h3>The win that costs money</h3>
-      <p>Fixed price, 60-day payment terms, a holdback until completion, and staff hired before day one. The face value looks healthy. But you're funding payroll for months before the first payment clears, and the margin that looked like 12% shrinks once admin and financing are counted.</p>
-      <p class="call"><strong>The call:</strong> bid, but price the cash cost in and raise mobilization payments during the question period.</p>
-    </div>
-    <div class="scenario reveal">
-      <h3>The pattern in the losses</h3>
-      <p>Four losses in two years, each by a few points, each on the same rated section. The team assumed it was price, so they kept cutting it.</p>
-      <p class="call"><strong>The call:</strong> stop discounting. Rebuild the one section that keeps losing points.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 6. METHOD -->
-<section id="method" class="section on-dark">
-  <div class="wrap-wide">
-    <p class="eyebrow reveal">How I work</p>
-    <h2 class="h2 reveal">Three questions before anyone <em>writes a word.</em></h2>
-    <div class="method-steps reveal">
-      <div class="method-step"><p class="method-num">01</p><p class="method-q">Is it worth chasing?</p><p class="method-label">Bid economics</p></div>
-      <div class="method-step"><p class="method-num">02</p><p class="method-q">Can we win it?</p><p class="method-label">Capture and competitive position</p></div>
-      <div class="method-step"><p class="method-num">03</p><p class="method-q">Will it pay?</p><p class="method-label">Pricing and contract terms</p></div>
-      <div class="method-step final"><p class="method-num">THEN</p><p class="method-q">Win it.</p><p class="method-label">Bid strategy and proposal execution</p></div>
-    </div>
-    <p class="lead reveal">Proposal work comes last on purpose. A well-written bid on the wrong opportunity is still the wrong bid.</p>
-  </div>
-</section>
-
-<!-- 7. SERVICES -->
-<section id="services" class="section">
-  <div class="wrap-wide">
-    <p class="eyebrow reveal">How I help</p>
-    <h2 class="h2 reveal">From the first look <em>to the final submission.</em></h2>
-    <div class="service-grid">
-      <div class="service reveal"><p class="service-num">01</p><h3>Bid economics</h3><p>Decide which opportunities deserve your resources. A clear go or no-go, the lowest price that still pays, and a recommended price range — for one opportunity or your whole pipeline.</p></div>
-      <div class="service reveal"><p class="service-num">02</p><h3>Capture strategy</h3><p>Get positioned early for the opportunities worth winning: buyer history, spending, incumbents, renewal timing, and a pursuit plan.</p></div>
-      <div class="service reveal"><p class="service-num">03</p><h3>Bid strategy &amp; pricing</h3><p>The commercial and competitive plan for a major pursuit: win themes, teaming, pricing against the competition, and the risks hiding in the contract terms.</p></div>
-      <div class="service last reveal"><p class="service-num">04</p><h3>Proposal execution</h3><p>For bids that pass the test. I lead the response so the strategy survives the deadline: compliance, structure, reviews and submission.</p></div>
-    </div>
-    <p class="formats reveal">Work with me on one opportunity, a review of your last two years of bids, or as your ongoing bid advisor.</p>
-    <a href="services.html" class="text-link reveal">See services →</a>
-  </div>
-</section>
-
-<!-- 8. WHERE REVENUE LEAKS -->
-<section id="uncover" class="section">
-  <div class="wrap-wide">
-    <p class="eyebrow reveal">Where the money goes</p>
-    <h2 class="h2 reveal">Where government revenue <em>leaks.</em></h2>
-    <p class="body reveal">Every company is different. These are the kinds of things I look for, not assumptions about you.</p>
-    <div class="leak-grid">
-      <div class="leak-col reveal">
-        <h3>Before the bid</h3>
-        <ul>
-          <li>Chasing opportunities you rarely win</li>
-          <li>Finding them too late to compete properly</li>
-          <li>Treating every RFP as equally important</li>
-          <li>Senior time spent on low-value pursuits</li>
-        </ul>
-      </div>
-      <div class="leak-col reveal">
-        <h3>During the bid</h3>
-        <ul>
-          <li>Price set in the final week from a rate card</li>
-          <li>Delivery costs assumed, not worked out</li>
-          <li>The same scoring mistakes, bid after bid</li>
-        </ul>
-      </div>
-      <div class="leak-col reveal">
-        <h3>After the award</h3>
-        <ul>
-          <li>Work won below your own economic floor</li>
-          <li>Cash fronted for months before the first payment</li>
-          <li>Renewals nobody owns until it's too late</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 9. ROI -->
-<section id="roi" class="section on-dark">
-  <div class="wrap">
-    <p class="eyebrow reveal">The return</p>
-    <h2 class="h2 reveal">How this pays for itself — <em>and what I won't promise.</em></h2>
-    <p class="lead reveal">I won't promise a win rate or a return. Nobody honest can. The value works through a few plain mechanisms:</p>
-    <ul class="roi-list reveal">
-      <li>Walk away from one bid you shouldn't chase, and you keep every hour it would have taken.</li>
-      <li>Spot a strong opportunity months earlier, and you compete prepared instead of rushed.</li>
-      <li>Price one major bid from real costs, and you protect your margin for the whole contract term.</li>
-      <li>Stop repeating the same scoring mistake, and every future bid starts stronger.</li>
-    </ul>
-    <p class="body reveal">A serious bid can tie up weeks of senior time. Avoiding one that was never going to pay is often worth more than the engagement.</p>
-    <a href="#contact" class="btn btn-amber reveal">Pressure-test your next bid</a>
-  </div>
-</section>
-
-<!-- 10. WHO IT'S FOR -->
-<section id="fit" class="section">
-  <div class="wrap-wide">
-    <p class="eyebrow reveal">Who this is for</p>
-    <h2 class="h2 reveal">Built for companies that bid often enough <em>for the decisions to matter.</em></h2>
-    <p class="body reveal">Usually that's an established company with some government revenue already, or serious plans for it. You pursue several public opportunities a year, often worth hundreds of thousands or millions. You have people who can write, maybe even a proposal lead, but nobody whose job is deciding which bids deserve the effort, or what to charge.</p>
-    <div class="fit-grid">
-      <div class="fit-card yes reveal">
-        <h3>A good fit if</h3>
-        <ul>
-          <li>You already win some government work and want more of it, or better of it</li>
-          <li>Bids pull in people who have other jobs: sales, delivery leads, executives</li>
-          <li>You're not sure which of your bids, or wins, are actually paying off</li>
-          <li>You sell to government in Canada, or across the border into the US</li>
-        </ul>
-      </div>
-      <div class="fit-card no reveal">
-        <h3>Probably not the right fit if</h3>
-        <ul>
-          <li>You need someone to write or format a proposal</li>
-          <li>You're looking for grant writing</li>
-          <li>You bid occasionally on smaller contracts. Send me the opportunity anyway, and I'll point you to what will help.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 11. CREDIBILITY -->
-<section id="about" class="section">
-  <div class="wrap-wide about-grid">
-    <img src="akili.jpg" alt="Akili Atherley, founder of The Bid Desk" class="founder-photo reveal">
-    <div>
-      <p class="eyebrow reveal">Why I see bids differently</p>
-      <h2 class="h2 reveal">Most bid consultants come from writing. <em>I came up through proposal management and finance.</em></h2>
-      <p class="body reveal">I've spent years inside proposal teams on government and enterprise pursuits — reading evaluation grids, running submissions, and watching good companies lose on things that had nothing to do with their capability. My finance and accounting background means I look at the same bid and ask a different question. Not just "can we win?" but "what does winning cost, and what will it pay?"</p>
-      <div class="pillars reveal">
-        <div class="pillar"><strong>Procurement</strong><span>How buyers evaluate, disqualify and award</span></div>
-        <div class="pillar"><strong>Finance</strong><span>Cost, margin, cash and risk</span></div>
-        <div class="pillar"><strong>Revenue</strong><span>How bids fit a sales pipeline and a growth plan</span></div>
-      </div>
-      <p class="body reveal">Put together, that's government revenue strategy: deciding what to pursue, how to position, what to charge and how to win, before anyone writes a proposal.</p>
-      <p class="promise reveal">One desk, one expert. No junior handoffs, and I never work with two clients on the same opportunity.</p>
-      <div class="founder-links reveal">
-        <a href="https://linkedin.com/in/akiliatherley" target="_blank" rel="noopener" class="founder-link">LinkedIn</a>
-        <a href="mailto:akili@thebiddesk.ca" class="founder-link">Email me</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 12. FAIR QUESTIONS -->
-<section id="objections" class="section">
-  <div class="wrap">
-    <p class="eyebrow reveal">Fair questions</p>
-    <div class="objection reveal"><h3>"We already have a proposal team."</h3><p>Good — they'll get better inputs. I work upstream of them: what to bid, how to position, what to charge.</p></div>
-    <div class="objection reveal"><h3>"Isn't this just bid/no-bid?"</h3><p>A checklist tells you whether you <em>can</em> bid. Bid economics tells you whether you <em>should</em> — with numbers.</p></div>
-    <div class="objection reveal"><h3>"What does it cost?"</h3><p>Every engagement is a fixed fee, agreed before any work starts. Most clients begin with a Bid Economics Review, a fixed-scope assessment of one opportunity. Send it over and I'll quote it the same day.</p></div>
-    <div class="objection reveal"><h3>"Is my information safe?"</h3><p>Everything you share stays between us — no subcontractors, no rotating team, and never two clients on the same opportunity.</p></div>
-  </div>
-</section>
-
-<!-- 13. FINAL CTA + FORM -->
-<section id="contact" class="section on-dark">
-  <div class="wrap">
-    <p class="eyebrow reveal">Start with one bid</p>
-    <h2 class="h2 reveal">Have an opportunity <em>you're debating?</em></h2>
-    <p class="lead reveal">Send it to me — the notice, the RFP, or just a link. Within one business day, I'll reply with a candid first read: whether it looks worth a closer look, and the questions that will decide it. No obligation, no sales sequence.</p>
-    <div class="cta-actions reveal">
-      <a href="mailto:akili@thebiddesk.ca?subject=Opportunity%20to%20pressure-test" class="btn btn-amber">Send me an opportunity</a>
-      <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener" class="btn btn-outline-light">Book a 20-minute Bid Health Check</a>
-    </div>
-    <p class="cta-fine reveal">One opportunity per company. If it needs real analysis, I'll quote a fixed fee first.</p>
-
-    <div class="form-wrap reveal">
-      <form class="contact-card" id="contact-form" novalidate>
-        <div class="contact-card-label">Or send it here</div>
-        <div class="form-grid">
-          <div class="form-field"><label for="name">Your name</label><input type="text" id="name" name="name" autocomplete="name" placeholder="Jane Smith"></div>
-          <div class="form-field"><label for="company">Company</label><input type="text" id="company" name="company" autocomplete="organization" placeholder="Acme Inc."></div>
-        </div>
-        <div class="form-field"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" placeholder="jane@company.com" required></div>
-        <div class="form-grid">
-          <div class="form-field">
-            <label for="bids">Public bids per year</label>
-            <select id="bids" name="bids_per_year">
-              <option value="">Choose…</option>
-              <option>1–3</option><option>4–10</option><option>11–25</option><option>25+</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label for="value">Typical contract value</label>
-            <select id="value" name="typical_contract_value">
-              <option value="">Choose…</option>
-              <option>Under $100K</option><option>$100K–$500K</option><option>$500K–$2M</option><option>$2M+</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-field"><label for="link">Link to the opportunity (optional)</label><input type="url" id="link" name="opportunity_link" placeholder="CanadaBuys, SAM.gov, MERX, a state portal…"></div>
-        <div class="form-field"><label for="message">What are you weighing?</label><textarea id="message" name="message" placeholder="E.g. strong incumbent, tight margin, not sure we can staff it…"></textarea></div>
-        <button type="submit" class="form-submit" id="submit-btn">Send it over →</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <a href="index.html" class="footer-logo">The Bid Desk<span>.</span></a>
-    <ul class="footer-nav">
-      <li><a href="#economics">Bid economics</a></li>
-      <li><a href="services.html">Services</a></li>
+  <div class="nav-panel" id="nav-panel">
+    <ul>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/#how-it-works">How it works</a></li>
+      <li><a href="/#about">About</a></li>
       <li><a href="/blog/">Blog</a></li>
-      <li><a href="#contact">Contact</a></li>
     </ul>
-    <p class="footer-copy">&copy; 2026 The Bid Desk · Ottawa, Canada · akili@thebiddesk.ca</p>
+    <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener" class="btn btn-gold">Book a free 20-minute call</a>
+  </div>
+</header>
+
+<main id="main">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What does an RFP or bid consultant do?", "acceptedAnswer": { "@type": "Answer", "text": "I help you decide which RFPs and tenders to bid on, what to charge, and how to position your bid before any writing starts. When a bid passes that test, I can lead the full response." } },
+    { "@type": "Question", "name": "We already have a proposal team. Do we still need you?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, if they spend time on bids that don't pay. I work before they start: which opportunities to pursue and what to charge. They get better bids to write." } },
+    { "@type": "Question", "name": "What does it cost?", "acceptedAnswer": { "@type": "Answer", "text": "Every engagement is a fixed fee agreed before any work starts. Send the opportunity and you get a quote within one business day. The 20-minute Bid Health Check is free." } },
+    { "@type": "Question", "name": "Can you guarantee we'll win the contract?", "acceptedAnswer": { "@type": "Answer", "text": "No. Nobody honest can. I make sure you chase the right bids, at the right price, as prepared as possible." } },
+    { "@type": "Question", "name": "Do you work with US companies?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most clients are Canadian. I also help Canadian firms bidding on US opportunities and US firms bidding on Canadian tenders." } },
+    { "@type": "Question", "name": "Is my bid information confidential?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Everything stays between us. No subcontractors, and never two clients on the same opportunity." } }
+  ]
+}
+</script>
+
+<section class="hero dark glow" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div>
+      <h1 id="hero-title">Win government contracts that <em>actually pay.</em></h1>
+      <p class="lead">RFP and bid strategy for government contractors in Canada and the US. Know which tenders to chase, what to charge, and when to walk away, before anyone writes a word.</p>
+      <div class="actions">
+        <a href="https://calendly.com/thebiddesk" class="btn btn-gold" target="_blank" rel="noopener">Book your free Bid Health Check <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="#contact" class="btn btn-ghost">Send me an RFP</a>
+      </div>
+    </div>
+
+    <aside class="book-card" aria-labelledby="book-title">
+      <span class="badge badge-gold">Free · 20 minutes</span>
+      <h2 id="book-title">Bid Health Check</h2>
+      <p>Bring one RFP or tender. Leave with an honest answer.</p>
+      <ul class="ticks">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>Is this bid worth your team’s time?</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>What could sink it</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>Your smartest next move</li>
+      </ul>
+      <a href="https://calendly.com/thebiddesk" class="btn btn-gold" target="_blank" rel="noopener">Pick a time <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg></a>
+      <p class="small">Free, and you’re under no obligation.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section-tight proof" aria-labelledby="proof-title">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="proof-title">Most bids lose. The costly ones hurt most.</h2>
+      <p class="lead">The problem usually isn’t your proposal writing. It’s which opportunities you chase and how you price them.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card"><span class="fig">~37%</span><p>Roughly the share of RFPs North American response teams report winning.</p></div>
+      <div class="card"><span class="fig">38%</span><p>Of US and Canadian government contractors named weak pricing as the top reason proposals lost (Deltek, 2026).</p></div>
+      <div class="card"><span class="fig">No. 1</span><p>Finding opportunities too late was contractors’ top business-development challenge (Deltek, 2025).</p></div>
+    </div>
+    <p class="sources small">Sources: <a href="https://loopio.com/blog/rfp-statistics-win-rates/" target="_blank" rel="noopener">Loopio/APMP</a> · <a href="https://www.deltek.com/resources/articles/deltek-govcon-clarity-2026-pricing-and-estimating/" target="_blank" rel="noopener">Deltek Clarity 2026</a> · <a href="https://www.prnewswire.com/news-releases/deltek-unveils-16th-annual-clarity-government-contracting-study-ai-trends-compliance-pressures-and-strategic-shifts-for-govcon-leaders-302452027.html" target="_blank" rel="noopener">Deltek Clarity 2025</a></p>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="pain-title">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="pain-title">Tired of losing money on government contracts?</h2>
+      <p class="lead">You’re not alone, and it’s rarely your writing that’s the problem.</p>
+    </div>
+    <ul class="pain">
+      <li><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg>You bid on almost every RFP that looks relevant.</li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg>Your best people lose weeks to proposals.</li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg>Pricing happens in the final week, on gut feel.</li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg>You find tenders the day they’re posted.</li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg>You won a contract that’s been losing money ever since.</li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg>You lose by a few points and never find out why.</li>
+    </ul>
+    <div class="pain-close">
+      <p>Nodding along to two or more? Let’s fix that.</p>
+      <a href="https://calendly.com/thebiddesk" class="btn btn-gold" target="_blank" rel="noopener">Book a free call <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="outcomes" aria-labelledby="outcomes-title">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="outcomes-title">What changes when we work together.</h2>
+      <p class="lead">Every bid gets a clear answer before your team spends an hour on it.</p>
+    </div>
+    <div class="grid g4">
+      <div class="card outcome"><h3>You say no without the guilt.</h3><p>Your team’s time goes to bids you can actually win.</p><p class="instead">Before: bidding on everything</p></div>
+      <div class="card outcome"><h3>You know your number early.</h3><p>The lowest price that still pays you, and a range to aim for.</p><p class="instead">Before: gut-feel pricing</p></div>
+      <div class="card outcome"><h3>You see the good ones coming.</h3><p>Months of lead time instead of a two-week scramble.</p><p class="instead">Before: late tenders</p></div>
+      <div class="card outcome"><h3>Your wins make money.</h3><p>Contracts you’re glad you won, for the whole term.</p><p class="instead">Before: wins that lose money</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark glow" aria-labelledby="cost-title">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="cost-title">Every RFP costs you. Even the ones you win.</h2>
+      <p class="lead">Senior hours, pricing work, legal review, site visits. Most of it goes to bids that lose. And a contract priced just to win can drain your margin for years.</p>
+    </div>
+    <div class="track">
+      <ol aria-label="Stages of a government bid">
+        <li>Find<span>Costs time</span></li>
+        <li>Qualify<span>Costs time</span></li>
+        <li>Position<span>Costs time</span></li>
+        <li>Price<span>Costs margin</span></li>
+        <li>Propose<span>Costs senior hours</span></li>
+        <li>Negotiate<span>Costs leverage</span></li>
+        <li class="pays">Deliver<span>Finally pays you</span></li>
+      </ol>
+    </div>
+    <div class="band-foot">
+      <p>Only the last stage pays you back. That’s why the first decision matters most.</p>
+      <a href="#contact" class="btn btn-gold">Get a second opinion on your next bid <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="bid-economics" aria-labelledby="worth-title">
+  <div class="wrap worth">
+    <div>
+      <h2 id="worth-title">Contract value isn’t contract worth.</h2>
+      <p class="lead">The same $1.2M, three-year tender, looked at twice. Real margin and realistic odds change the answer.</p>
+      <p class="note"><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg>Illustrative numbers</p>
+      <div class="actions"><a href="#contact" class="btn btn-gold">Find out what your bid is worth <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+    </div>
+    <div class="ledger">
+      <div class="ledger-col">
+        <h3>On gut feel</h3>
+        <dl>
+          <div><dt>Margin you keep</dt><dd>15%</dd></div>
+          <div><dt>Odds of winning</dt><dd>1 in 4</dd></div>
+          <div><dt>Cost to bid</dt><dd>~$20,000</dd></div>
+          <div class="total"><dt>Expected profit</dt><dd>$45,000</dd></div>
+        </dl>
+        <p class="verdict verdict-go"><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>Easy yes</p>
+      </div>
+      <div class="ledger-col">
+        <h3>With real numbers</h3>
+        <dl>
+          <div><dt>Margin after overhead</dt><dd>8%</dd></div>
+          <div><dt>Odds, strong incumbent</dt><dd>~15%</dd></div>
+          <div><dt>Cost to bid</dt><dd>~$20,000</dd></div>
+          <div class="total"><dt>Expected profit</dt><dd>$14,400</dd></div>
+        </dl>
+        <p class="verdict verdict-stop"><svg class="icon" aria-hidden="true"><use href="#i-stop"/></svg>Costs more than it returns</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section tint" id="how-it-works" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="how-title">How it works</h2>
+      <p class="lead">Three questions answered before anyone writes a word of your proposal.</p>
+    </div>
+    <ol class="steps">
+      <li class="card"><span class="step-num" aria-hidden="true">1</span><h3>Is it worth chasing?</h3><p>The economics of the opportunity, before you commit.</p></li>
+      <li class="card"><span class="step-num" aria-hidden="true">2</span><h3>Can you win it?</h3><p>An honest read on your position and the competition.</p></li>
+      <li class="card"><span class="step-num" aria-hidden="true">3</span><h3>Will it pay?</h3><p>A bid price that wins and still makes money.</p></li>
+      <li class="card final"><span class="step-num" aria-hidden="true"><svg class="icon" width="18" height="18"><use href="#i-check"/></svg></span><h3>Then, win it.</h3><p>A proposal built on a decision you already trust.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="scenarios" aria-labelledby="scenarios-title">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="scenarios-title">Four bids I see all the time.</h2>
+      <p class="lead">Each looks like a writing problem. None of them is.</p>
+    </div>
+    <div data-tabs>
+      <div class="tablist" role="tablist" aria-label="Bid situations">
+        <button type="button" role="tab" id="tab-1" aria-controls="sit-1">The strong incumbent</button>
+        <button type="button" role="tab" id="tab-2" aria-controls="sit-2">The costly pursuit</button>
+        <button type="button" role="tab" id="tab-3" aria-controls="sit-3">The win that loses money</button>
+        <button type="button" role="tab" id="tab-4" aria-controls="sit-4">The same lost points</button>
+      </div>
+      <article class="situation card" id="sit-1" aria-labelledby="tab-1">
+        <div><h3>The incumbent you can’t beat, yet</h3><p>A $2M services contract that fits you perfectly. The same vendor has held it for eight years, and past performance carries much of the score.</p></div>
+        <p class="call"><b>My call</b><span>Skip this round. Get on the buyer’s radar before re-tender and be the obvious alternative.</span></p>
+      </article>
+      <article class="situation card" id="sit-2" aria-labelledby="tab-2">
+        <div><h3>The pursuit that costs more than the prize</h3><p>A $300,000 RFP needing a live demo, two site visits, a teaming partner and legal review. The pursuit could cost more than it earns.</p></div>
+        <p class="call"><b>My call</b><span>Bid only if the demo and partner help you win other work. Otherwise, pass.</span></p>
+      </article>
+      <article class="situation card" id="sit-3" aria-labelledby="tab-3">
+        <div><h3>The win that costs money</h3><p>Fixed price, 60-day payment terms, a holdback, and staff hired before day one. You fund payroll for months and the 12% margin shrinks fast.</p></div>
+        <p class="call"><b>My call</b><span>Bid, but price in the cash cost and ask for better payment terms in the question period.</span></p>
+      </article>
+      <article class="situation card" id="sit-4" aria-labelledby="tab-4">
+        <div><h3>The losses that look like price</h3><p>Four losses in two years, each by a few points, each on the same rated section. The team kept cutting price.</p></div>
+        <p class="call"><b>My call</b><span>Stop cutting price and fix the one section that keeps losing points.</span></p>
+      </article>
+      <div class="situations-foot">
+        <p class="note"><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg>Illustrative scenarios, not client results</p>
+        <a href="#contact" class="link">Recognize one? Tell me about it <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section tint" id="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="services-title">Bid consulting services</h2>
+      <p class="lead">Fixed fees, agreed up front. Start with one bid.</p>
+    </div>
+    <div class="card svc-feature">
+      <div>
+        <span class="badge badge-gold">Most clients start here</span>
+        <h3>Bid Economics Review</h3>
+        <p>A clear go, go-with-conditions or walk-away on one RFP or tender, in 3–5 business days.</p>
+        <div class="actions"><a href="/services#decision-review" class="btn btn-gold">See how it works <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      </div>
+      <ul class="ticks">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>Bid or no-bid, with the reasons</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>The lowest price that still pays you</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>The risks that could sink it</li>
+      </ul>
+    </div>
+    <div class="grid g4 svc-grid">
+      <a class="card svc-card" href="/services#diagnostic"><h3>Bid Desk Diagnostic</h3><p>See which past bids made money, and why you lose.</p><p class="meta">3–4 weeks</p><span class="link more">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+      <a class="card svc-card" href="/services#capture"><h3>Capture Plan</h3><p>Spot the right opportunities months before they’re posted.</p><p class="meta">4–6 weeks</p><span class="link more">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+      <a class="card svc-card" href="/services#pursuit-lead"><h3>Pursuit Lead</h3><p>I lead your RFP response once a bid passes the test.</p><p class="meta">To the deadline</p><span class="link more">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+      <a class="card svc-card" href="/services#fractional"><h3>Fractional Bid Desk</h3><p>A senior bid advisor every month, without the hire.</p><p class="meta">Ongoing</p><span class="link more">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="fit" aria-labelledby="fit-title">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="fit-title">Who I work with</h2>
+      <p class="lead">Established companies that bid on public contracts a few times a year, where one bad call really hurts.</p>
+    </div>
+    <div class="grid g2 fit">
+      <div class="card fit-yes">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>A great fit if you</h3>
+        <ul>
+          <li>Win some government work and want more, or better</li>
+          <li>Pull senior people off paying work for bids</li>
+          <li>Aren’t sure which bids, or wins, really pay</li>
+          <li>Sell to government in Canada or the US</li>
+        </ul>
+      </div>
+      <div class="card fit-no">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-minus-circle"/></svg>Not the right fit if you</h3>
+        <ul>
+          <li>Only need a proposal writer or formatter</li>
+          <li>Need grant writing</li>
+          <li>Bid now and then on small contracts (send it anyway, I’ll point you in the right direction)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section tint" id="about" aria-labelledby="about-title">
+  <div class="wrap">
+    <div class="about">
+      <div class="about-head">
+        <img src="/akili-avatar.jpg" alt="Akili Atherley, founder of The Bid Desk" class="avatar avatar-lg" width="96" height="96" loading="lazy">
+        <h2 id="about-title">Hi, I’m Akili. I’ll tell you when not to bid.</h2>
+      </div>
+      <p class="lead">Most bid consultants come from writing. I came up through proposal management and finance, including years inside a company that sells to government.</p>
+      <p>I’ve read the evaluation grids, run the submissions, and watched good companies lose on things that had nothing to do with their capability. So every bid gets two questions from me: can you win it, and will winning it pay?</p>
+      <dl class="creds">
+        <div><dt>Procurement</dt><dd>How buyers score and award</dd></div>
+        <div><dt>Finance</dt><dd>Cost, margin, cash and risk</dd></div>
+        <div><dt>Revenue</dt><dd>How bids fit your growth</dd></div>
+      </dl>
+      <p>You work with me directly. No junior handoffs, and never two clients chasing the same contract.</p>
+      <div class="actions">
+        <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener" class="btn btn-gold">Book a free call with me <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="https://linkedin.com/in/akiliatherley" target="_blank" rel="noopener" class="link">Connect on LinkedIn <svg class="icon" aria-hidden="true"><use href="#i-link"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="faq-title">Frequently asked questions</h2>
+      <p class="lead">Anything else? Email <a href="mailto:akili@thebiddesk.ca">akili@thebiddesk.ca</a>. I answer every one myself.</p>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>What does an RFP or bid consultant do? <svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <div class="answer"><p>I help you decide which RFPs and tenders to bid on, what to charge, and how to position your bid before any writing starts. When a bid passes that test, I can lead the full response.</p></div>
+      </details>
+      <details>
+        <summary>We already have a proposal team. Do we still need you? <svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <div class="answer"><p>Yes, if they spend time on bids that don’t pay. I work before they start: which opportunities to pursue and what to charge. They get better bids to write.</p></div>
+      </details>
+      <details>
+        <summary>What does it cost? <svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <div class="answer"><p>Every engagement is a fixed fee agreed before any work starts. Send the opportunity and you get a quote within one business day. The 20-minute Bid Health Check is free.</p></div>
+      </details>
+      <details>
+        <summary>Will it pay for itself? <svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <div class="answer">
+          <p>I won’t promise a win rate. Here’s how it usually pays off:</p>
+          <ul>
+            <li>Skip one bid you shouldn’t chase and keep weeks of senior time.</li>
+            <li>Price one big tender properly and protect your margin for years.</li>
+            <li>Fix the section that keeps losing points and every bid gets stronger.</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary>Can you guarantee we’ll win the contract? <svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <div class="answer"><p>No. Nobody honest can. I make sure you chase the right bids, at the right price, as prepared as possible.</p></div>
+      </details>
+      <details>
+        <summary>Do you work with US companies? <svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <div class="answer"><p>Yes. Most clients are Canadian. I also help Canadian firms bidding on US opportunities and US firms bidding on Canadian tenders.</p></div>
+      </details>
+      <details>
+        <summary>Is my bid information confidential? <svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <div class="answer"><p>Yes. Everything stays between us. No subcontractors, and never two clients on the same opportunity.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section dark glow" id="contact" aria-labelledby="contact-title">
+  <div class="wrap contact-grid">
+    <div>
+      <h2 id="contact-title">Send me the RFP you’re unsure about.</h2>
+      <p class="lead">Get an honest first read within one business day. If it’s not worth chasing, I’ll tell you.</p>
+      <ul class="ticks">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>Free first read, no obligation</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>A reply from me, not a sales team</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>Confidential, one client per opportunity</li>
+      </ul>
+      <p class="talk"><strong>Prefer to talk?</strong> <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener">Book a free 20-minute call</a></p>
+    </div>
+
+    <form class="form-panel" id="contact-form" action="https://formspree.io/f/mbdwrybp" method="POST">
+      <h3>Send it here</h3>
+      <p>Only your email is required.</p>
+      <input type="hidden" name="_subject" value="New RFP to review">
+      <div class="hp" aria-hidden="true"><label for="gotcha">Leave this empty</label><input type="text" id="gotcha" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+      <div class="form-grid">
+        <div class="field"><label for="name">Your name</label><input type="text" id="name" name="name" autocomplete="name"></div>
+        <div class="field"><label for="company">Company</label><input type="text" id="company" name="company" autocomplete="organization"></div>
+        <div class="field field-full">
+          <label for="email">Work email <span class="req" aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error">
+          <p class="field-error" id="email-error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="bids">Bids per year</label>
+          <select id="bids" name="bids_per_year">
+            <option value="">Choose one</option>
+            <option>1–3</option><option>4–10</option><option>11–25</option><option>25+</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="value">Typical contract value</label>
+          <select id="value" name="typical_contract_value">
+            <option value="">Choose one</option>
+            <option>Under $100K</option><option>$100K–$500K</option><option>$500K–$2M</option><option>$2M+</option>
+          </select>
+        </div>
+        <div class="field field-full">
+          <label for="link">Link to the RFP or tender <span class="opt">(optional)</span></label>
+          <input type="url" id="link" name="opportunity_link" inputmode="url" placeholder="CanadaBuys, MERX, SAM.gov or a portal link" aria-describedby="link-error">
+          <p class="field-error" id="link-error" aria-live="polite"></p>
+        </div>
+        <div class="field field-full">
+          <label for="message">What’s making you unsure? <span class="opt">(optional)</span></label>
+          <textarea id="message" name="message" placeholder="For example: strong incumbent, tight margin, not sure we can staff it"></textarea>
+        </div>
+      </div>
+      <div class="form-foot">
+        <button type="submit" class="btn btn-gold">Send it to Akili <svg class="icon" aria-hidden="true"><use href="#i-send"/></svg></button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a href="/" class="wordmark">The Bid Desk<span class="dot">.</span></a>
+        <p>RFP and bid strategy consulting for government contractors in Canada and the US. Based in Ottawa.</p>
+      </div>
+      <div class="footer-col">
+        <h2>Work with me</h2>
+        <ul>
+          <li><a href="/services#decision-review">Bid/no-bid review</a></li>
+          <li><a href="/services#diagnostic">Bid history diagnostic</a></li>
+          <li><a href="/services#capture">Capture planning</a></li>
+          <li><a href="/services">All services</a></li>
+          <li><a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener">Book a free call</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2>Learn</h2>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="https://linkedin.com/in/akiliatherley" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="mailto:akili@thebiddesk.ca">akili@thebiddesk.ca</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 The Bid Desk · Ottawa, Ontario, Canada</p>
+      <p>Confidential. One client per opportunity.</p>
+    </div>
   </div>
 </footer>
 
-<script>
-// Mobile nav
-const toggle = document.getElementById('nav-toggle');
-const mobile = document.getElementById('nav-mobile');
-toggle.addEventListener('click', () => {
-  const open = mobile.classList.toggle('open');
-  toggle.setAttribute('aria-expanded', open);
-});
-mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  mobile.classList.remove('open');
-  toggle.setAttribute('aria-expanded', 'false');
-}));
+<div class="book-bar" id="book-bar" aria-hidden="true">
+  <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener" class="btn btn-gold" tabindex="-1">Book a free 20-minute call</a>
+</div>
 
-// Scroll reveal
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-}, { threshold: 0.1 });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-// Contact form — Formspree ID: mbdwrybp
-document.getElementById('contact-form').addEventListener('submit', async function (e) {
-  e.preventDefault();
-  const btn = document.getElementById('submit-btn');
-  const val = id => document.getElementById(id).value.trim();
-  const data = {
-    name: val('name'),
-    company: val('company'),
-    email: val('email'),
-    bids_per_year: val('bids'),
-    typical_contract_value: val('value'),
-    opportunity_link: val('link'),
-    message: val('message'),
-    _subject: 'Opportunity to pressure-test'
-  };
-  if (!data.email) { alert('Please enter your email address.'); return; }
-  btn.textContent = 'Sending…';
-  btn.disabled = true;
-  try {
-    const res = await fetch('https://formspree.io/f/mbdwrybp', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(data)
-    });
-    if (res.ok) {
-      btn.textContent = 'Sent — I\u2019ll reply within one business day ✓';
-      this.reset();
-    } else {
-      btn.textContent = 'Error — email akili@thebiddesk.ca';
-    }
-  } catch {
-    btn.textContent = 'Error — email akili@thebiddesk.ca';
-  }
-  setTimeout(() => { btn.textContent = 'Send it over →'; btn.disabled = false; }, 5000);
-});
-</script>
+<script src="/js/site.js" defer></script>
 </body>
 </html>
