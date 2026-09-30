@@ -1,16 +1,75 @@
 ---
 layout: base.njk
+nav: blog
+ogType: article
 ---
-<section class="post-hero">
-  <p class="post-hero-eyebrow">{{ eyebrow or "The Bid Desk Blog" }}</p>
-  <h1>{{ title }}</h1>
-  <p class="post-hero-date">{{ date | readableDate }}</p>
-</section>
-
-<article class="post-body">
-  {{ content | safe }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": {{ title | dump | safe }},
+      "description": {{ (excerpt or description or "") | dump | safe }},
+      "datePublished": "{{ page.date | isoDate }}",
+      "dateModified": "{{ page.date | isoDate }}",
+      "author": { "@id": "https://thebiddesk.ca/#akili" },
+      "publisher": { "@id": "https://thebiddesk.ca/#business" },
+      "image": "https://thebiddesk.ca/og-image.png",
+      "mainEntityOfPage": "https://thebiddesk.ca{{ page.url }}",
+      "isPartOf": { "@id": "https://thebiddesk.ca/blog/#blog" },
+      "inLanguage": "en-CA"
+    },
+    { "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://thebiddesk.ca/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://thebiddesk.ca/blog/" },
+      { "@type": "ListItem", "position": 3, "name": {{ title | dump | safe }}, "item": "https://thebiddesk.ca{{ page.url }}" }
+    ] }
+  ]
+}
+</script>
+<article>
+  <header class="page-hero article-head dark glow">
+    <div class="wrap">
+      <ol class="crumbs"><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li aria-current="page">{{ eyebrow or "Bid strategy" }}</li></ol>
+      <h1>{{ title }}</h1>
+      {% if excerpt %}<p class="excerpt">{{ excerpt }}</p>{% endif %}
+      <div class="byline">
+        <div><strong>By Akili Atherley</strong><span><time datetime="{{ page.date | isoDate }}">{{ page.date | readableDate }}</time> · {{ content | readingTime }}</span></div>
+      </div>
+    </div>
+  </header>
+  <div class="article-body wrap">
+    <div class="prose">
+      {{ content | safe }}
+    </div>
+    <aside class="post-cta dark glow" aria-labelledby="post-cta-title">
+      <h2 id="post-cta-title">Have an RFP you’re unsure about?</h2>
+      <p>Send it over. You’ll get an honest first read from me within one business day. If it’s not worth chasing, I’ll tell you.</p>
+      <div class="actions">
+        <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener" class="btn btn-gold">Book a free call <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="/#contact" class="btn btn-ghost">Send me an RFP</a>
+      </div>
+    </aside>
+  </div>
 </article>
 
-<div class="post-cta">
-  <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener">📅 Book a free call</a>
-</div>
+<section class="related" aria-labelledby="related-title">
+  <div class="wrap">
+    <div class="head"><h2 id="related-title">Keep reading</h2></div>
+    <div class="post-grid">
+      {%- set shown = 0 %}
+      {%- for post in collections.posts %}
+        {%- if post.url != page.url and shown < 2 %}
+        {%- set shown = shown + 1 %}
+      <a class="card post-card" href="{{ post.url }}">
+        <span class="badge">{{ post.data.eyebrow or "Bid strategy" }}</span>
+        <h2>{{ post.data.title }}</h2>
+        <p>{{ post.data.excerpt }}</p>
+        <p class="post-meta"><span><time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time></span><span>{{ post.content | readingTime }}</span></p>
+      </a>
+        {%- endif %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>

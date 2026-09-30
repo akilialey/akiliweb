@@ -1,60 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ title }} | The Bid Desk</title>
-<meta name="description" content="{{ description or 'Bid economics, capture and pricing insights for Canadian government contractors, from The Bid Desk.' }}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/blog.css">
+{%- set fullTitle = metaTitle or (title + " | The Bid Desk") %}
+{%- set desc = description or excerpt or "RFP and government bid strategy for Canadian and US contractors. Know which tenders to chase, what to charge, and when to walk away." %}
+{%- set canonical = "https://thebiddesk.ca" + (canonicalPath or page.url | replace("index.html", "") | replace(".html", "")) %}
+<title>{{ fullTitle }}</title>
+<meta name="description" content="{{ desc }}">
+<meta name="author" content="Akili Atherley">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="{{ canonical }}">
+<meta property="og:site_name" content="The Bid Desk">
+<meta property="og:type" content="{{ ogType or 'website' }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:title" content="{{ ogTitle or fullTitle }}">
+<meta property="og:description" content="{{ ogDescription or desc }}">
+<meta property="og:image" content="https://thebiddesk.ca/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Bid Desk: win government contracts that actually pay">
+<meta property="og:locale" content="en_CA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ ogTitle or fullTitle }}">
+<meta name="twitter:description" content="{{ ogDescription or desc }}">
+<meta name="twitter:image" content="https://thebiddesk.ca/og-image.png">
+<meta name="geo.region" content="CA-ON">
+<meta name="geo.placename" content="Ottawa">
+<meta name="theme-color" content="#2E1D33">
+<link rel="alternate" type="application/rss+xml" title="The Bid Desk Blog" href="/blog/feed.xml">
+<link rel="preload" href="/fonts/SchibstedGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://thebiddesk.ca/#business",
+      "name": "The Bid Desk",
+      "url": "https://thebiddesk.ca/",
+      "image": "https://thebiddesk.ca/og-image.png",
+      "logo": "https://thebiddesk.ca/og-image.png",
+      "description": "RFP and government bid strategy consulting: bid/no-bid decisions, bid pricing, capture planning and proposal leadership for government contractors in Canada and the US.",
+      "email": "akili@thebiddesk.ca",
+      "priceRange": "$$$",
+      "address": { "@type": "PostalAddress", "addressLocality": "Ottawa", "addressRegion": "ON", "addressCountry": "CA" },
+      "areaServed": [{ "@type": "Country", "name": "Canada" }, { "@type": "Country", "name": "United States" }],
+      "founder": { "@id": "https://thebiddesk.ca/#akili" },
+      "knowsAbout": ["RFP response", "Government tenders", "Bid/no-bid decisions", "Bid pricing", "Capture management", "Proposal management", "CanadaBuys", "MERX", "SAM.gov"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://thebiddesk.ca/#akili",
+      "name": "Akili Atherley",
+      "jobTitle": "Founder and bid strategist",
+      "image": "https://thebiddesk.ca/akili.jpg",
+      "worksFor": { "@id": "https://thebiddesk.ca/#business" },
+      "sameAs": ["https://linkedin.com/in/akiliatherley"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://thebiddesk.ca/#website",
+      "url": "https://thebiddesk.ca/",
+      "name": "The Bid Desk",
+      "inLanguage": "en-CA",
+      "publisher": { "@id": "https://thebiddesk.ca/#business" }
+    }
+  ]
+}
+</script>
 </head>
 <body>
+{% include "sprite.html" %}
+<a class="skip-link" href="#main">Skip to content</a>
 
-<nav id="navbar">
-  <a href="/index.html" class="nav-logo">The Bid Desk<span>.</span></a>
-  <ul class="nav-links">
-    <li><a href="/index.html#economics">Bid economics</a></li>
-    <li><a href="/index.html#method">How I work</a></li>
-    <li><a href="/services.html">Services</a></li>
-    <li><a href="/index.html#about">About</a></li>
-    <li><a href="/blog/">Blog</a></li>
-  </ul>
-  <a href="/index.html#contact" class="nav-cta">Pressure-test a bid</a>
-  <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<div class="nav-mobile" id="nav-mobile">
-  <a href="/index.html#economics">Bid economics</a>
-  <a href="/index.html#method">How I work</a>
-  <a href="/services.html">Services</a>
-  <a href="/index.html#about">About</a>
-  <a href="/blog/">Blog</a>
-  <a href="/index.html#contact">Pressure-test a bid</a>
-</div>
-
-{{ content | safe }}
-
-<footer>
-  <div class="footer-inner">
-    <a href="/index.html" class="footer-logo">The Bid Desk<span>.</span></a>
-    <ul class="footer-nav">
-      <li><a href="/index.html#economics">Bid economics</a></li>
-      <li><a href="/services.html">Services</a></li>
+<header class="site-nav">
+  <div class="wrap">
+    <a href="/" class="wordmark" aria-label="The Bid Desk, home">The Bid Desk<span class="dot">.</span></a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="/services"{% if nav == "services" %} aria-current="page"{% endif %}>Services</a></li>
+        <li><a href="/#how-it-works">How it works</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/blog/"{% if nav == "blog" %} aria-current="page"{% endif %}>Blog</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener" class="btn btn-gold nav-cta">Book a free call</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Open menu">
+        <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="nav-panel" id="nav-panel">
+    <ul>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/#how-it-works">How it works</a></li>
+      <li><a href="/#about">About</a></li>
       <li><a href="/blog/">Blog</a></li>
-      <li><a href="/index.html#contact">Contact</a></li>
     </ul>
-    <p class="footer-copy">&copy; 2026 The Bid Desk · Ottawa, Canada · akili@thebiddesk.ca</p>
+    <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener" class="btn btn-gold">Book a free 20-minute call</a>
+  </div>
+</header>
+
+<main id="main">
+{{ content | safe }}
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a href="/" class="wordmark">The Bid Desk<span class="dot">.</span></a>
+        <p>RFP and bid strategy consulting for government contractors in Canada and the US. Based in Ottawa.</p>
+      </div>
+      <div class="footer-col">
+        <h2>Work with me</h2>
+        <ul>
+          <li><a href="/services#decision-review">Bid/no-bid review</a></li>
+          <li><a href="/services#diagnostic">Bid history diagnostic</a></li>
+          <li><a href="/services#capture">Capture planning</a></li>
+          <li><a href="/services">All services</a></li>
+          <li><a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener">Book a free call</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2>Learn</h2>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="https://linkedin.com/in/akiliatherley" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="mailto:akili@thebiddesk.ca">akili@thebiddesk.ca</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 The Bid Desk · Ottawa, Ontario, Canada</p>
+      <p>Confidential. One client per opportunity.</p>
+    </div>
   </div>
 </footer>
 
-<script>
-document.getElementById('nav-toggle').addEventListener('click', () => {
-  document.getElementById('nav-mobile').classList.toggle('open');
-});
-document.querySelectorAll('#nav-mobile a').forEach(a => a.addEventListener('click', () => {
-  document.getElementById('nav-mobile').classList.remove('open');
-}));
-</script>
+<div class="book-bar" id="book-bar" aria-hidden="true">
+  <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener" class="btn btn-gold" tabindex="-1">Book a free 20-minute call</a>
+</div>
+
+<script src="/js/site.js" defer></script>
 </body>
 </html>
