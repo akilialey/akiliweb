@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {%- set fullTitle = metaTitle or (title + " | The Bid Desk") %}
-{%- set desc = description or excerpt or "RFP and government bid strategy for Canadian and US contractors. Know which tenders to chase, what to charge, and when to walk away." %}
+{%- set desc = description or excerpt or "RFP consulting, bid pricing and proposal writing for government contractors in Canada and the US. Bid on the right RFPs and tenders, at a price that pays." %}
 {%- set canonical = "https://thebiddesk.ca" + (canonicalPath or page.url | replace("index.html", "") | replace(".html", "")) %}
 <title>{{ fullTitle }}</title>
 <meta name="description" content="{{ desc }}">
@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://thebiddesk.ca/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="The Bid Desk: win government contracts that actually pay">
+<meta property="og:image:alt" content="The Bid Desk: win government RFPs and tenders that actually pay">
 <meta property="og:locale" content="en_CA">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ ogTitle or fullTitle }}">
@@ -27,10 +27,10 @@
 <meta name="twitter:image" content="https://thebiddesk.ca/og-image.png">
 <meta name="geo.region" content="CA-ON">
 <meta name="geo.placename" content="Ottawa">
-<meta name="theme-color" content="#2E1D33">
+<meta name="theme-color" content="#FFFFFF">
 <link rel="alternate" type="application/rss+xml" title="The Bid Desk Blog" href="/blog/feed.xml">
 <link rel="preload" href="/fonts/SchibstedGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/css/site.css?v=9a99b505">
+<link rel="stylesheet" href="/css/site.css?v=20261002b">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {
@@ -43,7 +43,7 @@
       "url": "https://thebiddesk.ca/",
       "image": "https://thebiddesk.ca/og-image.png",
       "logo": "https://thebiddesk.ca/og-image.png",
-      "description": "RFP and government bid strategy consulting: bid/no-bid decisions, bid pricing, capture planning and proposal leadership for government contractors in Canada and the US.",
+      "description": "RFP and proposal consulting for government contractors in Canada and the US: bid/no-bid decisions, bid pricing, proposal writing and management, and capture planning.",
       "email": "akili@thebiddesk.ca",
       "priceRange": "$$$",
       "address": { "@type": "PostalAddress", "addressLocality": "Ottawa", "addressRegion": "ON", "addressCountry": "CA" },
@@ -55,7 +55,7 @@
       "@type": "Person",
       "@id": "https://thebiddesk.ca/#akili",
       "name": "Akili Atherley",
-      "jobTitle": "Founder and bid strategist",
+      "jobTitle": "Founder & Principal",
       "image": "https://thebiddesk.ca/akili.jpg",
       "worksFor": { "@id": "https://thebiddesk.ca/#business" },
       "sameAs": ["https://linkedin.com/in/akiliatherley"]
@@ -88,7 +88,7 @@
       </ul>
     </nav>
     <div class="nav-right">
-      <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener" class="btn btn-gold nav-cta">Free Bid Health Check</a>
+      <a href="https://calendly.com/thebiddesk?utm_source=website&amp;utm_medium=blog" target="_blank" rel="noopener" class="btn btn-gold nav-cta">Free Bid Health Check</a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Open menu">
         <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
         <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
@@ -102,7 +102,7 @@
       <li><a href="/#about">About</a></li>
       <li><a href="/blog/">Blog</a></li>
     </ul>
-    <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener" class="btn btn-gold">Book a free Bid Health Check</a>
+    <a href="https://calendly.com/thebiddesk?utm_source=website&amp;utm_medium=blog" target="_blank" rel="noopener" class="btn btn-gold">Book a free Bid Health Check</a>
   </div>
 </header>
 
@@ -115,16 +115,16 @@
     <div class="footer-top">
       <div>
         <a href="/" class="wordmark">The Bid Desk<span class="dot">.</span></a>
-        <p>RFP and bid strategy consulting for government contractors in Canada and the US. Based in Ottawa.</p>
+        <p>RFP consulting, bid pricing and proposal writing for government contractors in Canada and the US. Based in Ottawa.</p>
       </div>
       <div class="footer-col">
-        <h2>Work with me</h2>
+        <h2>Work with us</h2>
         <ul>
-          <li><a href="/services#decision-review">Bid Economics Review</a></li>
-          <li><a href="/services#diagnostic">Bid Desk Diagnostic</a></li>
-          <li><a href="/services#capture">Capture Plan</a></li>
+          <li><a href="/services#decision-review">Bid/No-Bid &amp; Pricing Review</a></li>
+          <li><a href="/services#pursuit-lead">Proposal Writing</a></li>
+          <li><a href="/services#diagnostic">Win/Loss Review</a></li>
           <li><a href="/services">All services</a></li>
-          <li><a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener">Free Bid Health Check</a></li>
+          <li><a href="https://calendly.com/thebiddesk?utm_source=website&amp;utm_medium=blog" target="_blank" rel="noopener">Free Bid Health Check</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -145,9 +145,9 @@
 </footer>
 
 <div class="book-bar" id="book-bar" aria-hidden="true">
-  <a href="https://calendly.com/thebiddesk" target="_blank" rel="noopener" class="btn btn-gold" tabindex="-1">Book a free Bid Health Check</a>
+  <a href="https://calendly.com/thebiddesk?utm_source=website&amp;utm_medium=blog" target="_blank" rel="noopener" class="btn btn-gold" tabindex="-1">Book a free Bid Health Check</a>
 </div>
 
-<script src="/js/site.js?v=9a99b505" defer></script>
+<script src="/js/site.js?v=20261002b" defer></script>
 </body>
 </html>
