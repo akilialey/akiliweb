@@ -43,53 +43,6 @@
     if (contact) new IntersectionObserver(function (e) { state.atContact = e[0].isIntersecting; update(); }).observe(contact);
   }
 
-  // Tabs (content is stacked and fully visible without JS)
-  document.querySelectorAll('[data-tabs]').forEach(function (root) {
-    var tabs = Array.prototype.slice.call(root.querySelectorAll('[role="tab"]'));
-    var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
-    var select = function (i, focus) {
-      tabs.forEach(function (t, j) {
-        var on = i === j;
-        t.setAttribute('aria-selected', String(on));
-        t.tabIndex = on ? 0 : -1;
-        panels[j].hidden = !on;
-      });
-      if (focus) tabs[i].focus();
-    };
-    tabs.forEach(function (t, i) {
-      t.addEventListener('click', function () { select(i, false); });
-      t.addEventListener('keydown', function (e) {
-        var k = e.key, n = tabs.length;
-        if (k === 'ArrowDown' || k === 'ArrowRight') { e.preventDefault(); select((i + 1) % n, true); }
-        if (k === 'ArrowUp' || k === 'ArrowLeft') { e.preventDefault(); select((i - 1 + n) % n, true); }
-        if (k === 'Home') { e.preventDefault(); select(0, true); }
-        if (k === 'End') { e.preventDefault(); select(n - 1, true); }
-      });
-    });
-    panels.forEach(function (p) { p.setAttribute('role', 'tabpanel'); p.tabIndex = 0; });
-    select(0, false);
-  });
-
-  // Services table of contents: mark the section in view
-  var toc = document.querySelector('.svc-toc');
-  if (toc && 'IntersectionObserver' in window) {
-    var links = toc.querySelectorAll('a');
-    var byId = {};
-    links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (en.isIntersecting) {
-          links.forEach(function (a) { a.removeAttribute('aria-current'); });
-          var a = byId[en.target.id];
-          if (a) a.setAttribute('aria-current', 'true');
-        }
-      });
-    }, { rootMargin: '-35% 0px -60% 0px' });
-    Object.keys(byId).forEach(function (id) {
-      var el = document.getElementById(id);
-      if (el) io.observe(el);
-    });
-  }
 })();
 
 (function () {
@@ -109,7 +62,7 @@
     var validate = function () {
       var ok = true;
       var v = email.value.trim();
-      if (!v) { emailErr.textContent = 'Enter your email so I can reply.'; ok = false; }
+      if (!v) { emailErr.textContent = 'Enter your email so we can reply.'; ok = false; }
       else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) { emailErr.textContent = 'That email looks incomplete. Check it and try again.'; ok = false; }
       else emailErr.textContent = '';
       email.setAttribute('aria-invalid', emailErr.textContent ? 'true' : 'false');
@@ -131,7 +84,7 @@
 
     // Pre-select the service when arriving from a services page button (/?service=diagnostic#contact)
     var svcSel = form.querySelector('#service');
-    var svcMap = { review: 'Bid Economics Review', diagnostic: 'Bid Desk Diagnostic', capture: 'Capture Plan', pursuit: 'Pursuit Lead', fractional: 'Fractional Bid Desk', check: 'Bid Health Check (free)' };
+    var svcMap = { review: 'Bid/No-Bid & Pricing Review', assessment: 'Bid/No-Bid & Pricing Review', diagnostic: 'Win/Loss Review', portfolio: 'Win/Loss Review', capture: 'Capture Planning', pursuit: 'Proposal Writing & Management', proposal: 'Proposal Writing & Management', fractional: 'Fractional Bid Manager', check: 'Bid Health Check (free)', call: 'Bid Health Check (free)' };
     try {
       var want = new URLSearchParams(location.search).get('service');
       if (svcSel && want && svcMap[want]) svcSel.value = svcMap[want];
